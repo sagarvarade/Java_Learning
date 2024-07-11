@@ -18,7 +18,6 @@ class CourseRepositoryTest {
         List<Course> courseList=courseRepository.findAll();
         for(Course cs:courseList){
             System.out.println(cs);
-
         }
     }
 }
