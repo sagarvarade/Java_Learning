@@ -16,13 +16,13 @@ import static org.junit.jupiter.api.Assertions.*;
 class StudentRepositoryTest {
 
     @Autowired
-    private  StudentRepository studentRepo;
+    private StudentRepository studentRepo;
 
     @Test
-    public  void createStudent(){
-        Guardian grd=Guardian.builder().name("Guarding").mobile("124").email("rdg@emc.vom").build();
+    public void createStudent() {
+        Guardian grd = Guardian.builder().name("Guarding").mobile("124").email("rdg@emc.vom").build();
 
-        Student std=Student.builder()
+        Student std = Student.builder()
                 .emailId("abc@gml.com")
                 .firstName("sagar")
                 .lastName("varade")
@@ -30,33 +30,59 @@ class StudentRepositoryTest {
                 .build();
         studentRepo.save(std);
     }
-    @Test
-    public void getAllStudent(){
-       List<Student> stdList=studentRepo.findAll();
-       for(Student std:stdList){
-           System.out.println(std);
-       }
-    }
 
     @Test
-    public void getStudentByName(){
-        List<Student> stdList=studentRepo.findByFirstName("sagar");
-        for(Student std:stdList){
+    public void getAllStudent() {
+        List<Student> stdList = studentRepo.findAll();
+        for (Student std : stdList) {
             System.out.println(std);
         }
     }
 
     @Test
-    public void getStudentByNameContaining(){
-        List<Student> stdList=studentRepo.findByFirstNameContaining("gar");
-        for(Student std:stdList){
+    public void getStudentByName() {
+        List<Student> stdList = studentRepo.findByFirstName("sagar");
+        for (Student std : stdList) {
             System.out.println(std);
         }
     }
 
     @Test
-    public void getJPQLQuery(){
-        Student std=studentRepo.getStudentByEmailAddress("abc@gml.com");
+    public void getStudentByNameContaining() {
+        List<Student> stdList = studentRepo.findByFirstNameContaining("gar");
+        for (Student std : stdList) {
+            System.out.println(std);
+        }
+    }
+
+    @Test
+    public void getJPQLQuery() {
+        studentRepo.findByLastNameNotNull();
+        Student std = studentRepo.getStudentByEmailAddress("abc@gml.com");
         System.out.println(std);
+    }
+
+    @Test
+    void getStudentFirstNameByEmailAddress() {
+        String s=studentRepo.getStudentFirstNameByEmailAddress("abc@gml.com");
+        System.out.println(s);
+    }
+
+    @Test
+    void getStudentByEmailAddressNative() {
+        Student std = studentRepo.getStudentByEmailAddressNative("abc@gml.com");
+        System.out.println(std);
+    }
+
+    @Test
+    void getStudentByEmailAddressNativeNamedParam() {
+        Student std = studentRepo.getStudentByEmailAddressNativeNamedParam("abc@gml.com");
+        System.out.println(std);
+    }
+
+    @Test
+    void updateStudent() {
+        int res = studentRepo.updateStudentByEmailId("XX","abc@gml.com");
+        System.out.println(res);
     }
 }
