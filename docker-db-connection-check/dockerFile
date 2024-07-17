@@ -1,0 +1,17 @@
+# Use a lightweight Java runtime
+# CMD command : docker build -t dbconcheck:1.1.1 -f dockerFile .
+# Stage 2: Create the final image
+FROM eclipse-temurin:17-jre-focal
+
+# Set the working directory in the container
+WORKDIR /app
+
+# Copy the JAR file from the target directory to the container
+COPY target/*.jar /app/app.jar
+
+# Specify metadata labels
+LABEL org.opencontainers.image.name="dbconcheck"
+LABEL org.opencontainers.image.version="1.1.1"
+
+# Specify the command to run on container start
+CMD ["java", "-jar", "/app/app.jar"]

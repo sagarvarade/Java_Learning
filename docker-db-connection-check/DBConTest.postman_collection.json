@@ -1,0 +1,126 @@
+{
+	"info": {
+		"_postman_id": "96036575-9535-47c5-8ebf-36b181b91981",
+		"name": "DBConTest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1783708"
+	},
+	"item": [
+		{
+			"name": "Mysql",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"url\": \"jdbc:mysql://localhost:3306/world?allowPublicKeyRetrieval=true&useSSL=false\",\r\n    \"username\": \"root\",\r\n    \"password\": \"admin\",\r\n    \"driverClassName\": \"org.hibernate.dialect.MySQLDialect\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7070/api/database/check",
+					"host": [
+						"localhost"
+					],
+					"port": "7070",
+					"path": [
+						"api",
+						"database",
+						"check"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Oracle",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"url\": \"jdbc:oracle:thin:@localhost:1521:orcl\",\r\n    \"username\": \"system\",\r\n    \"password\": \"oracle\",\r\n    \"driverClassName\": \"oracle.jdbc.OracleDriver\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7070/api/database/check",
+					"host": [
+						"localhost"
+					],
+					"port": "7070",
+					"path": [
+						"api",
+						"database",
+						"check"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Postgres",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"url\": \"jdbc:postgresql://localhost:5432/mydatabase\",\r\n    \"username\": \"postgres\",\r\n    \"password\": \"password\",\r\n    \"driverClassName\": \"org.postgresql.Driver\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7070/api/database/check",
+					"host": [
+						"localhost"
+					],
+					"port": "7070",
+					"path": [
+						"api",
+						"database",
+						"check"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mysql_2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"url\": \"jdbc:mysql://host.docker.internal:3306/authentication?allowPublicKeyRetrieval=true&useSSL=false\",\r\n    \"username\": \"root\",\r\n    \"password\": \"admin\",\r\n    \"driverClassName\": \"org.hibernate.dialect.MySQLDialect\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7070/api/database/check",
+					"host": [
+						"localhost"
+					],
+					"port": "7070",
+					"path": [
+						"api",
+						"database",
+						"check"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
