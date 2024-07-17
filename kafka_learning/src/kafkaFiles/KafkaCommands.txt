@@ -1,0 +1,31 @@
+***********
+# Connect docker compose in detached state
+
+docker-compose up -d
+
+# List all your running docker images
+docker ps
+
+# Connect to docker image with kafka id :
+
+docker exec -it 611b453999fd bash
+
+# Locate where your kafka topic sh is present :
+
+find / -name "kafka-topics.sh"
+
+# Command to create topic with below command in opt/kafka_2.13-2.8.1/bin  Dir
+kafka-topics.sh --create --topic test-topic --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1
+
+> Created topic test-topic.
+#  List all topics here .
+kafka-topics.sh --list --bootstrap-server localhost:9092
+> my-topic
+> test-topic
+
+
+> Kafka Consumer :
+docker exec -it 611b453999fd bash
+cd opt/kafka_2.13-2.8.1/bin
+kafka-console-consumer.sh --topic test-topic --bootstrap-server localhost:9092 --from-beginning
+# will show all messages here
