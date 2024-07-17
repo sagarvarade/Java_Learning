@@ -1,0 +1,33 @@
+#Find Nth highest sal
+select * from(select salary,ROW_NUMBER() OVER (ORDER BY salary desc) as rn from HR.employees) tmp where rn=1;
+
+#Select duplicate entry
+select * from employee a where rowid >(select min(rowid) from employee b where a.fname = b.fname);
+
+SELECT name, email, COUNT(*) FROM users GROUP BY name, email HAVING COUNT(*) > 1
+
+Delete duplicate records?
+
+DELETE FROM Employee WHERE ID NOT IN(SELECT MAX(ID) AS MaxRecordID FROM Employee
+        GROUP BY fnmame, lName,country);
+
+#Getting first and last record from table?
+
+(select *from DemoTable694 order by EmployeeId ASC LIMIT 1)
+UNION
+(select *from DemoTable694 order by EmployeeId DESC LIMIT 1);
+
+OR
+
+SELECT (SELECT * FROM tableName ORDER BY col1 LIMIT 1)  AS first, (SELECT * FROM tableName ORDER BY col1 DESC LIMIT 1) AS last;
+
+
+Diff between like and contains in sql?
+
+Diff between union and unioanall?
+
+What is decode() ?
+
+How to find uniqe row without using distinct()?
+
+What is the view and materalised view?

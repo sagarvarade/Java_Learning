@@ -1,0 +1,28 @@
+CONGNI
+
+1. Default method DONE
+2. Functional interface DONE
+3. Optional Class DONE
+4. Singletone class DONE
+5. unchecked Exception DONE
+6. concurenthashmap DONE
+7. singleton class threadsafe how? DONE
+8. volitle keyword 50%
+9. using stream find duplicate from int [] 20%
+10. What is terminal & intermidiate operations 20%
+11. What is map & flatmap DONE
+12. What is Eagar & lazy in angular 10%
+13. What is stateless protocol 20%
+13. what is outer join 50%
+14. what is callable & future object DONE
+13. What is executer services DONE
+14. How to set different envirment parameter in application.prop NO
+15  What is controller & rest controller DONE
+16  How to create json obj if you want to return 50
+17  What is @Qulifier DONE
+18  How to create executer services(fixed single multi) DONE
+19  what is idempotent method NO
+20  how many default & static method we write in functional interface DONE
+21 What is predicate functinal interface where we used? DONE
+
+============================================================================================

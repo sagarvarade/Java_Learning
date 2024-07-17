@@ -1,0 +1,931 @@
+I-1 : 
+1. oops concept in java
+2. Dynamic polymorphism vs static polymorphism
+3. Collections which are used
+4. HashMap vs List
+5. when to use array List , features of array list
+6. Concept of hashmap
+
+I-2 :
+7. What is circuit breaker pattern
+8. Concurrent hashmap vs synchronized map
+9. How to configure eureka server
+10. What is API gateway with proper explanation
+11. Find employee for each departmenent
+12. How to configure OAuth2 
+13. How to segregate stories (JIRA) Agile
+14. Feature of Java , streams lambda and optional
+16. Benifit of optional value
+17. Employee {name,location} , Find employee at each location by lambda
+18. Handling transaction in microservice architecure
+19. Inter service communication ,Clients : RestTemplate, Web flux, OpenFeign
+20. Auth how to implement
+21. Advantages and dis-Advantages of Spring boot framework.
+22. HashMap vs Concurrent hashmap
+23. Customized object in hashmap : equal() , hashCode() method  deal
+24. Patch vs Put when to use.
+25. Docker
+26. Spring boot configuration based on profile
+27. What if application.properties file is renamed,
+28. Design pattern in microservice , which one you have used. , Gateway, Circuit breaker , fall back
+29. Parent bean , Child bean , Singleton and proptotype bean configuration.
+30. Hibernate vs JPA
+31. Repository vs JPA Repository
+32. How JPA is configured in Application
+33. How finAll works
+34. findByOne - how it will fetch record.
+35. findOne  - how it will fetch record.
+36. Comparator VS Comparable
+37. @RestController vs @Controller
+38. How to configure bean should be loaded only once.
+
+I-3 :
+39. Micorservices dis-Advantages and advantages : More complex than monolith, expensive to manage, security threats, network latency and load balancing
+40. If there are 10 microservice in application how to secure communication in between them
+41. SAGA design pattern
+42. Your experience in design patterns , Aggregator, Circuit breaker, API gateway
+43. Consider each mircoservice as each data source and you need to join data from more than one data source how to do that.
+44. @Component VS @Bean
+45. What is spring transaction management and how to implement in it.
+46. How to work on future and completable
+47. CRUD repository  VS JPA repository
+48. Serializable, ResponseEntity, Collections.sort(). multiple compartors,  method reference , Java Lambda, Put vs Patch
+49. Contanerization, Docker
+50. Docker swarm vs kubernates
+51. Java Bean mapping BeanUtils, Mapconstructs
+
+52. SL4J  vs Log4j
+53. Spring dependecy injection explain 
+54. Design patterns, explain any four 
+55. Spring boot profiles, Dev , test , Prod
+56. Functional interface in java 8
+57. what function inside predicate have to made use of other that isEqual() 
+58. Map() vs FlatMap()
+59. Test driven development (TDD)
+60. Java 8 : Have employee object with parameters as id, name, age ,active, departmenent,yearOfJoining, salary
+    Create a list of employee objects as below
+62. Print max/min salary from the given collection
+    high=empList.stream().collect(Collectors.maxBy(Comparator.comparingDouble(Employee::getSalary)));
+    low=empList.stream().collect(Collectors.minBy(Comparator.comparingDouble(Employee::getSalary)));
+63. Print max salary of employee from each departmenent
+    empList.stream().collect(Collectors.groupingBy(Employee::getDepartment,Collectors.reducing(BinaryOperator.maxBy(Comprator.comparin(Employee.getSalary));
+64. find active and inactive employee from list 
+    empList.stream().collect(Collectors.groupingBy(Employee::getActive),collectors.counting()));
+    // Employee count working in each departmenent
+    empList.stream().collect(Collectors.groupingBy(Employee::getDepartment));
+    
+    empList.stream().collect(Collectors.groupingBy(Employee::getDepartment),collectors.counting);
+    empDeptCount.forEach(key,value)->Syso(key+" "+value)
+    
+65. Expain Spring boot @Configuration @Autowired, @Qualifier
+66. Internal working of Rest
+67. New java 8 features
+68. Expain use of SpringBoot starters parent
+69. How microservice communicate
+70. How to use microservice based architecure in your application
+71. Explain what issue service discovery solves
+72. explain SSO for microservice
+73. How do you validate the query you have written is most efficient one.
+
+Oracle Interview :
+74. Explain in details what happen internally if we put a key object in a hashMap which is already there.
+75. Explain in details about JVM architecure
+76. Explain encapsulation in details and its significance
+77. Stack and queue
+78. Asked to create singleton threa safe class.
+79. Scenario based questions on string and string buffer
+80. waht happens when A extends B, B extends C and C extends A.
+81. Access specifier : Private , Public, Protected.
+82. Using null reference can we call any method
+83. Even though we have garbage collection in java , why do we still have memory issue.
+84. Scenario based question on ArrayList , HashMap , hashTable
+85. Java 8 features Collections, stream
+86. diferent ways to iterate over list
+87. Remove white spaces from a string
+88. Transaction management that are supported in Spring boot
+89. spring parent child bean scopes.
+90. Types of event listeners
+91. How does spring boot enable creating production ready application in quick time
+92. Role of Spring boot starter.
+93. Expain in details "run as java application" for spring boot app
+94. IOC/ DI
+95. Expain various types of spring bean auto wiring
+96. AOP in Spring boot
+97. Different types of spring advice
+98. Point cut in SPring AOP
+99. Spring AOP used in spring app, what issues it resolved.
+100. Tables like , college, class , student , teaches asked question on mapping (Hibernate mapping)
+101. Secure communication between multiple microservice calls
+102. Different ways to handle transaction which involves multiple microservice calls =>SAGA
+103. Kafka configuration and zoo-keeper
+104. Is it good idea to use DB as a Oracle
+
+DBS Bank
+105. Explain ArrayList, HashMap, ConcurrentHashMap
+106. what is blocking queue, write code to implement blocking queue.
+107. You have threa T1,T2,T3 , How do you ensure that thread T2 run after T1 and T3 run after T2 ?
+108. how do you implement a high performance cachec which allows multip readers,but the signle writed to keep the integrity how do you implement it.
+109. what is race condition , how will you find and solve race condition
+110. How do you handle an unwanted exception in thread
+111. what do you mean by inter-thread communication
+112. can you explain real time example where you have used abstraction in your application
+113. What is operational , and how to use , what issue does it solved.
+114. What is default method and when to use it.
+115. OOPs, with real time example.
+116. Difference between intermediate and terminal operations
+117. How to find duplicate elements in given interger list in java using strea fucntions
+118. Given a string find the first repeated character in it using stream functions.
+119. Spring bean scope & how do you configre DB in your spring application
+120. Sping boot how to read profile specific configuration
+121. Fetch Highest and nth salary from emp table
+122. Inner join and outer join
+123. Micorservices vs monolith application
+124. What type of review comment
+125. Agile
+
+Wipro
+126. Spring boot starte parant
+127, @Controller vs @RestController
+128. Service discovery in details
+129. SSO and microservice difference
+130. Stack , queues and DS instead of ArrayList
+131. Design an abstract / Load balancer
+132. Types of locks , difference between re-entrant and synchronized blocks
+133. can the main method be synchronized  And 
+134. synchronization , class level locks, , block level/Object level , volatile keyword.
+135. Write  code to demonstrate dead lock, race condition in multi threading.
+136. Double locking in signle class
+137. Blocking queues
+138. OOPS concept, SOLID principles, (Association composition vs aggregation)
+139. Inheritance base code snippets 
+140. JVM architecure
+141. Global vs local exception , exception in overriding
+142. Immutable class and benefits/ dis-Advantages
+143. Why functional programming
+144. Serlization and marker interface
+145. Custom object related to HashMap 
+146. How spring boot auto-config works, 
+    Meta-init-> Spring factory -> Conditional bean annotations.
+147. What are generics and their performance implications (Type erasure)
+148. Is it mandatory to make the class final if making custom immutable class
+149. what are possible scope of access modifiers for an overridin method in child class.
+150. What happen when you modify the value of an elements in list while interation using interators.
+
+Coding questions :
+151. Group anagrams
+152. Program to shift all the 0's at front followed by 1's
+153. find the nth node from last linked list (constraing- size cannt be found)
+154. write a program to find the max length of palindromin substring in String (Dynamic programming)
+155. Micorservices advantages/dis-Advantages
+156. How would you rollback all changes in a scenario of services calling and something goes wrong among them
+157. A->B->C->D SAGA
+158. Design an application to send emails to all client on a specific day.
+159. Design patterns in mircoservice
+160. caching related questions
+161. circuit breaker implications
+162. Security in spring boot application
+163. when not to use microservice
+
+Delloite
+164. Different class loaders in Java
+165. What is immutable class , how to make one
+166. Abstraction, how can be achived in java
+167. how can we override the default methods from functional interface
+168. ConcurrentHashMap how its is diferent from hashmap
+169. why do arraylist allows duplicate
+170. Junit , Junit for repository class
+171. How do you receive request form the client, which annotations you used.
+172. Call microservice in your application
+173. Spring bean types , Singleton, Prototype , various bean scopes
+174. Session in hibernate is thread safe.
+175. Call stored procedure in Spring boot app
+176. Handling security in spring boot app
+177. departmenent process
+178. Docker & advantages
+179. Jenkins
+180. find second largest form array.
+
+Thermo Fisher
+181. Limitations of Mockito
+182. @Before Junit
+183. How garbage collection work in java
+184. comprator interface working in java
+185. recursive function to reverse string in java
+186. Interface vs abstract class
+187. Collections interfaces
+188. contract of equals and hashcode method
+189. why do we need to override equal and hashcode methods
+190. how system.gc() works
+191. heap and stack memory in java
+192. what happens when : 1. Stack fill up , do we get stack overflow exception
+     when heap fills up : you get memory overflow exception
+
+Analytics fox :
+193. Exception handling in java 
+194. HashMap vs HashTable in collection framework
+195. @Controller vs  @RestController vs @Component
+196. JPA vs Hibernate
+197. Primary key vs unique key
+198. second highest salary in java 8 streams
+199. Frequency of int in list
+200. What if two objects of same class insert to List , Set ad Map
+201. Concurrent modification exception @Bean m @Component
+202. wait() vs sleep()
+203. Executor framework , Immutable classes
+
+TCS :
+204. Different ways to handle expception in spring boot application
+205. Deep discussion on DI
+206. spring mvc over other frameworks
+207. what is view resolver pattern and how does it works
+208. what is scope in reference to spring bean
+209. what is root application context in spring mvc, How is it loaded.
+210. How an incoming request is mapped to controller adn mapped to methods
+211. Diff in @RequestParam & @Pathvariable
+212. Process of creating spring boot application using maven
+213. Deep discussion on spring annotations
+214. Memory management in Java
+215. Internal working on concurrent hash map
+216. Hiebernate , JDBC architecure , 
+217. First and second level cache
+218. One to one , many to many mapping
+
+219. How do we reverse a linked list
+220. why non static variables are not allowed in static block
+221. diferent HTTP methods
+222. How do we pass header parameters as method input
+223. Sample api to upload file
+224. On what principles microservice are build upon
+225. swagger ui and all its endpoints
+226. Process of configuring spring actuator
+
+PL/SQL :
+227. Truncate vs Delete
+228. types of joins
+229. can you create a trigger.
+230. how many triggers can be applied on a table
+
+Docker :
+231. docker image vs docker container
+232. common use cased of docker
+233. Docker swarm
+234. can you run more than one process in docker container
+235. enrty point in docker
+
+Global logic :
+236. Non repeatating character from string
+237. sort hash map by value
+238. java diferent memory areas
+239. changes required in class to make it use as key in hashmap
+240. remove character from string to make it palindrom
+241. Logging in your application ,
+242. API gateway , what issue does it solve
+243. what is circuit breaker how does it workd internally
+244. Transaction in application
+245. Authentication in application => JWT and OAuth2
+246. code to consume API
+247. design api which will take both XML and Json as input
+249. Stream to find sum of an array
+250. Stram to find second highest salary of employee
+251. Steam to find oldest employee in organization
+
+Newgen
+252. java 8 , Lambda, method reference , functional interface m stream api
+253. default method , base 64, encode , decode
+254. static method in interfaces
+255. optional class, collection class , for each
+256. Parrallel array sorting, 
+257. IO enhancement , concurrency enhancement , JDBC enhancement
+258. Comparator vs Comparable
+259. Array vs ArrayList
+260. Method overloading vs Method overriding
+261. Abstract class vs interface
+262. final key word => variable , method ,class 
+263. Immutable class in java => wrapper string
+264. Annotations used in java, 
+265. exclude dependecy form pom.
+266. how to connect to db in spring boot
+267. error vs exception
+268. How to create custom exception class
+
+
+TIBCO :
+269. Instance vs static and local variables
+270. partitioning in DB, 
+271. Relational vs non-relational DB
+272. use of application.proprties file
+273. ORM tools
+274. Binary search
+275. can we overload static methods
+276. runtime polymorphism vs compile time polymorphism
+277. given to link list convert to single linked list representing sum of both linked list
+278. Explain searching algorithms
+279. Given DB schema , design API and tools
+280. Atomic integer
+At&t
+
+281. static initializer block - flow control
+282. where static blocks saved in memory
+283. externalization in java
+284. Heap memory in java
+285. can we synchronize process not threads
+286. re-entrant lock
+287. generics in java
+288. erasure in generics
+289. JSP include actions/directive
+290. how to pass parameters in JSP , 1. Query parameters, 2. hidden variables ,3. session object
+291. JSP:useBean
+292. Advantages of spring boot/ security
+293. cartessian product / cross join
+294. outer join
+295. Diff in clustered vs not clustered index.
+
+
+Cognizant :
+
+296. Rowset in JDBC, Executor framework
+297. Thread pooling, thread join, thread local
+298. what is the purpose of connection pooling & why to use.
+299. custom id in hibernate
+300. capture cookie and send to backend using AJAX
+301. when to use default methods
+302. concurrent hashmap vs synchronized hash map
+303. JAX-rs & jersey
+304. control multiple request coming from client and how to control access to shared resource in java => Semaphore
+
+Siemens 
+305. how locking mechanism work and implemented in jvm
+306. which event bus is used by SAGA pattern.
+307. why we use ThreadPooolExectuor when we hava executor framework
+308. @SpringBootApplication Vs @Enable Auto Configuration
+309. what if springApplication.run() method is call in spring app
+310. map vs FlatMap()
+311. Boxed Stream
+312. List spring core & sterotype annotations
+313. Swagger
+314. Why @RestController when same can be done with @Controller and @ResponseBody
+315. Is there any speed increase while indexing a table ?, what if all columns are index
+316. Intern() method,
+317. wht if constructor is private
+318. what if constructor is final
+319. Transient keyword , System.exit(0) , in finally block
+320. Why thread.stop() is stopped
+321. Class.forName() & Class.forName().newInstance()
+322. Heap vs Stack diff
+323. Fail safe() vs fail fast iterators.
+324. Association vs aggregation vs composition
+325. how subString works
+326. Try with resource
+327. ClassLoader in java & generics
+
+Pulicis sapient
+328.  what is the poerformance benefit of using stream
+329. what is stream api, and why is it introduced 
+330. Paralle stream
+331. what are intermediate & terminal operations
+332. any change is memory management in java 8
+333. where static method / variable stored
+334. why only 1 null key is allowed in hashmap
+335. which mechanism is used by treeMap for sorting
+336. Is method overriding is possible in same class
+337. how to create final arrayList in java
+338. Rest VS SOAP
+339. If list contains int, string , and other data types how to determine it is of which type
+340. Consumer vs functional interface
+341. @Qualifier in spring , DI , dev tools in SB
+342. If we dont use any sb internal server how to configure with other servers
+343. In one to one mapping what if parent object is deleted
+
+HCL 
+344. Multithreading how to create a thread pool ? where in the app it can be used.
+345. If parent bean is singleton and child bean is prototype when we do the getbean on parent what is the child scope here.
+346. Different ways to remove an given elements from a list
+347. Different scope in spring ,where and where to use, what are real time scenario
+348. How do you trace the defect 
+349. DB performance tunning
+350. How are your api's are secured
+351. Exception and error defination
+352. how to write custome exception
+353. singleton class in java how to implement spring security
+354. how to call DB query in spring
+355. what are microservices
+
+
+Explain spring boot Annotations :
+1. @SpringBootApplication
+2. @EnableAutoConfiguration
+3. @ConditionalOnProperty
+4. @ConditionalOnExpression
+5. @ConditionalOnBean
+6. @ConditionalOnMissingBean
+7. @ConditionalOnResource
+8. @ConditionalOnClass
+9. @ConditionalOnMissingClass
+10. @ConditionalOnJNDI
+11. @ConditionalOnJava
+12. @ConditionalOnSingleCandidate
+13. @ConditionalOnNotWebApplication
+14. @ConditionalOnCloudPlatform
+15. @ConditionalOnWebServer
+
+
+
+356. Hystrix circuit breaker
+357. Kafka consumer / Producer config
+358. write an sql to remove duplicate
+359. Create a Promise
+360. how to stop bean getting initialized in spring
+361. If we increased thread count , the performance will be increase ?
+362. Parent child , Bean scope
+363. ByFunction in java 
+364. how to debug a stream in java
+365. Explain about comparator chaining
+366. SOLID principles
+367. @Qualifier , @Primary , Predicate , consumer 
+368. @RequestMapping and @Getmapping
+369. Execute() vs ExecuteQuery()
+370. Disadvantages in prepared statment
+371. SOAP vs rest
+372. what is composition and benefit of it
+373. ThreadLocal & synchronized method or block
+374. String joiners in java
+375. How to break monoliths into microservice (Centralized logging)
+376. how to handle distributed transactions for asynchronus services
+377. Testing required for MS
+378. stream() vs parallelStream()
+
+Infosys
+379.  Scalability, elasticity and resilience
+380. CallBack and fallBack
+381. Service mesh , 2 phase commit
+382. how to handle distributed transactions
+383. SAGA Pattern
+384. Features of spring security
+385. Spring boot features
+386. how to call a webservice
+387. how to handle caching asynchronusolsy
+388. shutDown() vs shutDownNow()
+389. Labda, optional , limt() in java
+390. code review ,Identity hashmap
+391. Types of garbage collection in java
+392. circular dependecy how to handle
+393. get middle element of linked list
+394. Collection api vs Stream api
+
+Kafka :
+
+
+395. Producer , consumer, Partition , topic, broker, and zoo-keeper
+396. How servlets works and life cycle
+397. Map vs flat map
+398. what happen when you start spring boot application
+399. Dead lock with out thread in java
+400. SSL vs TLS
+401. GIGC improvments
+402. how http works
+403. Hibernate Proxy
+404. Spring framework containers
+405. Spring boot starter caching
+406. @Bean vs @Component
+407. Serverless architecure
+408. Char array for password
+409. static import in java
+410. how to handle spring transaction
+411. how hashTree set works
+412. how to add different type of object to treeset
+413. Association, aggregation, and composition
+414. Garbage collection 
+415. Make class immutable
+416. Cron job,
+417. Proxy desing pattern
+418. Spring transaction isolation vs Propogation
+
+419. OAuth , different types of rest methods
+420. Docker with spring
+421. Observable Pattern
+422. Factory vs abstract factory
+423. Polymorphism
+424. what is .equal() is not overriden
+425. Junit, mockito, power mockito
+426. customized sort in hashset
+427. comparator vs comprable
+428. Purge command in java
+429. ENUM, hibernate lazy loading
+430. Sessions in MS
+431. Docker image vs container
+432. docker build cache
+433. stateless or stateful are more suitable for docker container
+434. Para-virtualization
+435. docker file onBuild instruction
+436. Dcoker with multiple environment
+437. Resource in restful web service
+438. why root certification important
+439. OPTIONS methiod of restful web services
+440. different ways to test web services
+441. what is distributed transaction
+442. Primary security issues with web-services
+443. Advantages of stateless in restful web services
+444. NoSQL vs SQL
+445. Sharding in DB
+446. how to write custome immutable class
+447. best way to store password 
+448. Marker interface in java
+449. All collections you have used in your project
+450. why set don't allow duplicates
+451. concurrent hashmap vs hashmap
+452. Internal working of hashmap
+453. if null in hash map then where that entry will be store in map
+454. Map enhancement in java 8
+
+
+Spring framework 
+
+1. Why will you choose Spring Boot over Spring Framework ?
+2. What all spring boot starter you have used or what all module you have worked on ?
+3. How will you run your Spring Boot application ?
+4. What is the purpose of the @SpringBootApplication annotation in a Spring Boot application ?
+5. can I directly use @EnableAutoConfiguration ,@ComponentScan & @Configuration annotation in my main class , instead of using
+6. @SpringBootApplication annotation , if yes will my application work as expected ?
+7. What is Auto configuration in spring boot ?
+8. How can you disable a specific auto-configuration class in Spring Boot ?
+9. How can you customize the default configuration in Spring Boot ?
+10. How Spring boot run() method works internally ?
+11. What is Command line runner in spring boot ?
+12. What is dependency injection ?
+13. How many ways we can perform dependency injection in spring or spring boot ?
+14. where you would choose to use setter injection over constructor injection, and vice versa ?
+15. Can you provide an example of a real-world use case where @PostConstruct is particularly useful?
+16. How can we dynamically load values in a Spring Boot application?
+17. Can you explain the key differences between YML and properties files, and in what scenarios you might prefer one format over the other?
+18. What is the difference between yml & YAML ?
+19. If I will configure same values in both properties then which value will be load in spring boot OR Who will load first properties or yml file ?
+20. How to load External Properties in Spring Boot ?
+21. How to map or bind config properties to java Object ?
+22. How will you resolve bean dependency ambiguity ?
+23. Can we avoid this dependency ambiguity without using @Qualifier ?
+24. What is bean scope & Can you explain different type of bean scope ?
+25. How to define custom bean scope ?
+26. Can you provide a few real-time use cases for when to choose Singleton scope and Prototype scope ?
+27. can we inject prototype bean in singleton bean ? if yes what will happen if we inject prototype bean in singleton bean ?
+28. What is the difference between spring singleton and plain singleton ?
+29. What is the purpose of the BeanPostProcessor interface in Spring, and how can you use it to customize bean initialization and destruction?
+
+
+
+
+30. Have you worked on Restful webservices ? If yes What all HTTP methods have you used in your project ?
+31. How can you specify the HTTP method type for your REST endpoint?
+    Scenario : Can you design a rest endpoint , Assume that you have a Product database, and your task is to create an API to filter a list of products by productType ?
+    Scenario : Design endpoints in a way that takes “productType” as input. If the user provides this input, the endpoint should filter products based on the specified condition. If “productType” is not provided, the endpoint should return all the products. ?
+32. What is the difference between @PathVariable & @RequestParam ?
+33. Why did you use @RestController why not @Controller ?
+34. How can we deserialize a JSON request payload into an object within a Spring MVC controller ?
+35. Can we perform update operation in POST http method if yes then why do we need Put Mapping or put http method?
+36. Can we pass Request Body in GET HTTP Method ?
+37. How can we perform content negotiation (XML/JSON) in Rest endpoint ?
+38. What all status code you have observed in your application ?
+39. How can you customize the status code for your endpoint ?
+40. How can you enable cross origin ?
+41. How can you upload a file in spring ?
+42. How do you maintain versioning for your REST API?
+43. How will you document your rest API ?
+44. How can you hide certain REST endpoints to prevent them from being exposed externally?
+45. How will you consume restful API ?
+
+46. How will you handle exceptions in your project ?
+47. How can you avoid defining handlers for multiple exceptions, or what is the best practice for handling exceptions ?
+48. How will you validate or sanitise your input payload ?
+49. How can you populate validation error message to the end users ?
+50. How can you define custom bean validation ?
+    use case : let’s say you find a bug in production environment and now you want to debug that scenario ,How can you do that from your local ?
+51. How can you enable a specific environment without using profiles? OR what is the alternative to profiles to achieving same use case ?
+52. What is the difference between @Profile & @ConditioOnXXX ?
+53. What is AOP ?
+54. What is pointcut & join Points in AOP ?
+55. What are different type of advice ?
+    use case — can I use AOP to evaluate performance of a method or is this possible to design a logging framework to capture request and response body of a method ?
+
+
+
+
+
+
+Spring boot annotations :
+
+1. @SpringBootApplication
+2. @EnableAutoConfiguration
+3. @ComponentScan
+4. @Configuration
+
+Sterotype annocations
+1. @Component
+2. @RestController
+3. @Repository
+4. @Service
+5. @Controller
+
+Spring core annotation
+1. @Configuration
+2. @Bean
+3. @Autowired
+4. @Qualifier
+5. @Lazy and @Eager
+6. @Value
+7. @PropertySource
+8. @ConfigurationProperties
+9. @Profile
+10. @Scope
+
+
+
+Spring REst api related annocations 
+1. @RestController
+2. @RequestMapping
+3. @Putmapping
+4. @RequestBody
+5. @RequestParam
+6. @ControlAdvice
+7. @ExceptionHandler
+8. @Getmapping
+9. @Postmapping
+10. @DeleteMapping
+11. @Pathvariable
+
+
+Spring data JPA :
+1. @Entity
+2. @Table
+3. @Column
+4. @Transactional
+
+Entity class relations
+1. @OneToOne
+2. @OneToMany
+3. @ManyToMany
+
+
+Security
+1. @CrossJoin
+2. @Secured
+3. @PreAuthorize
+4. @PermitAll
+
+Caching
+1. @EnableCahing
+2. @Cacheble
+3. @CahePut
+4. @CacheEvict
+
+AOP
+1. @Aspect
+2. @AfterThrowing
+3. @PointCut
+4. @AfterRunning
+5. @Around
+6. @Before
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>
+Micorservices design patterns
+1. Decomposition design patterns :
+    1. decompose by business capabilitis
+    2. Decompose by sub-domain ,furthur into core, supporotory , generics
+    3. Decompose by stragler
+      A monolith cann be run with microservice a MS groups as monolith is disambled.
+2. Integration design patterns:
+   1. API gateway
+   2. Aggregator
+   3. Proxy
+   4. client side UI composition
+   5. chain of responsibility
+   6. Branch
+
+3. Database design patterns
+    1. Database per service
+        1. private table per service
+        2. schema per service
+        3. DB server per service
+    2. Shared DB per service
+    3. Command query responsibility sergregator , One service update data, other will read.
+    4. SAGA- It is sequence of local transaction each trx updates the DB and trigger an event or publish a message for next transaction once complete then commit, otherwise rollback
+    5. Asynchronus messaging :
+        1. Request/ synchrnus response
+        2. Notification
+        3. Request/Asynchronus response
+        4. Publish/Subscribe
+        5. Publish/ Asynchronus response
+        6. Event sourcing  = Pub/sub
+    
+4. Observalibility design pattern :
+    1. Log aggregation - Kafka, Logstash, kibana
+    2. Performance metrics - Push , Pull
+    3. Java metric libraries, Prometheus, Aws, cloud watch
+    4. Distrubuted tracing 
+        1. Co-relation id
+        2. Log the corelation id
+        3. Record the details
+    5. Health check
+        1. Connection availability
+        2. host status
+        3. appplication specific logic
+
+5. External configuration :
+    1. Cross cutting concern
+    2. external configuration :
+        1. Configuration data
+        2. Multiple environment
+        3. Varying configuration data
+    3. service discovery
+    4. circuit breaker 
+    5. Blue green deployment
+    
+    
+    
+    
+
+
+
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>.
+ 
+Status codes in http API's
+1XX = Informational
+2xx = Successfull
+3xx = Redirection
+4xx = Client error
+5xx = Server error
+
+
+200 = Ok
+201 = Created
+204 = No Content
+201 = Mover Permananlty
+400 = Bad request
+401 = Un-Authorised
+403 = Forbidden
+404 = Not Found
+500 = Internal server error
+
+
+Types of API Requests
+1. Get  = Get resource from server ,read-only , 
+2. Post = Create resources from server, 
+3. Put  = Update existing resource on server , update entire resource
+4. Delete = To delete resources on server 
+5. Patch  = To update partial data on resource 
+
+Spring framework : 
+
+Features of Spring framework :
+1. Inversion of control (Ioc)
+2. Data access
+3. MVC Framework
+4. Transaction management
+5. Spring security
+6. Testing support
+7. i18n and localization
+
+Components of Spring boot app :
+1. Spring boot starters
+2. Auto configuration
+3. Spring boot actuator
+4. Embedded server
+5. Spring boot dev tools
+
+Advantages of Spring boot :
+1. Stand alone Quick Start
+2. Starter code 
+3. Less Configurations 
+4. Reduced cost and application development time
+
+Spring boot architecure  :
+1. Presentation layer
+2. Service layer 
+3. Data access layer 
+
+Browser  =>  Controller => Service = > Repository => Database
+
+
+
+
+>>>>>>>>>>>>>>>>>>>>
+
+
+
+Java
+1.Lamda expression
+2.Stream api
+3.What improvement in date time api and why
+4.Oops java
+5.Dimond problem from with java 8 default method and how to solve
+6.how to hack singleton patter how to prevent
+7.design patterns
+8.multithreading 
+9.what is synchronisation , why we need it
+10.how to prevent from object get serialise
+11.immutable class, how to create and can we break immutability of object
+12.coding questions
+13.functional interface and lamda expression
+14.marker interfaces
+15.collection internal implementations , hashmap internal working
+16.composition vs association vs aggregation
+17.can we start thread twice
+18.what happens we call run method directly instead of start of thread 
+
+
+Spring
+1.Spring life cycle, spring beans
+2.Spring beans scope
+3.Can we create more than one ioc containers
+4.If beans created in ioc context is also visble on another ioc context.
+
+
+
+
+Spring boot
+1.Spring vs spring boots
+2.Spring annotations
+3.What autoconfiguration 
+4.Advantages and disadvantages of spring
+5.How configure databases
+
+
+Hibernate and JPA
+1.Hibernate vs JPA
+2.What is transaction management in hibernet
+3.Get vs load method
+4.Save vs persist vs saveandupdate
+5.Save vs saveandflush
+6.What is session
+7.What is cache in hibernate  and how to manage it
+8.Nested trasation management and working
+9.Inheritance stratergy like table per hierache vs table per concreate class vs table per subclass
+
+Basic for just overlook….
+What is the purpose of the method public static void main in a Java program?
+What is the difference between System.out.println and System.err.println?
+What is an interface in Java?
+When would you use an abstract class instead of an interface?
+What are the differences between a public method and a protected one?
+What is a static variable?
+What is an Exception in Java?
+Is it a good practice to catch a RuntimeException?
+What is the keyword to use in a method signature to allow non-catching of an exception in this 	method?
+What is the latest version of Java?
+What is the purpose of a garbage collector?
+What is the difference between a HashSet and a TreeSet?
+Which Thread method is called when a thread starts?
+Is it possible to update a String object (without using introspection)?
+What is the contract between the methods equals and hashcode?
+Who is James Gosling?
+
+
+https://www.quora.com/What-are-the-real-life-practical-examples-of-a-Java-overloading-and-overriding
+
+
+
+
+Infosys  :
+
+1. Desing pattern in java , which you have used.
+2. Design pattern in spring microservices
+3. What is use of API_Gateway and service registry
+4. What if below add to set / Map / List , how it will behave
+    Employee e1=new Employee(1,"emp1",20000);
+	Employee e2=new Employee(1,"emp1",20000);
+5. Get max salary from lambda
+6. Functional Interface in java
+7. Sprign boot Put vs Patch
+8. Exception handling in spring boot local vs Global exception
+9. CI/ CD
+10. Git fetch vs Pull
+11. All joing in DB
+12. How to call native query in JPA
+13. How to handle composite key in JPA
+14. How do you define mapping in JPA
+15. Have you used kafka
+16. what are diferent design patther in MS
+
+
+
+
+
+
+
