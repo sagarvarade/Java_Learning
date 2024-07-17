@@ -7,10 +7,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="multithreading" />
         <module name="Hibernate" />
-        <module name="Docs" />
+        <module name="kafka_learning" />
         <module name="core_java" />
+        <module name="multithreading" />
+        <module name="Docs" />
         <module name="design_patterns" />
         <module name="database_learning" />
       </profile>
