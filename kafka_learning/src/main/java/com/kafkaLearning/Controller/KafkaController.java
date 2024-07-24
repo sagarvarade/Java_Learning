@@ -17,10 +17,10 @@ public class KafkaController {
     @Autowired
     private KafkaProducer kafkaProducer;
 
-    @GetMapping("/publish/{topic}/{key}/{message}")
-    public ResponseEntity<String> kafkaPublish(@PathVariable("topic") String topic,@PathVariable("key") String key,@PathVariable("message") String message){
+    @GetMapping("/publish/{topic}/{key}/{message}/{count}")
+    public ResponseEntity<String> kafkaPublish(@PathVariable("topic") String topic,@PathVariable("key") String key,@PathVariable("message") String message,@PathVariable("count") int count){
         try{
-            for(int i=0;i<10000;i++){
+            for(int i=0;i<count;i++){
                 kafkaProducer.sendMessageToTopic(topic,key,"MSG : "+message+" : "+i);
             }
             kafkaProducer.sendMessageToTopic(topic,key,message);
