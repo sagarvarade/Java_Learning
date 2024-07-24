@@ -9,21 +9,30 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/kafka-rest")
 public class KafkaController {
     @Autowired
     private KafkaProducer kafkaProducer;
 
-    @GetMapping("/publish/{message}")
-    public ResponseEntity<String> kafkaPublish(@PathVariable("message") String message){
+    @GetMapping("/publish/{topic}/{key}/{message}")
+    public ResponseEntity<String> kafkaPublish(@PathVariable("topic") String topic,@PathVariable("key") String key,@PathVariable("message") String message){
         try{
-            kafkaProducer.sendMessageToTopic(message);
+            for(int i=0;i<10000;i++){
+                kafkaProducer.sendMessageToTopic(topic,key,"MSG : "+message+" : "+i);
+            }
+            kafkaProducer.sendMessageToTopic(topic,key,message);
             return ResponseEntity.ok("Message published successfully..");
         }
         catch (Exception e){
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
         }
+    }
+    @GetMapping("/get-list-of-topic")
+    public ResponseEntity<List<String>> getListOfTopics(){
+        return null;
     }
 
 }

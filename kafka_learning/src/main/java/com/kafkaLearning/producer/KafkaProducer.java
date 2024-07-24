@@ -12,9 +12,8 @@ public class KafkaProducer {
     @Autowired
     private KafkaTemplate<String,Object> template;
 
-    public void sendMessageToTopic(String message){
-        CompletableFuture<SendResult<String, Object>> send = template.send("mytopic","key", message);
-
+    public void sendMessageToTopic(String topic,String key,String message){
+        CompletableFuture<SendResult<String, Object>> send = template.send(topic,key, message);
         send.whenComplete((res,ex)->{
             if(ex==null){
                 System.out.println("Sent message : "+res.getRecordMetadata().offset());
