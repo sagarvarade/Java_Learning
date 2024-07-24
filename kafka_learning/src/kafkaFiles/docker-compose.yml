@@ -10,6 +10,9 @@ services:
       - zookeeper_datalog:/datalog
     networks:
       - kafka-network
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
 
   kafka:
     image: wurstmeister/kafka:latest
@@ -25,7 +28,7 @@ services:
       KAFKA_LISTENERS: INSIDE://0.0.0.0:9093,OUTSIDE://0.0.0.0:9092
       KAFKA_INTER_BROKER_LISTENER_NAME: INSIDE
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
-      KAFKA_CREATE_TOPICS: "my-topic:1:1"
+      KAFKA_CREATE_TOPICS: "mytopic:1:1"
       KAFKA_CLUSTER_ID: kafka-cluster
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
@@ -36,6 +39,8 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
+    links:
+      - zookeeper:zookeeper
 
 networks:
   kafka-network:

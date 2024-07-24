@@ -13,7 +13,7 @@ public class KafkaProducer {
     private KafkaTemplate<String,Object> template;
 
     public void sendMessageToTopic(String message){
-        CompletableFuture<SendResult<String, Object>> send = template.send(" spring-topic","Key", message);
+        CompletableFuture<SendResult<String, Object>> send = template.send("mytopic","key", message);
 
         send.whenComplete((res,ex)->{
             if(ex==null){
@@ -22,5 +22,7 @@ public class KafkaProducer {
                 System.out.println("Unable to Sent message : "+ex.getMessage());
             }
         });
+
     }
+
 }
