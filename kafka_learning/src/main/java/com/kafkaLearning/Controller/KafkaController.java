@@ -1,16 +1,13 @@
 package com.kafkaLearning.Controller;
 
+import com.kafkaLearning.dto.Student;
 import com.kafkaLearning.producer.KafkaProducer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
 @RestController
 @RequestMapping("/kafka-rest")
 public class KafkaController {
@@ -33,6 +30,17 @@ public class KafkaController {
     @GetMapping("/get-list-of-topic")
     public ResponseEntity<List<String>> getListOfTopics(){
         return null;
+    }
+
+    @PostMapping("/publish/student/{topic}/{key}")
+    public ResponseEntity<String> kafkaPublishStudent(@PathVariable("topic") String topic,@PathVariable("key") String key,@RequestBody Student student){
+        try{
+            kafkaProducer.sendStudentToTopic(topic,key,student);
+            return ResponseEntity.ok("Student Sent to "+topic);
+        } catch (Exception e){
+            e.printStackTrace();
+            return  new ResponseEntity<>(e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
 
 }
