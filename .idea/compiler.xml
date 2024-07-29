@@ -10,6 +10,7 @@
         <module name="Hibernate" />
         <module name="kafka_learning" />
         <module name="core_java" />
+        <module name="JavaTechieSpring" />
         <module name="multithreading" />
         <module name="Docs" />
         <module name="design_patterns" />
@@ -21,6 +22,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Hibernate" options="-parameters" />
+      <module name="JavaTechieSpring" options="-parameters" />
       <module name="kafka_learning" options="-parameters" />
     </option>
   </component>

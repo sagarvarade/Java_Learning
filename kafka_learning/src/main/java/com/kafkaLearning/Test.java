@@ -20,16 +20,21 @@ public class Test implements  Runnable{
     }
 
     public static void main(String[] args)throws Exception {
-        Test t=new Test();
-        Thread thrd=new Thread(t);
-        System.out.println(thrd.getName());
-        thrd.setPriority(1);
-        thrd.start();
-
-        Thread thrd2=new Thread(t);
-        thrd2.setPriority(5);
-        System.out.println(thrd2.getName());
-        thrd2.start();
+        String x="<!DOCTYPE html>\n" +
+                "<html>\n" +
+                "<head>\n" +
+                "    <title>Email Template</title>\n" +
+                "</head>\n" +
+                "<body>\n" +
+                "    <h1>Hello, sagar_varade!</h1>\n" +
+                "\t<p>Sneha Patel</p>\n" +
+                "\t<p>sneha.patel@example.com</p>\n" +
+                "\t<p>9876543213</p>\n" +
+                "\t<p>1993-04-04 05:30:00.0</p>\n" +
+                "\t<p>Female</p>\n" +
+                "</body>\n" +
+                "</html>\n";
+        System.out.println(x.getBytes());
 
     }
 }

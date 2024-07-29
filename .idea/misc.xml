@@ -8,12 +8,8 @@
         <option value="$PROJECT_DIR$/core_java/pom.xml" />
         <option value="$PROJECT_DIR$/Hibernate/pom.xml" />
         <option value="$PROJECT_DIR$/kafka_learning/pom.xml" />
-      </list>
-    </option>
-    <option name="ignoredFiles">
-      <set>
         <option value="$PROJECT_DIR$/JavaTechieSpring/pom.xml" />
-      </set>
+      </list>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="17 (2)" project-jdk-type="JavaSDK" />
