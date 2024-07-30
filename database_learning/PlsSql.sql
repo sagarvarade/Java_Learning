@@ -954,3 +954,533 @@ END;
 
 
 
+
+
+--------------------------------------
+
+Cursor , implicit cursor, explicit cursor
+
+CURSOR cursor_name IS query;
+
+
+DECLARE
+  l_budget NUMBER := 1000000;
+   -- cursor
+  CURSOR c_sales IS
+  SELECT  *  FROM sales  
+  ORDER BY total DESC;
+   -- record    
+   r_sales c_sales%ROWTYPE;
+BEGIN
+
+  -- reset credit limit of all customers
+  UPDATE customers SET credit_limit = 0;
+
+  OPEN c_sales;
+
+  LOOP
+    FETCH  c_sales  INTO r_sales;
+    EXIT WHEN c_sales%NOTFOUND;
+
+    -- update credit for the current customer
+    UPDATE 
+        customers
+    SET  
+        credit_limit = 
+            CASE WHEN l_budget > r_sales.credit 
+                        THEN r_sales.credit 
+                            ELSE l_budget
+            END
+    WHERE 
+        customer_id = r_sales.customer_id;
+
+    --  reduce the budget for credit limit
+    l_budget := l_budget - r_sales.credit;
+
+    DBMS_OUTPUT.PUT_LINE( 'Customer id: ' ||r_sales.customer_id || 
+' Credit: ' || r_sales.credit || ' Remaining Budget: ' || l_budget );
+
+    -- check the budget
+    EXIT WHEN l_budget <= 0;
+  END LOOP;
+
+  CLOSE c_sales;
+END;
+
+
+
+DECLARE
+  CURSOR c_product
+  IS
+    SELECT 
+        product_name, list_price
+    FROM 
+        products 
+    ORDER BY 
+        list_price DESC;
+BEGIN
+  FOR r_product IN c_product
+  LOOP
+    dbms_output.put_line( r_product.product_name || ': $' ||  r_product.list_price );
+  END LOOP;
+END;
+
+
+
+set serveroutput on;
+
+BEGIN
+  FOR r_product IN (
+        SELECT 
+            product_name, list_price 
+        FROM 
+            products
+        ORDER BY list_price DESC
+    )
+  LOOP
+     dbms_output.put_line( r_product.product_name ||
+        ': $' || 
+        r_product.list_price );
+  END LOOP;
+END;
+
+
+
+BEGIN
+  FOR r_product IN (
+        SELECT 
+            product_name, list_price 
+        FROM 
+            products
+        ORDER BY list_price DESC
+    )
+  LOOP
+     dbms_output.put_line( r_product.product_name ||
+        ': $' || 
+        r_product.list_price );
+  END LOOP;
+END;
+
+-- Cursors  
+
+DECLARE
+    r_product products%rowtype;
+    CURSOR c_product (low_price NUMBER, high_price NUMBER)
+    IS
+        SELECT *
+        FROM products
+        WHERE list_price BETWEEN low_price AND high_price;
+BEGIN
+    -- show mass products
+    dbms_output.put_line('Mass products: ');
+    OPEN c_product(50,100);
+    LOOP
+        FETCH c_product INTO r_product;
+        EXIT WHEN c_product%notfound;
+        dbms_output.put_line(r_product.product_name || ': ' ||r_product.list_price);
+    END LOOP;
+    CLOSE c_product;
+
+    -- show luxury products
+    dbms_output.put_line('Luxury products: ');
+    OPEN c_product(800,1000);
+    LOOP
+        FETCH c_product INTO r_product;
+        EXIT WHEN c_product%notfound;
+        dbms_output.put_line(r_product.product_name || ': ' ||r_product.list_price);
+    END LOOP;
+    CLOSE c_product;
+
+END;
+/
+
+
+
+
+
+
+
+
+
+
+DECLARE
+    CURSOR c_revenue (in_year NUMBER :=2017 , in_customer_id NUMBER := 1)
+    IS
+        SELECT SUM(quantity * unit_price) revenue
+        FROM order_items
+        INNER JOIN orders USING (order_id)
+        WHERE status = 'Shipped' AND EXTRACT( YEAR FROM order_date) = in_year
+        GROUP BY customer_id
+        HAVING customer_id = in_customer_id;
+        
+    r_revenue c_revenue%rowtype;
+BEGIN
+    OPEN c_revenue;
+    LOOP
+        FETCH c_revenue INTO r_revenue;
+        EXIT    WHEN c_revenue%notfound;
+        -- show the revenue
+        dbms_output.put_line(r_revenue.revenue);
+    END LOOP;
+    CLOSE c_revenue;
+END;
+
+
+
+
+
+CREATE OR REPLACE FUNCTION get_direct_reports(
+      in_manager_id IN employees.manager_id%TYPE)
+   RETURN SYS_REFCURSOR
+AS
+   c_direct_reports SYS_REFCURSOR;
+BEGIN
+
+   OPEN c_direct_reports FOR 
+   SELECT 
+      employee_id, 
+      first_name, 
+      last_name, 
+      email
+   FROM 
+      employees 
+   WHERE 
+      manager_id = in_manager_id 
+   ORDER BY 
+         first_name,   
+         last_name;
+
+   RETURN c_direct_reports;
+END;
+
+
+
+DECLARE
+   c_direct_reports SYS_REFCURSOR;
+   l_employee_id employees.employee_id%TYPE;
+   l_first_name  employees.first_name%TYPE;
+   l_last_name   employees.last_name%TYPE;
+   l_email       employees.email%TYPE;
+BEGIN
+   -- get the ref cursor from function
+   c_direct_reports := get_direct_reports(42); 
+   
+   -- process each employee
+   LOOP
+      FETCH
+         c_direct_reports
+      INTO
+         l_employee_id,
+         l_first_name,
+         l_last_name,
+         l_email;
+      EXIT
+   WHEN c_direct_reports%notfound;
+      dbms_output.put_line(l_first_name || ' ' || l_last_name || ' - ' ||    l_email );
+   END LOOP;
+   -- close the cursor
+   CLOSE c_direct_reports;
+END;
+/
+
+
+
+DECLARE
+    -- customer cursor
+    CURSOR c_customers IS 
+        SELECT 
+            customer_id, 
+            name, 
+            credit_limit
+        FROM 
+            customers
+        WHERE 
+            credit_limit > 0 
+        FOR UPDATE OF credit_limit;
+    -- local variables
+    l_order_count PLS_INTEGER := 0;
+    l_increment   PLS_INTEGER := 0;
+    
+BEGIN
+    FOR r_customer IN c_customers
+    LOOP
+        -- get the number of orders of the customer
+        SELECT COUNT(*)
+        INTO l_order_count
+        FROM orders
+        WHERE customer_id = r_customer.customer_id;
+        -- 
+        IF l_order_count >= 5 THEN
+            l_increment := 5;
+        ELSIF l_order_count < 5 AND l_order_count >=2 THEN
+            l_increment := 2;
+        ELSIF l_increment = 1 THEN
+            l_increment := 1;
+        ELSE 
+            l_increment := 0;
+        END IF;
+        
+        IF l_increment > 0 THEN
+            -- update the credit limit
+            UPDATE 
+                customers
+            SET 
+                credit_limit = credit_limit * ( 1 +  l_increment/ 100)
+            WHERE 
+                customer_id = r_customer.customer_id;
+            
+            -- show the customers whose credits are increased
+            dbms_output.put_line('Increase credit for customer ' 
+                || r_customer.NAME || ' by ' 
+                || l_increment || '%' );
+        END IF;
+    END LOOP;
+    
+    EXCEPTION
+        WHEN OTHERS THEN
+            dbms_output.put_line('Error code:' || SQLCODE);
+            dbms_output.put_line('Error message:' || sqlerrm);
+            RAISE;
+            
+END;
+/
+
+
+
+PL/SQL procedures
+
+
+1) Declarative part
+
+In this part, you can declare variables, constants, cursors, etc. Unlike an anonymous block, a declaration part of a procedure does not start with the DECLARE keyword.
+
+2) Executable part
+
+This part contains one or more statements that implement specific business logic. It might contain only a NULL statement.
+
+3) Exception-handling part
+
+This part contains the code that handles exceptions.
+
+
+
+CREATE OR REPLACE PROCEDURE print_contact(
+    in_customer_id NUMBER 
+)
+IS
+  r_contact contacts%ROWTYPE;
+BEGIN
+  -- get contact based on customer id
+  SELECT *
+  INTO r_contact
+  FROM contacts
+  WHERE customer_id = p_customer_id;
+
+  -- print out contact's information
+  dbms_output.put_line( r_contact.first_name || ' ' ||
+  r_contact.last_name || '<' || r_contact.email ||'>' );
+
+EXCEPTION
+   WHEN OTHERS THEN
+      dbms_output.put_line( SQLERRM );
+END;
+
+
+
+CREATE OR REPLACE PROCEDURE get_customer_by_credit(
+    min_credit NUMBER
+)
+AS 
+    c_customers SYS_REFCURSOR;
+BEGIN
+    -- open the cursor
+    OPEN c_customers FOR
+        SELECT customer_id, credit_limit, name
+        FROM customers
+        WHERE credit_limit > min_credit
+        ORDER BY credit_limit;
+    -- return the result set
+    dbms_sql.return_result(c_customers);
+END;
+
+
+exec get_customer_by_credit(100);
+
+
+
+CREATE OR REPLACE PROCEDURE get_customers(
+    page_no NUMBER, 
+    page_size NUMBER
+)
+AS
+    c_customers SYS_REFCURSOR;
+    c_total_row SYS_REFCURSOR;
+BEGIN
+    -- return the total of customers
+    OPEN c_total_row FOR
+        SELECT COUNT(*)
+        FROM customers;
+    
+    dbms_sql.return_result(c_total_row);
+    
+    -- return the customers 
+    OPEN c_customers FOR
+        SELECT customer_id, name
+        FROM customers
+        ORDER BY name
+        OFFSET page_size * (page_no - 1) ROWS
+        FETCH NEXT page_size ROWS ONLY;
+        
+    dbms_sql.return_result(c_customers);    
+END;
+
+
+
+EXEC get_customers(1,10);
+
+
+
+
+
+
+
+
+CREATE OR REPLACE FUNCTION get_total_sales(
+    in_year PLS_INTEGER
+) 
+RETURN NUMBER
+IS
+    l_total_sales NUMBER := 0;
+BEGIN
+    -- get total sales
+    SELECT SUM(unit_price * quantity)
+    INTO l_total_sales
+    FROM order_items
+    INNER JOIN orders USING (order_id)
+    WHERE status = 'Shipped'
+    GROUP BY EXTRACT(YEAR FROM order_date)
+    HAVING EXTRACT(YEAR FROM order_date) = in_year;
+    
+    -- return the total sales
+    RETURN l_total_sales;
+END;
+
+
+select get_total_sales(2016) from dual;
+
+
+DECLARE
+    l_sales_2017 NUMBER := 0;
+BEGIN
+    l_sales_2017 := get_total_sales (2017);
+    DBMS_OUTPUT.PUT_LINE('Sales 2017: ' || l_sales_2017);
+END;
+
+BEGIN
+    IF get_total_sales (2017) > 10000000 THEN
+        DBMS_OUTPUT.PUT_LINE('Sales 2017 is above target');
+    END IF;
+END;
+
+
+
+Package : 
+
+
+
+CREATE OR REPLACE PACKAGE order_mgmt
+AS
+  gc_shipped_status  CONSTANT VARCHAR(10) := 'Shipped';
+  gc_pending_status CONSTANT VARCHAR(10) := 'Pending';
+  gc_canceled_status CONSTANT VARCHAR(10) := 'Canceled';
+
+  -- cursor that returns the order detail
+  CURSOR g_cur_order(p_order_id NUMBER)
+  IS
+    SELECT
+      customer_id,
+      status,
+      salesman_id,
+      order_date,
+      item_id,
+      product_name,
+      quantity,
+      unit_price
+    FROM
+      order_items
+    INNER JOIN orders USING (order_id)
+    INNER JOIN products USING (product_id)
+    WHERE
+      order_id = p_order_id;
+
+  -- get net value of a order
+  FUNCTION get_net_value(
+      p_order_id NUMBER)
+    RETURN NUMBER;
+
+  -- Get net value by customer
+  FUNCTION get_net_value_by_customer(
+      p_customer_id NUMBER,
+      p_year        NUMBER)
+    RETURN NUMBER;
+
+END order_mgmt;
+
+
+
+
+
+CREATE TABLE audits (
+      audit_id         NUMBER GENERATED BY DEFAULT AS IDENTITY PRIMARY KEY,
+      table_name       VARCHAR2(255),
+      transaction_name VARCHAR2(10),
+      by_user          VARCHAR2(30),
+      transaction_date DATE
+);
+
+
+
+
+CREATE OR REPLACE TRIGGER customers_audit_trg
+    AFTER 
+    UPDATE OR DELETE 
+    ON customers
+    FOR EACH ROW    
+DECLARE
+   l_transaction VARCHAR2(10);
+BEGIN
+   -- determine the transaction type
+   l_transaction := CASE  
+         WHEN UPDATING THEN 'UPDATE'
+         WHEN DELETING THEN 'DELETE'
+   END;
+
+   -- insert a row into the audit table   
+   INSERT INTO audits (table_name, transaction_name, by_user, transaction_date)
+   VALUES('CUSTOMERS', l_transaction, USER, SYSDATE);
+END;
+/
+
+
+
+
+
+
+
+
+
+
+CREATE OR REPLACE TRIGGER customers_credit_trg
+    BEFORE UPDATE OF credit_limit  
+    ON customers
+DECLARE
+    l_day_of_month NUMBER;
+BEGIN
+    -- determine the transaction type 
+    l_day_of_month := EXTRACT(DAY FROM sysdate);
+
+    IF l_day_of_month BETWEEN 28 AND 31 THEN
+        raise_application_error(-20100,'Cannot update customer credit from 28th to 31st');
+    END IF;
+END;
+
