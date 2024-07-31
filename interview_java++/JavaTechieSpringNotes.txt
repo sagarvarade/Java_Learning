@@ -1,0 +1,68 @@
+Spring boot with java techie:
+
+1. Video 2 :
+Spring boot demo app and internal working :
+
+Benefits ot spring boot obver spring
+1. Dependecy resolution/avoit version conflict
+2. muimum or very less config
+3. embeded tomcat , jetty
+3. No boilerplate code, and no requirement for xml config
+4. Production ready feature such as metrics and health check
+5. Auto configuration
+
+
+Prop file :
+debug=true  => will show all logs
+
+
+@Configuration
+@AutoConfiguraion
+@ConditionalOnProperty  -prop file checking
+@ConditionalOnClass  : Check for class in classpath : Advice.class
+@ConditionalOnWebApplication
+@ConditionalOnMissingBean : If bean is missing from context of spring
+
+
+Spring autoconfiguration is alternative  to  spring profile.
+
+for autoconfiguration in SB.
+All auto config is saved uin above files
+Meta-inf
+Spring.factories 
+spring-autoconfigure-metadata.properties
+spring-configuration-metadata.json 
+
+Spring app will starts with main method 
+
+Spring Context : 
+
+@SpringBootApplication , compose of : 
+1. SpringBootConfiguration = use for java base config approach to define a bean 
+2. EnableAutoConfiguration = Scan pom.xml and enable bean of config.
+3. ComponentScan = Need to tell which package to scan to start this app
+   @ComponentScan("com.javatechie.a.*") = will load all beans in this package
+
+
+Q. what is @SpringBootApplication
+
+
+Spring boot internal Work :
+1. Create application context 
+2. check for application type :
+    Two app types
+    1. Web application servlet type
+    2. Reactive application type
+3. Add annotated scanned beans to application context, depends on @ComponentScan
+4. Once bean is loaded , it will enable embedded tomcat containers
+
+
+
+Spring boot starter dependencies :
+1. Web
+2. JPA
+3. 
+
+
+
+ 

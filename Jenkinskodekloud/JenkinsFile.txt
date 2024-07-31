@@ -39,3 +39,29 @@ sudo systemctl enable jenkins
 sudo systemctl start jenkins
 
 sudo systemctl status jenkins
+
+
+
+---
+
+sudo yum install epel-release -y
+sudo yum install java-11-openjdk -y
+sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo --no-check-certificate
+sudo rpm --import http://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
+sudo yum install jenkins -y
+
+sudo vi /lib/systemd/system/jenkins.service
+
+Environment="JENKINS_PORT=8090"
+
+
+check port 
+curl -Lv http://localhost:8085/login 2>&1 | grep -i 'x-ssh-endpoint'
+
+
+curl -Lv http://localhost:8085/login 2>&1 | grep -i 'x-ssh-endpoint'
+
+
+service jenkins restart
+
+
