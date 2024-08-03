@@ -609,6 +609,21 @@ Spring framework
 
 
 
+LTI :
+1.  Merge two Employee ArrayList and sort by age in using java8 stream API
+ 
+List<Employee> list1 = ...; // Your first list
+
+List<Employee> list2 = ...; // Your second list
+
+2. SSL
+3. What if serialization not used
+4. what is use for this
+5. How to call other mircoservices
+6. Java 8 stream api
+7. SQL questions  get count of employee from table per project
+
+
 
 Spring boot annotations :
 

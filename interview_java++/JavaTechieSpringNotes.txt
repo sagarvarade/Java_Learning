@@ -27,7 +27,7 @@ debug=true  => will show all logs
 Spring autoconfiguration is alternative  to  spring profile.
 
 for autoconfiguration in SB.
-All auto config is saved uin above files
+All auto config is saved in above files
 Meta-inf
 Spring.factories 
 spring-autoconfigure-metadata.properties
@@ -62,6 +62,113 @@ Spring boot starter dependencies :
 1. Web
 2. JPA
 3. 
+
+
+
+Video 3 :
+
+Video 3: 
+Dependency Injections , types 
+1. Can be used by using interface to create object
+2. Factory pattern can be used to create object
+
+1. Constructor DI
+2. Setter DI
+
+IOC, inversion of control
+
+Sterotype Annotations, 4 annotations to identify class as service or repository, Its good practive to seperate this annos.
+
+1. @Component  =Parent of below annotations
+2. @Service
+3. @Repository
+4. @Controller
+
+
+@Autowired : Most imp, will create object in Spring app ,setter is default injection, if other is not set to bean.
+
+If two bean found we get error , required a single bean found 2 , to resolve this we can use @Qualifier annotaion 
+
+1. Setter injection
+
+@Autowired
+@Qualifier("tikTokService") 
+private Social Service;
+=> class Name in camel case / setter injection
+
+2. Constructor injection
+
+private SocialService service;
+
+@Autowired
+public UserApp(@Qualifier("whatsAppService") SocialSerive service){
+this.service=service;
+}
+
+why we have two injection stratergies :
+1. If injection is optional then go for setter
+2. If injection is mandatory then go for construction DI, Spring will make sure bean is loaded.
+   If there is cyclic dependency then it can be solved by setter injection, constructor injection can not solve this.
+
+
+2. Command Line runners : 
+    If we want to do somethis before application start up then we should use command line runners , need to implement command line runner interface and need to override run method. this overriden method will be called before SpringApp.run();  , Instead of command line runner we can use @PostConstruct annoation to run some method before main method.
+
+@SpringBootApplication
+class App implements CommandLineRunner{
+   
+@PostConstruct
+public void postme(){  sout("post app run"); }
+  @Override
+  public void run(String... args){
+  sout("print before app statrt");
+}
+}
+
+Video 4 : Spring boot Rest example 
+
+We can expose our services to users
+1. SOAP
+  ->  Need to stick with SOAP protocol
+  ->  Can only use XML
+  ->  Secure 
+  ->  WSDL -> Wsdl2Java -> pojo -> stub -> call the method
+2. REST
+  -> We can use HTTP, HTTPS protocols
+  -> Media type can be anything , XML,JSON, Text ,HTML
+  -> Now with security rest is as secure as SOAP, with token base auth
+  -> Design principle is easy :  Just create a method ->define http method type ->define the URL from which user will access the url.
+
+
+3. 3 layer tiers architecture (Industry standard )
+   Web = sevice = Database 
+
+1. Web -> Rest controller, HTTP methods 
+2. Service -> business layer
+3. DB  -> DAO logic connections
+
+For project structure we need to create different packages :
+1. controller -> for all the rest controllers we need
+2. DAO/ repository  -> Data access obejct
+3. service   -> for service 
+4. dto -> data transfer object , for all the request/response object structures
+5. entity -> For Jpa entities
+6. Exception --> for custome exceptions 
+
+JSON data ->controller -> service -> dto/repository-> entity -> model ->DB
+
+RestController = @Controller + @ResponseBody
+
+HTTP methods :
+
+1. POST   -> Create resource (insert to DB)
+2. PUT     -> Modifying the resource
+3. GET     -> get the resource 
+4. DELETE -> delete from the DB
+5. OPTION -> used to request information about the communication options available for a target resource
+6. PATCH   -> to update partial object
+7. HEAD   ->  to get metadata about the object
+
 
 
 
