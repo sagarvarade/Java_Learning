@@ -6,6 +6,9 @@ import com.JavaTechieSpring.Exception.CourseServiceBusinessException;
 import com.JavaTechieSpring.entity.CourseEntity;
 import com.JavaTechieSpring.repository.CourseRepository;
 import com.JavaTechieSpring.util.AppUtils;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -37,6 +40,10 @@ public class CourseService {
     }
 
     // Get course by id
+    @Operation(summary = "Find course by course  Id.")
+    @ApiResponses(value={
+            @ApiResponse(responseCode = "200",description = "Get course by id")
+    })
     public CourseResponseDTO getCourseById(Integer id){
         CourseEntity courseEntity=courseRepository.findById(id).orElseThrow(()->new CourseServiceBusinessException(id+" not found is DB."));
         return  AppUtils.mapCourseEntityToCourseResponse(courseEntity);

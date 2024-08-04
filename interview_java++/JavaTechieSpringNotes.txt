@@ -169,6 +169,17 @@ HTTP methods :
 6. PATCH   -> to update partial object
 7. HEAD   ->  to get metadata about the object
 
+Video Bean validation: 
+
+Constraints on bean 
+
+1. @NotNull
+2. @NotEmpty
+3. @NotBlank
+4. @Min / @Max
+5. @Pattern
+6. @Email
+7. @PastOrPresent
 
 
 
