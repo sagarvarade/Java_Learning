@@ -1,7 +1,7 @@
 package com.JavaTechieSpring.util;
 
-import com.JavaTechieSpring.dataTransferObject.CourseRequestDTO;
-import com.JavaTechieSpring.dataTransferObject.CourseResponseDTO;
+import com.JavaTechieSpring.DTO.CourseRequestDTO;
+import com.JavaTechieSpring.DTO.CourseResponseDTO;
 import com.JavaTechieSpring.entity.CourseEntity;
 
 
@@ -17,6 +17,9 @@ public class AppUtils {
         courseEntity.setFees(courseRequestDTO.getFees());
         courseEntity.setCertificateAvailable(courseRequestDTO.isCertificateAvailable());
         courseEntity.setDescription(courseRequestDTO.getDescription());
+        courseEntity.setEmail(courseRequestDTO.getEmail());
+        courseEntity.setContact(courseRequestDTO.getContact());
+        courseEntity.setCourseType(courseRequestDTO.getCourseType());
         return courseEntity;
     }
 
@@ -31,6 +34,9 @@ public class AppUtils {
         courseResponseDTO.setCertificateAvailable(courseEntity.isCertificateAvailable());
         courseResponseDTO.setDescription(courseEntity.getDescription());
         courseResponseDTO.setCourseUniqueCode("");
+        courseResponseDTO.setEmail(courseEntity.getEmail());
+        courseResponseDTO.setContact(courseEntity.getContact());
+        courseResponseDTO.setCourseType(courseEntity.getCourseType());
         return courseResponseDTO;
     }
 }

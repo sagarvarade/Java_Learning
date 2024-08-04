@@ -24,4 +24,7 @@ public class CourseEntity {
     private double fees;
     private boolean isCertificateAvailable;
     private String description;
+    private String email;
+    private String contact;
+    private String courseType;
 }

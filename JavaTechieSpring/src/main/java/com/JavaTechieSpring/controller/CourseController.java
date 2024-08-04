@@ -1,12 +1,12 @@
 package com.JavaTechieSpring.controller;
 
-import com.JavaTechieSpring.dataTransferObject.CourseRequestDTO;
-import com.JavaTechieSpring.dataTransferObject.CourseResponseDTO;
-import com.JavaTechieSpring.dataTransferObject.ServiceResponse;
+import com.JavaTechieSpring.DTO.CourseRequestDTO;
+import com.JavaTechieSpring.DTO.CourseResponseDTO;
+import com.JavaTechieSpring.DTO.ServiceResponse;
 import com.JavaTechieSpring.service.CourseService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -26,8 +26,8 @@ public class CourseController {
 
     @PostMapping("/add-course")
     //@RequestMapping(value="add-course",method = RequestMethod.POST)
-    public ServiceResponse<CourseResponseDTO> addCourse(@RequestBody CourseRequestDTO course){
-        return new ServiceResponse<>(HttpStatus.CREATED,courseService.onBoardNewCourse(course));
+    public ServiceResponse<CourseResponseDTO> addCourse(@RequestBody @Valid CourseRequestDTO courseRequestDTO){
+        return new ServiceResponse<>(HttpStatus.CREATED,courseService.onBoardNewCourse(courseRequestDTO));
     }
 
     @GetMapping("/get-all-courses")
@@ -52,7 +52,7 @@ public class CourseController {
     }
 
     @PutMapping("/{id}")
-    public ServiceResponse<CourseResponseDTO> updateCourse(@PathVariable("id")  int id,@RequestBody CourseRequestDTO course ){
+    public ServiceResponse<CourseResponseDTO> updateCourse(@PathVariable("id")  int id,@RequestBody @Valid CourseRequestDTO course ){
         return new ServiceResponse<CourseResponseDTO>(HttpStatus.OK,courseService.updateCourse(id,course));
     }
 }

@@ -1,7 +1,8 @@
 package com.JavaTechieSpring.service;
 
-import com.JavaTechieSpring.dataTransferObject.CourseRequestDTO;
-import com.JavaTechieSpring.dataTransferObject.CourseResponseDTO;
+import com.JavaTechieSpring.DTO.CourseRequestDTO;
+import com.JavaTechieSpring.DTO.CourseResponseDTO;
+import com.JavaTechieSpring.Exception.CourseServiceBusinessException;
 import com.JavaTechieSpring.entity.CourseEntity;
 import com.JavaTechieSpring.repository.CourseRepository;
 import com.JavaTechieSpring.util.AppUtils;
@@ -37,7 +38,7 @@ public class CourseService {
 
     // Get course by id
     public CourseResponseDTO getCourseById(Integer id){
-        CourseEntity courseEntity=courseRepository.findById(id).orElseThrow(()->new RuntimeException("not found"));
+        CourseEntity courseEntity=courseRepository.findById(id).orElseThrow(()->new CourseServiceBusinessException(id+" not found is DB."));
         return  AppUtils.mapCourseEntityToCourseResponse(courseEntity);
     }
     //1:8

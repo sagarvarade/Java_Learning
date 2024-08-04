@@ -1,4 +1,4 @@
-package com.JavaTechieSpring.dataTransferObject;
+package com.JavaTechieSpring.DTO;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
@@ -22,4 +22,7 @@ public class CourseBaseDTO {
     private boolean isCertificateAvailable;
     private String description;
     private String courseUniqueCode;
+    private String email;
+    private String contact;
+    private String courseType;
 }

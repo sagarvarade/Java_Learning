@@ -941,6 +941,1392 @@ Infosys  :
 
 
 
+Generating 1000 questions involving Java 8 Streams would be quite extensive, but I can certainly get you started with a good number of varied questions. Here are some examples to get you started. 
+
+### Questions on Java 8 Streams Using Consumer, Producer, Filter, and Collectors
+
+1. **Filtering and Collecting**: 
+   - Given a list of integers, filter out the odd numbers and collect the even numbers into a new list.
+
+2. **Mapping and Collecting**:
+   - Given a list of strings, convert each string to its uppercase form and collect the results into a set.
+
+3. **Sorting and Collecting**:
+   - Given a list of employees, sort them by their salary in descending order and collect the top 5 employees into a list.
+
+4. **Reducing**:
+   - Given a list of integers, find the sum of all the integers using the `reduce` method.
+
+5. **Filtering and Counting**:
+   - Given a list of students with their grades, filter out the students who scored above 90 and count them.
+
+6. **Mapping and Joining**:
+   - Given a list of strings, convert them to uppercase and join them into a single string separated by commas.
+
+7. **Grouping and Counting**:
+   - Given a list of transactions with their types, group the transactions by type and count the number of transactions in each group.
+
+8. **Mapping and Reducing**:
+   - Given a list of products with their prices, calculate the total price of all products using the `map` and `reduce` methods.
+
+9. **Filtering and Collecting to Map**:
+   - Given a list of employees, filter the employees who have a salary above 5000 and collect them into a map with employee id as key and employee name as value.
+
+10. **Parallel Streams**:
+    - Given a large list of integers, use a parallel stream to find the maximum integer.
+
+### More Specific Examples
+
+11. **Filtering Strings by Length**:
+    - Given a list of strings, filter out strings that are shorter than 5 characters and collect the remaining strings into a list.
+
+12. **Grouping by First Character**:
+    - Given a list of strings, group them by their first character and collect the results into a map.
+
+13. **Finding Average**:
+    - Given a list of numbers, find the average of these numbers using the `Collectors.averagingDouble` method.
+
+14. **Finding Minimum and Maximum**:
+    - Given a list of employees, find the employee with the minimum salary and the employee with the maximum salary.
+
+15. **Partitioning by Predicate**:
+    - Given a list of integers, partition them into two lists: one with even numbers and one with odd numbers.
+
+16. **Summarizing Statistics**:
+    - Given a list of integers, obtain various statistics such as count, sum, min, average, and max using `IntSummaryStatistics`.
+
+17. **Converting Stream to Array**:
+    - Given a list of integers, convert the stream to an array of integers.
+
+18. **Collecting to Unmodifiable List**:
+    - Given a list of strings, collect them into an unmodifiable list.
+
+19. **Distinct Elements**:
+    - Given a list of integers, collect all the distinct integers into a set.
+
+20. **Flat Mapping**:
+    - Given a list of lists of integers, flatten the lists into a single list of integers.
+
+### Questions on Consumers and Producers
+
+21. **Consumer for Printing**:
+    - Create a `Consumer` that prints each element of a list of strings.
+
+22. **Consumer for Updating**:
+    - Create a `Consumer` that updates the age of each employee in a list by adding 1 year.
+
+23. **Producer for Generating Data**:
+    - Create a `Supplier` that generates random integers and use it to populate a list of 10 random integers.
+
+24. **Producer for Creating Objects**:
+    - Create a `Supplier` that generates new instances of a `Person` class and use it to create a list of 5 people.
+
+25. **BiConsumer Example**:
+    - Create a `BiConsumer` that takes two integers and prints their sum.
+
+26. **BiFunction Example**:
+    - Create a `BiFunction` that takes two strings and concatenates them.
+
+27. **Predicate for Filtering**:
+    - Create a `Predicate` that checks if a string starts with the letter 'A' and use it to filter a list of strings.
+
+28. **Predicate for Conditions**:
+    - Create a `Predicate` that checks if an integer is greater than 100 and use it to filter a list of integers.
+
+29. **Using Consumer in ForEach**:
+    - Given a list of integers, use a `Consumer` in a `forEach` method to print each integer.
+
+30. **Using Predicate for Validation**:
+    - Create a `Predicate` to check if an employee’s salary is above a certain threshold and use it to filter a list of employees.
+
+### Advanced Examples
+
+31. **Custom Collector**:
+    - Create a custom collector to collect a list of strings into a single concatenated string with elements separated by a space.
+
+32. **Combining Predicates**:
+    - Given a list of integers, combine multiple predicates to filter out integers that are both even and greater than 10.
+
+33. **Using Collectors to Group By**:
+    - Given a list of students with their grades, group the students by grade and collect the results into a map.
+
+34. **Using Collectors to Partition By**:
+    - Given a list of numbers, partition them into even and odd numbers and collect the results into a map.
+
+35. **Chaining Consumers**:
+    - Create two `Consumer` instances, one that prints an integer and another that prints the square of the integer. Chain them together to process a list of integers.
+
+36. **Filtering with Complex Predicate**:
+    - Given a list of employees, filter out employees who have been with the company for less than 2 years and have a salary less than 5000.
+
+37. **Finding the Second Largest**:
+    - Given a list of integers, find the second largest integer using streams.
+
+38. **Stream of Custom Objects**:
+    - Given a list of `Person` objects, filter out persons who are older than 30 and collect their names into a list.
+
+39. **Optional with Streams**:
+    - Given a list of integers, find the first integer that is greater than 50, if any, using `Optional`.
+
+40. **Using `collectingAndThen`**:
+    - Given a list of integers, find the sum of the integers and then return the sum as a string.
+
+### Project-Oriented Questions
+
+41. **Employee Project Grouping**:
+    - Given a list of employees and their projects, group the employees by project and collect the results into a map.
+
+42. **Top N Salaries**:
+    - Given a list of employees, find the top 3 highest salaries and collect the corresponding employees into a list.
+
+43. **Yearly Salary Calculation**:
+    - Given a list of employees with their monthly salaries, calculate the yearly salary for each employee and collect the results into a map with employee id as key and yearly salary as value.
+
+44. **Birthday Celebration**:
+    - Given a list of employees with their birth dates, find out how many employees have birthdays in the current month.
+
+45. **Longest Tenure**:
+    - Given a list of employees with their joining dates, find the employee with the longest tenure.
+
+46. **City-wise Employee Count**:
+    - Given a list of employees with their cities, count the number of employees in each city and sort the results in descending order of count.
+
+47. **Department-wise Average Salary**:
+    - Given a list of employees with their departments and salaries, calculate the average salary in each department.
+
+48. **Dynamic Predicate Filtering**:
+    - Given a list of integers and a dynamically created predicate, filter the integers using the predicate.
+
+49. **Transforming Data Structure**:
+    - Given a list of `Employee` objects, transform it into a list of `EmployeeDTO` objects where `EmployeeDTO` contains only `name` and `age`.
+
+50. **Joining Data from Two Streams**:
+    - Given two lists of students and their respective scores in two different subjects, create a combined list with each student's total score.
+
+### Questions on Error Handling and Edge Cases
+
+51. **Handling Nulls in Stream**:
+    - Given a list of integers that might contain null values, filter out the null values and collect the remaining integers into a list.
+
+52. **Default Values with Optionals**:
+    - Given a list of strings, find the first string that starts with 'A', if any, or return a default string.
+
+53. **Empty Stream Handling**:
+    - Given an empty list, use streams to ensure the resulting operations do not throw an error and handle the empty case gracefully.
+
+54. **Safe Stream Termination**:
+    - Given a list of integers, ensure the stream operations terminate safely even if the list is null.
+
+55. **Logging Intermediate Results**:
+    - Given a list of integers, log each intermediate result while performing a map operation to square each integer.
+
+### Combining Concepts
+
+56. **Combining Map and FlatMap**:
+    - Given a list of sentences, split each sentence into words and flatten the results into a list of words.
+
+57. **Using Peek for Debugging**:
+    - Given a list of integers, use `peek` to log each integer before and after filtering even numbers.
+
+58. **Complex Collector with Multiple Operations**:
+    - Given a list of employees, create a collector that groups employees by department, then collects each department's employees into a sorted list by salary.
+
+59. **Generating Stream from Supplier**:
+    - Use a
+
+ `Supplier` to generate a stream of 10 random integers and collect them into a list.
+
+60. **Dynamic Stream Building**:
+    - Given a list of user inputs, dynamically build a stream pipeline based on the inputs (e.g., filter, map, sort).
+
+### Use Cases and Scenarios
+
+61. **Email Validation**:
+    - Given a list of emails, filter out invalid emails and collect the valid ones into a list.
+
+62. **Phone Number Formatting**:
+    - Given a list of phone numbers, format each number to a standard format and collect the results into a list.
+
+63. **Product Discount Calculation**:
+    - Given a list of products with their prices, apply a discount to each price and collect the discounted prices into a list.
+
+64. **File Processing**:
+    - Read a list of strings from a file, filter out empty lines, and collect the non-empty lines into a list.
+
+65. **Stream from Custom Iterator**:
+    - Create a custom iterator for a list of integers and convert it into a stream to process the integers.
+
+### Performance and Optimization
+
+66. **Parallel Stream for Large Data**:
+    - Given a large list of integers, use a parallel stream to calculate the sum of the integers.
+
+67. **Stream Pipeline Optimization**:
+    - Optimize a complex stream pipeline that performs multiple filtering and mapping operations to improve performance.
+
+68. **Stream Reuse**:
+    - Given a list of integers, demonstrate how to reuse a stream pipeline efficiently.
+
+69. **Lazy Evaluation Demonstration**:
+    - Given a list of integers, demonstrate the lazy evaluation nature of streams by logging intermediate results and showing that operations are not executed until a terminal operation is invoked.
+
+70. **Combining Streams from Multiple Sources**:
+    - Given multiple lists of integers, combine them into a single stream and perform a collective operation like finding the maximum value.
+
+These questions should give you a broad range of examples to work with and understand various aspects of Java 8 Streams, from basic filtering and mapping to more complex operations involving custom collectors and parallel processing. Feel free to expand on these examples or generate more based on different scenarios and use cases.
 
 
+
+Certainly! Here are the next 100 questions involving Java 8 Streams with a focus on using `Consumer`, `Producer`, `Filter`, and `Collectors`:
+
+### Advanced Filtering and Mapping
+
+71. **Filter by String Length**:
+    - Given a list of strings, filter out strings longer than 10 characters and collect the results into a list.
+
+72. **Map and Filter**:
+    - Given a list of `Employee` objects, map the `Employee` objects to their salaries, filter out salaries less than 5000, and collect the results into a list.
+
+73. **Flatten and Filter**:
+    - Given a list of lists of integers, flatten the list and filter out numbers less than 10, collecting the results into a set.
+
+74. **Mapping to Custom Objects**:
+    - Given a list of `Person` objects, map each `Person` to a `PersonDTO` (a new data transfer object) and collect the results into a list.
+
+75. **Filter by Multiple Conditions**:
+    - Given a list of products, filter out products that are either out of stock or have a price higher than $1000, and collect the results into a list.
+
+76. **Complex Mapping and Filtering**:
+    - Given a list of orders, map each order to its total price, filter out orders with a total price less than $50, and collect the results into a list.
+
+77. **Predicate Combining**:
+    - Given a list of integers, combine multiple predicates to filter out numbers that are both even and greater than 50, and collect the results into a list.
+
+78. **Map to Custom String Format**:
+    - Given a list of `User` objects, map each `User` to a string in the format "User: [name]" and collect the results into a list.
+
+79. **Filter by Date**:
+    - Given a list of `Event` objects with a `LocalDate` property, filter out events that occurred before the current year and collect the results into a list.
+
+80. **Mapping and Summarizing**:
+    - Given a list of transactions, map each transaction to its amount and then summarize the amounts to get the total, average, min, and max amounts.
+
+### Advanced Collectors
+
+81. **Grouping and Summarizing**:
+    - Given a list of products, group them by category and summarize the total price in each category.
+
+82. **Partitioning and Counting**:
+    - Given a list of numbers, partition them into even and odd numbers and count how many numbers fall into each partition.
+
+83. **Collecting to TreeMap**:
+    - Given a list of employees, collect them into a `TreeMap` with employee ID as the key and employee name as the value.
+
+84. **Grouping by Multiple Fields**:
+    - Given a list of students, group them first by grade and then by class section.
+
+85. **Reducing with Custom Collector**:
+    - Given a list of integers, use a custom collector to find the product of all integers.
+
+86. **Mapping and Joining with Custom Delimiter**:
+    - Given a list of strings, map them to their uppercase form and join them with a custom delimiter (e.g., "|").
+
+87. **Mapping to List of Lists**:
+    - Given a list of `Order` objects, map each `Order` to its list of `Item` objects and collect the results into a single list of all items.
+
+88. **Multi-level Grouping**:
+    - Given a list of books, group them first by author and then by genre.
+
+89. **Partitioning by Custom Predicate**:
+    - Given a list of students with their scores, partition the students into those who passed and those who failed based on a passing score.
+
+90. **Collecting to Unmodifiable Collection**:
+    - Given a list of integers, collect them into an unmodifiable list.
+
+### Producers and Suppliers
+
+91. **Generating Random Numbers**:
+    - Create a `Supplier` that generates random integers and use it to populate a list of 20 random integers.
+
+92. **Generating Fibonacci Sequence**:
+    - Create a `Supplier` that generates the Fibonacci sequence and use it to populate a list of the first 10 Fibonacci numbers.
+
+93. **Generating Infinite Stream**:
+    - Use a `Supplier` to create an infinite stream of random numbers and collect the first 100 numbers into a list.
+
+94. **Producing Custom Objects**:
+    - Create a `Supplier` that produces instances of a `Car` class and use it to create a list of 5 cars.
+
+95. **Custom Object Generator**:
+    - Create a `Supplier` that generates unique `UUID` strings and use it to create a list of 50 UUIDs.
+
+96. **Stream from Supplier**:
+    - Create a `Supplier` that generates current timestamps and use it to create a stream of 10 timestamps.
+
+97. **Dynamic Data Generation**:
+    - Create a `Supplier` that generates random `Person` objects with random names and ages, and use it to create a list of 10 persons.
+
+98. **Finite Stream from Infinite Supplier**:
+    - Use a `Supplier` that generates an infinite stream of prime numbers and collect the first 20 primes into a list.
+
+99. **Producing Infinite Stream of Current Time**:
+    - Use a `Supplier` that generates the current date-time and create a stream that collects the date-time every second, stopping after 10 seconds.
+
+100. **Custom Sequence Generator**:
+    - Create a `Supplier` that generates a sequence of integers starting from 100, increasing by 10, and use it to create a list of the first 10 numbers in this sequence.
+
+### Consumers and BiConsumers
+
+101. **Consumer for Logging**:
+    - Create a `Consumer` that logs each element of a list of strings.
+
+102. **Consumer for Side Effects**:
+    - Create a `Consumer` that processes each element of a list of orders, updating the status of each order.
+
+103. **Chaining Consumers**:
+    - Create two `Consumer` instances, one that prints an integer and another that prints the square of the integer. Chain them together to process a list of integers.
+
+104. **BiConsumer for Combining Data**:
+    - Create a `BiConsumer` that takes two lists of integers and prints the sum of corresponding elements from both lists.
+
+105. **BiConsumer for Complex Objects**:
+    - Create a `BiConsumer` that takes a list of `Employee` objects and a `Map` of employee IDs to salaries, updating the salary of each employee in the list.
+
+106. **Consumer for Resource Management**:
+    - Create a `Consumer` that processes a list of file paths, reading and printing the contents of each file.
+
+107. **BiConsumer for Pair Processing**:
+    - Create a `BiConsumer` that processes pairs of integers, printing their product.
+
+108. **Dynamic Consumer**:
+    - Create a `Consumer` that processes a list of objects, printing different properties based on the type of the object.
+
+109. **Consumer for Error Handling**:
+    - Create a `Consumer` that processes a list of integers, printing each integer and handling any exceptions that occur during processing.
+
+110. **Logging with BiConsumer**:
+    - Create a `BiConsumer` that logs the keys and values of a map.
+
+### More Complex Stream Operations
+
+111. **Nested Streams**:
+    - Given a list of departments, each with a list of employees, flatten the structure to get a list of all employees across all departments.
+
+112. **Multiple Mapping Steps**:
+    - Given a list of `Person` objects, map each `Person` to their name, then map each name to its length, and collect the lengths into a list.
+
+113. **Collecting with Conditions**:
+    - Given a list of orders, collect the orders into two lists: one for completed orders and one for pending orders.
+
+114. **Combining Streams**:
+    - Given two lists of integers, create a combined stream and find the maximum value from the combined stream.
+
+115. **Filtering and Sorting**:
+    - Given a list of products, filter out products with a price less than $20, sort the remaining products by price, and collect the results into a list.
+
+116. **FlatMapping Nested Lists**:
+    - Given a list of lists of strings, use flatMap to create a single list containing all the strings.
+
+117. **Custom Collector for Averaging**:
+    - Given a list of doubles, create a custom collector that calculates the average of the doubles.
+
+118. **Reducing with Custom Operation**:
+    - Given a list of integers, use `reduce` to find the product of all integers.
+
+119. **Combining Collectors**:
+    - Given a list of employees, use a collector to group them by department and within each department, collect the employees into a list sorted by salary.
+
+120. **Parallel Processing**:
+    - Given a large list of numbers, use parallel streams to filter out prime numbers and collect them into a list.
+
+### Edge Cases and Error Handling
+
+121. **Handling Empty Streams**:
+    - Given an empty list of integers, perform a series of stream operations and ensure the pipeline handles the empty case without errors.
+
+122. **Optional Handling in Streams**:
+    - Given a list of optional integers, filter out empty optionals and collect the present values into a list.
+
+123. **Stream with Nullable Elements**:
+    - Given a list of integers that may contain null values, filter out the null values and collect the non-null integers into a list.
+
+124. **Exception Handling in Streams**:
+    - Given a list of file paths, read the content of each file, handling any IO exceptions that may occur.
+
+125. **Handling Null Collections**:
+    - Given a potentially null list of strings, use streams to filter out null
+
+ values and collect the non-null strings into a list.
+
+126. **Default Values for Optional Results**:
+    - Given a list of integers, find the first integer greater than 100, or return a default value if no such integer exists.
+
+127. **Stream Termination with Empty List**:
+    - Given an empty list of strings, ensure that the stream pipeline terminates gracefully without performing any operations.
+
+128. **Log Intermediate Results**:
+    - Given a list of integers, use `peek` to log each integer before and after filtering out even numbers.
+
+129. **Safe Stream Operations**:
+    - Given a potentially null list of integers, perform safe stream operations to filter and process the integers without throwing a `NullPointerException`.
+
+130. **Handling Infinite Streams**:
+    - Use a `Supplier` to create an infinite stream of numbers and safely limit the stream to process only the first 100 numbers.
+
+### Real-world Use Cases
+
+131. **Transaction Processing**:
+    - Given a list of bank transactions, filter out transactions that are declined and collect the successful transactions into a list.
+
+132. **Customer Data Transformation**:
+    - Given a list of customer objects, map each customer to a summary string containing their name and email, and collect the summaries into a list.
+
+133. **Invoice Calculation**:
+    - Given a list of invoices, calculate the total amount for each invoice and collect the total amounts into a list.
+
+134. **User Login Filtering**:
+    - Given a list of user login attempts, filter out unsuccessful login attempts and collect the successful attempts into a list.
+
+135. **Stock Price Analysis**:
+    - Given a list of stock prices, filter out prices below a certain threshold and collect the remaining prices into a list.
+
+136. **Order Aggregation**:
+    - Given a list of orders, group the orders by customer and collect the results into a map.
+
+137. **Customer Segmentation**:
+    - Given a list of customers with their purchase history, segment the customers into high-value and low-value customers based on their total purchase amount.
+
+138. **Product Inventory Check**:
+    - Given a list of products with their stock levels, filter out products that are out of stock and collect the available products into a list.
+
+139. **Event Log Processing**:
+    - Given a list of event logs, filter out logs with a severity level below a certain threshold and collect the remaining logs into a list.
+
+140. **Employee Performance Analysis**:
+    - Given a list of employees with their performance scores, filter out employees with scores below a certain threshold and collect the remaining employees into a list.
+
+### Performance and Optimization
+
+141. **Optimizing Stream Operations**:
+    - Given a list of integers, optimize a complex stream pipeline that performs multiple filtering and mapping operations to improve performance.
+
+142. **Parallel Processing for Large Data**:
+    - Given a large list of orders, use parallel streams to process the orders and collect the results into a list.
+
+143. **Efficient Data Aggregation**:
+    - Given a list of transactions, efficiently aggregate the total amount for each transaction type using a parallel stream.
+
+144. **Reducing Memory Usage**:
+    - Given a large list of strings, optimize the stream pipeline to reduce memory usage while processing the strings.
+
+145. **Combining Multiple Streams Efficiently**:
+    - Given multiple lists of integers, combine them into a single stream and find the average value from the combined stream efficiently.
+
+146. **Stream Reuse and Optimization**:
+    - Given a list of integers, demonstrate how to reuse a stream pipeline efficiently to perform multiple operations on the list.
+
+147. **Lazy Evaluation Optimization**:
+    - Given a list of integers, demonstrate the lazy evaluation nature of streams by logging intermediate results and optimizing the pipeline to minimize unnecessary operations.
+
+148. **Parallel Stream with Custom Collector**:
+    - Given a large list of numbers, use a parallel stream with a custom collector to calculate the sum of the numbers.
+
+149. **Efficient Stream Termination**:
+    - Given a list of strings, use an efficient stream pipeline to process the strings and ensure the pipeline terminates quickly without unnecessary operations.
+
+150. **Dynamic Stream Pipeline**:
+    - Given a list of user inputs, dynamically build a stream pipeline based on the inputs to perform various operations like filtering, mapping, and sorting.
+
+### More Use Cases and Scenarios
+
+151. **User Activity Analysis**:
+    - Given a list of user activities, filter out activities that are inactive and collect the active activities into a list.
+
+152. **Sales Data Transformation**:
+    - Given a list of sales data, map each sale to a summary string containing the sale date and amount, and collect the summaries into a list.
+
+153. **Order Filtering and Aggregation**:
+    - Given a list of orders, filter out orders that are canceled and aggregate the total amount for the remaining orders.
+
+154. **Product Price Calculation**:
+    - Given a list of products with their prices, calculate the total price for each product category and collect the results into a map.
+
+155. **Customer Feedback Analysis**:
+    - Given a list of customer feedback comments, filter out comments that are shorter than 10 characters and collect the remaining comments into a list.
+
+156. **Invoice Payment Processing**:
+    - Given a list of invoices, filter out invoices that are unpaid and collect the paid invoices into a list.
+
+157. **Inventory Level Analysis**:
+    - Given a list of products with their inventory levels, filter out products with low inventory and collect the remaining products into a list.
+
+158. **Employee Attendance Tracking**:
+    - Given a list of employee attendance records, filter out records with less than 8 hours of work and collect the remaining records into a list.
+
+159. **Product Review Aggregation**:
+    - Given a list of product reviews, filter out reviews with a rating below 3 and aggregate the remaining reviews to calculate the average rating for each product.
+
+160. **Customer Purchase Analysis**:
+    - Given a list of customer purchases, group the purchases by customer and calculate the total amount spent by each customer.
+
+### Advanced Stream Operations
+
+161. **Multi-level Mapping**:
+    - Given a list of `Person` objects, map each `Person` to their address, then map each address to its city, and collect the cities into a list.
+
+162. **Custom Reduction Operation**:
+    - Given a list of integers, use a custom reduction operation to calculate the greatest common divisor (GCD) of all integers.
+
+163. **Grouping and Counting**:
+    - Given a list of words, group them by their length and count the number of words in each length group.
+
+164. **Partitioning with Complex Predicate**:
+    - Given a list of students, partition them into two groups: those who passed all their courses and those who failed at least one course.
+
+165. **Nested Stream Operations**:
+    - Given a list of departments, each with a list of employees, use nested streams to find the highest-paid employee in each department.
+
+166. **Filtering and FlatMapping**:
+    - Given a list of orders, each with a list of items, filter out orders with no items and flatMap the remaining orders to get a list of all items.
+
+167. **Stream of Custom Objects with Multiple Filters**:
+    - Given a list of `Product` objects, filter out products that are out of stock and have a price higher than $100, then collect the remaining products into a list.
+
+168. **Advanced Collecting with Conditions**:
+    - Given a list of `Person` objects, collect all persons into a map where the key is the first letter of their name and the value is a list of persons whose names start with that letter.
+
+169. **Custom Stream Pipeline**:
+    - Given a list of integers, create a custom stream pipeline that filters out even numbers, maps the remaining numbers to their squares, and collects the results into a set.
+
+170. **Combining Results of Multiple Streams**:
+    - Given two lists of integers, use streams to find the intersection of the two lists and collect the common elements into a list.
+
+### Error Handling and Edge Cases
+
+171. **Null-safe Stream Operations**:
+    - Given a potentially null list of strings, use streams to filter out null values and collect the non-null strings into a list.
+
+172. **Optional Handling in Stream Pipelines**:
+    - Given a list of optional integers, filter out empty optionals and map the present values to their squares, collecting the results into a list.
+
+173. **Exception Handling in Stream Operations**:
+    - Given a list of file paths, read the content of each file and handle any IO exceptions that may occur during the read operation.
+
+174. **Stream with Empty Lists**:
+    - Given multiple lists of integers, some of which may be empty, use streams to concatenate all non-empty lists into a single list.
+
+175. **Handling Default Values with Optionals**:
+    - Given a list of integers, find the first integer greater than 100, or return a default value if no such integer exists.
+
+176. **Safe Stream Operations with Null Collections**:
+    - Given a potentially null list of strings, perform safe stream operations to filter and process the strings without throwing a `NullPointerException`.
+
+177. **Graceful Stream Termination**:
+    - Given an empty list of integers, ensure that the stream pipeline terminates gracefully without performing any operations.
+
+178. **Handling Infinite Streams Safely**:
+    - Use a `Supplier` to create an infinite stream of numbers and safely limit the stream to process only the first 50 numbers.
+
+179. **Logging Intermediate Stream Results**:
+    - Given a list of integers, use `peek` to log each integer before and after applying a filter to remove even numbers.
+
+180. **Safe Stream Operations on Optional Elements**:
+    - Given a list of optional strings, filter out empty optionals and process the present strings, ensuring no exceptions are thrown.
+
+### Real
+
+-world Use Cases (Continued)
+
+181. **Product Inventory Check and Update**:
+    - Given a list of products with their stock levels, filter out products that are out of stock and update the stock level of the remaining products.
+
+182. **Customer Feedback Summary**:
+    - Given a list of customer feedback comments, filter out comments shorter than 10 characters and collect the remaining comments into a summary report.
+
+183. **Sales Data Analysis and Reporting**:
+    - Given a list of sales transactions, filter out transactions below a certain amount and generate a summary report of the remaining transactions.
+
+184. **Employee Performance Review**:
+    - Given a list of employees with their performance scores, filter out employees with scores below a certain threshold and collect the remaining employees into a performance review report.
+
+185. **Order Processing and Summary**:
+    - Given a list of orders, filter out canceled orders and generate a summary report of the remaining orders.
+
+186. **Customer Purchase History Analysis**:
+    - Given a list of customer purchases, group the purchases by customer and generate a purchase history report for each customer.
+
+187. **Product Review Filtering and Aggregation**:
+    - Given a list of product reviews, filter out reviews with a rating below 3 and aggregate the remaining reviews to calculate the average rating for each product.
+
+188. **Event Log Analysis and Reporting**:
+    - Given a list of event logs, filter out logs with a severity level below a certain threshold and generate a summary report of the remaining logs.
+
+189. **Invoice Payment Tracking**:
+    - Given a list of invoices, filter out unpaid invoices and generate a summary report of the paid invoices.
+
+190. **User Activity Logging and Filtering**:
+    - Given a list of user activities, filter out inactive activities and generate a log of the remaining active activities.
+
+### Performance and Optimization (Continued)
+
+191. **Stream Pipeline Optimization for Large Data Sets**:
+    - Given a large list of integers, optimize a complex stream pipeline that performs multiple filtering and mapping operations to improve performance.
+
+192. **Parallel Stream Processing for Large Data Sets**:
+    - Given a large list of orders, use parallel streams to process the orders and collect the results into a list.
+
+193. **Efficient Aggregation with Custom Collectors**:
+    - Given a list of transactions, efficiently aggregate the total amount for each transaction type using a custom collector.
+
+194. **Memory-efficient Stream Operations**:
+    - Given a large list of strings, optimize the stream pipeline to reduce memory usage while processing the strings.
+
+195. **Combining Multiple Streams Efficiently**:
+    - Given multiple lists of integers, combine them into a single stream and find the average value from the combined stream efficiently.
+
+196. **Optimizing Stream Reuse**:
+    - Given a list of integers, demonstrate how to reuse a stream pipeline efficiently to perform multiple operations on the list.
+
+197. **Lazy Evaluation and Pipeline Optimization**:
+    - Given a list of integers, demonstrate the lazy evaluation nature of streams by logging intermediate results and optimizing the pipeline to minimize unnecessary operations.
+
+198. **Parallel Stream Processing with Custom Collectors**:
+    - Given a large list of numbers, use a parallel stream with a custom collector to calculate the sum of the numbers.
+
+199. **Efficient Stream Termination for Large Data Sets**:
+    - Given a list of strings, use an efficient stream pipeline to process the strings and ensure the pipeline terminates quickly without unnecessary operations.
+
+200. **Dynamic Stream Pipeline Construction**:
+    - Given a list of user inputs, dynamically build a stream pipeline based on the inputs to perform various operations like filtering, mapping, and sorting.
+
+These additional questions cover more advanced scenarios, optimizations, error handling, and real-world use cases involving Java 8 Streams with `Consumer`, `Producer`, `Filter`, and `Collectors`. Feel free to expand on these examples or generate more based on different scenarios and use cases.
+
+
+Sure! Here are some questions focusing on merging lists, maps, and sorting using Java 8 Streams:
+
+### Merging Lists and Sorting
+
+201. **Merge Two Lists and Sort by Name**:
+    - Given two lists of `Employee` objects, merge them into a single list and sort the merged list by employee name.
+
+202. **Merge Two Lists and Sort by Age**:
+    - Given two lists of `Person` objects, merge them into a single list and sort the merged list by age.
+
+203. **Merge and Deduplicate Lists**:
+    - Given two lists of strings, merge them into a single list, remove duplicates, and sort the result alphabetically.
+
+204. **Merge and Sort by Custom Comparator**:
+    - Given two lists of `Product` objects, merge them into a single list and sort by price in descending order using a custom comparator.
+
+205. **Merge Lists and Filter**:
+    - Given two lists of integers, merge them, filter out numbers less than 10, and sort the remaining numbers in ascending order.
+
+206. **Merge Lists and Sort by Length**:
+    - Given two lists of strings, merge them and sort the merged list by string length.
+
+207. **Merge Lists of Lists and Sort**:
+    - Given two lists of lists of integers, merge them into a single list of integers and sort the result.
+
+208. **Merge and Sort with Condition**:
+    - Given two lists of `Student` objects, merge them, filter students with scores above 75, and sort by score.
+
+209. **Merge Lists and Remove Nulls**:
+    - Given two lists of integers, merge them, remove any null values, and sort the result in ascending order.
+
+210. **Merge Lists and Sort by Date**:
+    - Given two lists of `Event` objects, merge them and sort the merged list by event date.
+
+### Merging Maps and Sorting
+
+211. **Merge Two Maps and Sort by Key**:
+    - Given two maps of employee ID to employee name, merge them into a single map and sort the entries by key.
+
+212. **Merge Two Maps and Sort by Value**:
+    - Given two maps of product ID to product name, merge them and sort the entries by product name.
+
+213. **Merge Maps and Handle Duplicate Keys**:
+    - Given two maps of student ID to student grade, merge them. If a key exists in both maps, sum the grades.
+
+214. **Merge Maps and Filter by Value**:
+    - Given two maps of employee ID to salary, merge them and filter out entries where the salary is less than 50,000, then sort by salary.
+
+215. **Merge Maps and Sort by Key Length**:
+    - Given two maps with string keys and integer values, merge them and sort the entries by the length of the keys.
+
+216. **Merge Maps with Custom Merge Function**:
+    - Given two maps of product ID to quantity, merge them using a custom merge function to sum the quantities for duplicate keys, and then sort by quantity.
+
+217. **Merge Maps and Sort by Combined Key and Value**:
+    - Given two maps of customer ID to order count, merge them and sort by the concatenated string of the key and value.
+
+218. **Merge and Filter Maps**:
+    - Given two maps of employee ID to age, merge them, filter out entries where the age is below 30, and sort by age.
+
+219. **Merge Maps and Sort by Value Length**:
+    - Given two maps of product ID to description, merge them and sort by the length of the descriptions.
+
+220. **Merge Maps with Complex Keys**:
+    - Given two maps with complex keys (e.g., `Map<CustomKey, Integer>`), merge them and sort by the natural ordering of the keys.
+
+### Merging and Sorting with Streams
+
+221. **Merge and Sort Streams of Strings**:
+    - Given two streams of strings, merge them into a single stream, sort alphabetically, and collect into a list.
+
+222. **Merge Streams of Integers and Find Max**:
+    - Given two streams of integers, merge them, sort in descending order, and find the maximum value.
+
+223. **Merge and Sort Streams of Custom Objects**:
+    - Given two streams of `Person` objects, merge them, sort by age, and collect into a list.
+
+224. **Merge Streams and Sort by Custom Criteria**:
+    - Given two streams of `Product` objects, merge them, sort by a custom criteria (e.g., price-to-weight ratio), and collect into a list.
+
+225. **Merge Streams and Deduplicate**:
+    - Given two streams of integers, merge them, remove duplicates, sort in ascending order, and collect into a list.
+
+226. **Merge Streams and Filter by Predicate**:
+    - Given two streams of `Employee` objects, merge them, filter by a predicate (e.g., employees with a certain role), and sort by name.
+
+227. **Merge Streams and Group by Property**:
+    - Given two streams of `Student` objects, merge them and group by their grade, sorting each group by student name.
+
+228. **Merge Streams and Sort with Multiple Criteria**:
+    - Given two streams of `Order` objects, merge them and sort by order date, then by total amount.
+
+229. **Merge Streams of Maps**:
+    - Given two streams of maps (`Stream<Map<String, Integer>>`), merge all maps into a single map and sort by the key.
+
+230. **Merge and Collect Stream of Maps**:
+    - Given two streams of maps (`Stream<Map<String, Integer>>`), merge them and collect the result into a map, sorting by values.
+
+### Advanced Merging and Sorting
+
+231. **Merge Lists of Different Types**:
+    - Given two lists, one of integers and one of strings, merge them into a list of strings (with integers converted to strings) and sort alphabetically.
+
+232. **Merge Streams and Calculate Statistics**:
+    - Given two streams of `Transaction` objects, merge them and calculate statistics (e.g., total, average, min, max) for the transaction amounts.
+
+233. **Merge Lists and Sort by Multiple Fields**:
+    - Given two lists of `Book` objects, merge them and sort by author name, then by title.
+
+234. **Merge Maps and Flatten to List**:
+    - Given two maps of `Integer` to `List<String>`, merge them and flatten the result into a single list of strings, sorted alphabetically.
+
+235. **Merge Streams of Sets**:
+    - Given two streams of sets (`Stream<Set<String>>`), merge them into a single set, then sort the set alphabetically.
+
+236. **Merge and Sort with Custom Key Extractor**:
+    - Given two lists of `Product` objects, merge them and sort using a custom key extractor (e.g., product code).
+
+237. **Merge and Sort Nested Lists**:
+    - Given two lists of lists of integers, merge them and sort each nested list individually.
+
+238. **Merge Streams with Different Data Types**:
+    - Given two streams, one of integers and one of doubles, merge them into a single stream of doubles and sort in ascending order.
+
+239. **Merge Lists and Maintain Order**:
+    - Given two lists of `Task` objects, merge them and maintain their order based on a predefined priority field.
+
+240. **Merge and Sort Based on External Data**:
+    - Given two lists of `Student` objects, merge them and sort by their scores from an external map of student ID to score.
+
+### More Merging and Sorting Scenarios
+
+241. **Merge and Aggregate Maps**:
+    - Given two maps of product ID to sales count, merge them and aggregate the sales count for duplicate keys, then sort by sales count.
+
+242. **Merge Lists with Conditional Sorting**:
+    - Given two lists of `Employee` objects, merge them and conditionally sort by department, then by name within each department.
+
+243. **Merge Streams and Extract Unique Values**:
+    - Given two streams of strings, merge them, extract unique values, and sort them in ascending order.
+
+244. **Merge and Sort Complex Data Structures**:
+    - Given two lists of `Department` objects, each containing a list of `Employee` objects, merge the departments and sort employees within each department by their name.
+
+245. **Merge and Filter Nested Maps**:
+    - Given two maps of department to a map of employee ID to employee details, merge them and filter out departments with fewer than 5 employees, then sort by department name.
+
+246. **Merge Lists and Sort by Calculated Field**:
+    - Given two lists of `Product` objects, merge them and sort by a calculated field (e.g., discount price).
+
+247. **Merge Streams of Optional Values**:
+    - Given two streams of `Optional<Integer>`, merge them, filter out empty optionals, and sort the present values.
+
+248. **Merge and Process Nested Data**:
+    - Given two lists of orders, each containing a list of items, merge the orders and sort items within each order by item price.
+
+249. **Merge and Sort Hierarchical Data**:
+    - Given two lists of `Category` objects, each containing subcategories, merge them and sort categories and subcategories by name.
+
+250. **Merge Lists and Sort by Compound Key**:
+    - Given two lists of `Employee` objects, merge them and sort by a compound key consisting of department and age.
+
+### Combining Merging and Sorting
+
+251. **Merge Lists and Sort by Mapped Value**:
+    - Given two lists of `Person` objects, merge them and sort by the length of their names.
+
+252. **Merge and Transform Lists**:
+    - Given two lists of `String` objects, merge them, convert to uppercase, and sort alphabetically.
+
+253. **Merge Streams and Remove Specific Elements**:
+    -
+
+ Given two streams of integers, merge them and remove any occurrence of a specific integer (e.g., 42), then sort the remaining elements.
+
+254. **Merge and Sort Lists of Dates**:
+    - Given two lists of `LocalDate`, merge them and sort by date.
+
+255. **Merge Streams with Custom Collector**:
+    - Given two streams of `Employee` objects, merge them and collect using a custom collector that sorts employees by their hire date.
+
+256. **Merge Lists of Differing Lengths**:
+    - Given two lists of different lengths, merge them and sort by the original list index (if available).
+
+257. **Merge and Flatten Nested Collections**:
+    - Given two lists of lists of strings, merge and flatten them into a single list of strings, then sort alphabetically.
+
+258. **Merge and Sort by Derived Property**:
+    - Given two lists of `Order` objects, merge them and sort by the total order amount.
+
+259. **Merge Streams and Group by Function Result**:
+    - Given two streams of `Transaction` objects, merge them and group by the month of the transaction date, then sort each group by amount.
+
+260. **Merge and Sort Immutable Collections**:
+    - Given two lists of immutable `Person` objects, merge them and sort by last name.
+
+### More Merging and Sorting Questions
+
+261. **Merge Lists and Sort Using External Comparator**:
+    - Given two lists of `Book` objects, merge them and sort by title using an external comparator.
+
+262. **Merge and Transform Nested Maps**:
+    - Given two maps of department to employee maps, merge them and transform the employee maps to sort by employee name.
+
+263. **Merge and Sort by Multiple Criteria**:
+    - Given two lists of `Applicant` objects, merge them and sort first by application date, then by applicant name.
+
+264. **Merge Streams of Collections**:
+    - Given two streams of collections (e.g., `List<Set<String>>`), merge them into a single collection and sort the elements within.
+
+265. **Merge and Sort by Custom Extractor**:
+    - Given two lists of `Item` objects, merge them and sort by a custom extractor that extracts the item's category.
+
+266. **Merge and Sort Using Multiple Fields**:
+    - Given two lists of `Movie` objects, merge them and sort by director, then by release year.
+
+267. **Merge Lists and Apply Complex Filtering**:
+    - Given two lists of `Document` objects, merge them, filter by a complex condition (e.g., document type and creation date), and sort by title.
+
+268. **Merge and Sort with Custom Aggregation**:
+    - Given two lists of sales records, merge them and sort by the total sales amount, aggregating by product category.
+
+269. **Merge Streams and Sort by Length**:
+    - Given two streams of strings, merge them and sort by string length.
+
+270. **Merge and Sort Based on Reference Data**:
+    - Given two lists of `User` objects, merge them and sort by their status from an external reference map.
+
+### Complex Merging and Sorting Scenarios
+
+271. **Merge and Group by Nested Property**:
+    - Given two lists of `Project` objects, merge them and group by the project manager's name, then sort each group by project start date.
+
+272. **Merge Streams and Sort by Frequency**:
+    - Given two streams of strings, merge them and sort by the frequency of each string's occurrence.
+
+273. **Merge Lists and Sort Using Lambda**:
+    - Given two lists of `Event` objects, merge them and sort by event duration using a lambda expression.
+
+274. **Merge and Filter Nested Lists**:
+    - Given two lists of lists of `Task` objects, merge them and filter out tasks with a priority below 5, then sort by task name.
+
+275. **Merge and Sort Based on Computed Property**:
+    - Given two lists of `Expense` objects, merge them and sort by the computed property of tax-included amount.
+
+276. **Merge and Sort Immutable Streams**:
+    - Given two streams of immutable `Employee` objects, merge them and sort by employee ID.
+
+277. **Merge and Process Nested Maps**:
+    - Given two maps of department to maps of project to budget, merge them and sort projects within each department by budget.
+
+278. **Merge Lists and Sort by Nested Field**:
+    - Given two lists of `Order` objects, merge them and sort by the nested `Customer`'s last name.
+
+279. **Merge Streams with Conditional Mapping**:
+    - Given two streams of `Book` objects, merge them, conditionally map to a different object type (e.g., `BookSummary`), and sort by summary length.
+
+280. **Merge and Sort Using Multi-step Process**:
+    - Given two lists of `User` objects, merge them, sort by registration date, then filter by active status, and finally sort by last login date.
+
+### Additional Merging and Sorting Examples
+
+281. **Merge and Flatten Nested Streams**:
+    - Given two streams of lists of integers, merge and flatten them into a single stream of integers, then sort in ascending order.
+
+282. **Merge and Filter Maps Based on Values**:
+    - Given two maps of product ID to price, merge them and filter out products priced above $100, then sort by price.
+
+283. **Merge Lists and Sort Using Multiple Comparators**:
+    - Given two lists of `Candidate` objects, merge them and sort using multiple comparators for different fields (e.g., experience, name).
+
+284. **Merge Streams of Nested Objects**:
+    - Given two streams of `Company` objects, each containing a list of `Employee` objects, merge the companies and sort employees within each company by salary.
+
+285. **Merge and Sort by Computed Key**:
+    - Given two lists of `Reservation` objects, merge them and sort by a computed key (e.g., total cost including fees).
+
+286. **Merge and Sort by Priority**:
+    - Given two lists of `Job` objects, merge them and sort by job priority, then by job creation date.
+
+287. **Merge Lists and Sort by Date Fields**:
+    - Given two lists of `Event` objects, merge them and sort by event start date, then by event end date.
+
+288. **Merge and Filter Streams Based on Condition**:
+    - Given two streams of `Customer` objects, merge them and filter out customers who haven't made a purchase in the last year, then sort by last purchase date.
+
+289. **Merge and Sort Immutable Lists**:
+    - Given two lists of immutable `Transaction` objects, merge them and sort by transaction amount.
+
+290. **Merge and Transform Streams**:
+    - Given two streams of `Order` objects, merge them, transform to a different type (e.g., `OrderSummary`), and sort by order total.
+
+### Combining Different Data Structures
+
+291. **Merge Lists and Maps**:
+    - Given a list of employee IDs and a map of employee ID to employee name, merge them to create a list of employee names, sorted alphabetically.
+
+292. **Merge and Flatten Nested Data**:
+    - Given two lists of orders, each containing a list of items, merge them, flatten the items into a single list, and sort by item name.
+
+293. **Merge and Sort by External Criteria**:
+    - Given two lists of `Invoice` objects, merge them and sort by payment status from an external criteria map.
+
+294. **Merge and Sort Multi-level Collections**:
+    - Given two lists of departments, each containing a list of teams, merge the departments and sort teams within each department by team size.
+
+295. **Merge and Filter Streams by Type**:
+    - Given two streams of `Document` objects, merge them, filter by document type, and sort by document title.
+
+296. **Merge Lists and Apply Conditional Transformations**:
+    - Given two lists of `Product` objects, merge them, apply a conditional transformation (e.g., apply discount), and sort by final price.
+
+297. **Merge Streams of Optionals**:
+    - Given two streams of `Optional<String>`, merge them, filter out empty optionals, and sort the present values.
+
+298. **Merge and Process Hierarchical Data**:
+    - Given two lists of `Department` objects, each containing a list of `Team` objects, merge them and sort teams within each department by team lead's name.
+
+299. **Merge and Sort Nested Collections by Depth**:
+    - Given two lists of nested categories, merge them and sort by the depth of the categories.
+
+300. **Merge and Sort Immutable Data Structures**:
+    - Given two lists of immutable `Person` objects, merge them and sort by last name.
+
+### Complex Merging and Sorting Scenarios
+
+301. **Merge Lists with Dynamic Sorting**:
+    - Given two lists of `Task` objects, merge them and sort dynamically based on a user-provided field.
+
+302. **Merge and Sort by Computed Fields**:
+    - Given two lists of `Employee` objects, merge them and sort by a computed field (e.g., years until retirement).
+
+303. **Merge Streams and Apply Multiple Filters**:
+    - Given two streams of `Customer` objects, merge them and apply multiple filters (e.g., age, location), then sort by customer name.
+
+304. **Merge Lists and Sort by Nested Properties**:
+    - Given two lists of `Project` objects, merge them and sort by the nested `Manager`'s last name.
+
+305. **Merge and Sort with Custom Aggregation**:
+    - Given two lists of sales records, merge them and sort by the total sales amount, aggregating by region.
+
+306. **Merge and Flatten Streams of Collections**:
+    - Given two streams of collections (e.g., `List<Set<String>>`), merge them into
+
+ a single collection and sort the elements.
+
+307. **Merge and Sort by Multiple Criteria**:
+    - Given two lists of `Applicant` objects, merge them and sort first by application date, then by applicant score.
+
+308. **Merge and Transform Nested Maps**:
+    - Given two maps of department to employee maps, merge them and transform the employee maps to sort by employee age.
+
+309. **Merge Streams of Collections and Sort**:
+    - Given two streams of collections (e.g., `Stream<List<Integer>>`), merge them into a single collection and sort the elements.
+
+310. **Merge and Process Nested Data Structures**:
+    - Given two lists of hierarchical data (e.g., `Category` objects with nested `SubCategory` objects), merge them and sort by the depth of the hierarchy.
+
+### Additional Merging and Sorting Examples
+
+311. **Merge Lists with Conditional Aggregation**:
+    - Given two lists of `Transaction` objects, merge them and conditionally aggregate by transaction type, then sort by aggregated amount.
+
+312. **Merge and Filter Nested Streams**:
+    - Given two streams of lists of `Task` objects, merge them and filter tasks by priority, then sort by task name.
+
+313. **Merge and Sort with External Comparator**:
+    - Given two lists of `Product` objects, merge them and sort by price using an external comparator.
+
+314. **Merge and Process Nested Collections**:
+    - Given two lists of `Order` objects, each containing a list of `Item` objects, merge them and sort items within each order by item name.
+
+315. **Merge and Sort Immutable Collections**:
+    - Given two lists of immutable `Invoice` objects, merge them and sort by invoice date.
+
+316. **Merge and Transform Streams**:
+    - Given two streams of `Employee` objects, merge them, transform to a different type (e.g., `EmployeeSummary`), and sort by summary field.
+
+317. **Merge and Sort by Nested Field**:
+    - Given two lists of `Reservation` objects, merge them and sort by the nested `Customer`'s last name.
+
+318. **Merge and Filter Streams with Custom Predicate**:
+    - Given two streams of `Order` objects, merge them and filter by a custom predicate, then sort by order date.
+
+319. **Merge and Sort Nested Data Structures**:
+    - Given two lists of `Project` objects, each containing a list of `Task` objects, merge them and sort tasks within each project by task priority.
+
+320. **Merge and Sort Using Multi-step Process**:
+    - Given two lists of `User` objects, merge them, sort by registration date, then filter by active status, and finally sort by last login date.
+
+### More Advanced Merging and Sorting Scenarios
+
+321. **Merge Lists and Sort by Computed Property**:
+    - Given two lists of `Expense` objects, merge them and sort by the computed property of tax-included amount.
+
+322. **Merge and Sort Streams of Nested Objects**:
+    - Given two streams of `Company` objects, each containing a list of `Employee` objects, merge the companies and sort employees within each company by salary.
+
+323. **Merge and Sort by Custom Criteria**:
+    - Given two lists of `Applicant` objects, merge them and sort first by application date, then by applicant name.
+
+324. **Merge and Filter Streams by Type**:
+    - Given two streams of `Document` objects, merge them, filter by document type, and sort by document title.
+
+325. **Merge and Sort with Conditional Transformation**:
+    - Given two lists of `Product` objects, merge them, apply a conditional transformation (e.g., apply discount), and sort by final price.
+
+326. **Merge Streams of Optionals**:
+    - Given two streams of `Optional<String>`, merge them, filter out empty optionals, and sort the present values.
+
+327. **Merge and Process Hierarchical Data**:
+    - Given two lists of `Department` objects, each containing a list of `Team` objects, merge them and sort teams within each department by team lead's name.
+
+328. **Merge and Sort Nested Collections by Depth**:
+    - Given two lists of nested categories, merge them and sort by the depth of the categories.
+
+329. **Merge and Sort Immutable Data Structures**:
+    - Given two lists of immutable `Person` objects, merge them and sort by last name.
+
+330. **Merge Lists with Dynamic Sorting**:
+    - Given two lists of `Task` objects, merge them and sort dynamically based on a user-provided field.
+
+### Complex Merging and Sorting Scenarios
+
+331. **Merge and Sort by Computed Fields**:
+    - Given two lists of `Employee` objects, merge them and sort by a computed field (e.g., years until retirement).
+
+332. **Merge Streams and Apply Multiple Filters**:
+    - Given two streams of `Customer` objects, merge them and apply multiple filters (e.g., age, location), then sort by customer name.
+
+333. **Merge Lists and Sort by Nested Properties**:
+    - Given two lists of `Project` objects, merge them and sort by the nested `Manager`'s last name.
+
+334. **Merge and Sort with Custom Aggregation**:
+    - Given two lists of sales records, merge them and sort by the total sales amount, aggregating by region.
+
+335. **Merge and Flatten Streams of Collections**:
+    - Given two streams of collections (e.g., `List<Set<String>>`), merge them into a single collection and sort the elements.
+
+336. **Merge and Sort by Multiple Criteria**:
+    - Given two lists of `Applicant` objects, merge them and sort first by application date, then by applicant score.
+
+337. **Merge and Transform Nested Maps**:
+    - Given two maps of department to employee maps, merge them and transform the employee maps to sort by employee age.
+
+338. **Merge Streams of Collections and Sort**:
+    - Given two streams of collections (e.g., `Stream<List<Integer>>`), merge them into a single collection and sort the elements.
+
+339. **Merge and Process Nested Data Structures**:
+    - Given two lists of hierarchical data (e.g., `Category` objects with nested `SubCategory` objects), merge them and sort by the depth of the hierarchy.
+
+340. **Merge Lists with Conditional Aggregation**:
+    - Given two lists of `Transaction` objects, merge them and conditionally aggregate by transaction type, then sort by aggregated amount.
+
+341. **Merge and Filter Nested Streams**:
+    - Given two streams of lists of `Task` objects, merge them and filter tasks by priority, then sort by task name.
+
+342. **Merge and Sort with External Comparator**:
+    - Given two lists of `Product` objects, merge them and sort by price using an external comparator.
+
+343. **Merge and Process Nested Collections**:
+    - Given two lists of `Order` objects, each containing a list of `Item` objects, merge them and sort items within each order by item name.
+
+344. **Merge and Sort Immutable Collections**:
+    - Given two lists of immutable `Invoice` objects, merge them and sort by invoice date.
+
+345. **Merge and Transform Streams**:
+    - Given two streams of `Employee` objects, merge them, transform to a different type (e.g., `EmployeeSummary`), and sort by summary field.
+
+346. **Merge and Sort by Nested Field**:
+    - Given two lists of `Reservation` objects, merge them and sort by the nested `Customer`'s last name.
+
+347. **Merge and Filter Streams with Custom Predicate**:
+    - Given two streams of `Order` objects, merge them and filter by a custom predicate, then sort by order date.
+
+348. **Merge and Sort Nested Data Structures**:
+    - Given two lists of `Project` objects, each containing a list of `Task` objects, merge them and sort tasks within each project by task priority.
+
+349. **Merge and Sort Using Multi-step Process**:
+    - Given two lists of `User` objects, merge them, sort by registration date, then filter by active status, and finally sort by last login date.
+
+### More Advanced Merging and Sorting Scenarios
+
+350. **Merge Lists and Sort by Computed Property**:
+    - Given two lists of `Expense` objects, merge them and sort by the computed property of tax-included amount.
+
+351. **Merge and Sort Streams of Nested Objects**:
+    - Given two streams of `Company` objects, each containing a list of `Employee` objects, merge the companies and sort employees within each company by salary.
+
+352. **Merge and Sort by Custom Criteria**:
+    - Given two lists of `Applicant` objects, merge them and sort first by application date, then by applicant name.
+
+353. **Merge and Filter Streams by Type**:
+    - Given two streams of `Document` objects, merge them, filter by document type, and sort by document title.
+
+354. **Merge and Sort with Conditional Transformation**:
+    - Given two lists of `Product` objects, merge them, apply a conditional transformation (e.g., apply discount), and sort by final price.
+
+355. **Merge Streams of Optionals**:
+    - Given two streams of `Optional<String>`, merge them, filter out empty optionals, and sort the present values.
+
+356. **Merge and Process Hierarchical Data**:
+    - Given two lists of `Department` objects, each containing a list of `Team` objects, merge them and sort teams within each department by team lead's name.
+
+357. **Merge and Sort Nested Collections by Depth**:
+    - Given two lists of nested categories, merge them and sort by the depth of the categories.
+
+358. **Merge and Sort Immutable Data Structures**:
+    - Given two lists of immutable `Person` objects, merge them and sort by last name.
+
+359
+
+. **Merge Lists with Dynamic Sorting**:
+    - Given two lists of `Task` objects, merge them and sort dynamically based on a user-provided field.
+
+360. **Merge and Sort by Computed Fields**:
+    - Given two lists of `Employee` objects, merge them and sort by a computed field (e.g., years until retirement).
+
+### Final Merging and Sorting Examples
+
+361. **Merge Streams and Apply Multiple Filters**:
+    - Given two streams of `Customer` objects, merge them and apply multiple filters (e.g., age, location), then sort by customer name.
+
+362. **Merge Lists and Sort by Nested Properties**:
+    - Given two lists of `Project` objects, merge them and sort by the nested `Manager`'s last name.
+
+363. **Merge and Sort with Custom Aggregation**:
+    - Given two lists of sales records, merge them and sort by the total sales amount, aggregating by region.
+
+364. **Merge and Flatten Streams of Collections**:
+    - Given two streams of collections (e.g., `List<Set<String>>`), merge them into a single collection and sort the elements.
+
+365. **Merge and Sort by Multiple Criteria**:
+    - Given two lists of `Applicant` objects, merge them and sort first by application date, then by applicant score.
+
+366. **Merge and Transform Nested Maps**:
+    - Given two maps of department to employee maps, merge them and transform the employee maps to sort by employee age.
+
+367. **Merge Streams of Collections and Sort**:
+    - Given two streams of collections (e.g., `Stream<List<Integer>>`), merge them into a single collection and sort the elements.
+
+368. **Merge and Process Nested Data Structures**:
+    - Given two lists of hierarchical data (e.g., `Category` objects with nested `SubCategory` objects), merge them and sort by the depth of the hierarchy.
+
+369. **Merge Lists with Conditional Aggregation**:
+    - Given two lists of `Transaction` objects, merge them and conditionally aggregate by transaction type, then sort by aggregated amount.
+
+370. **Merge and Filter Nested Streams**:
+    - Given two streams of lists of `Task` objects, merge them and filter tasks by priority, then sort by task name.
+
+### Final Merging and Sorting Examples
+
+371. **Merge and Sort with External Comparator**:
+    - Given two lists of `Product` objects, merge them and sort by price using an external comparator.
+
+372. **Merge and Process Nested Collections**:
+    - Given two lists of `Order` objects, each containing a list of `Item` objects, merge them and sort items within each order by item name.
+
+373. **Merge and Sort Immutable Collections**:
+    - Given two lists of immutable `Invoice` objects, merge them and sort by invoice date.
+
+374. **Merge and Transform Streams**:
+    - Given two streams of `Employee` objects, merge them, transform to a different type (e.g., `EmployeeSummary`), and sort by summary field.
+
+375. **Merge and Sort by Nested Field**:
+    - Given two lists of `Reservation` objects, merge them and sort by the nested `Customer`'s last name.
+
+376. **Merge and Filter Streams with Custom Predicate**:
+    - Given two streams of `Order` objects, merge them and filter by a custom predicate, then sort by order date.
+
+377. **Merge and Sort Nested Data Structures**:
+    - Given two lists of `Project` objects, each containing a list of `Task` objects, merge them and sort tasks within each project by task priority.
+
+378. **Merge and Sort Using Multi-step Process**:
+    - Given two lists of `User` objects, merge them, sort by registration date, then filter by active status, and finally sort by last login date.
+
+379. **Merge Lists and Sort by Computed Property**:
+    - Given two lists of `Expense` objects, merge them and sort by the computed property of tax-included amount.
+
+380. **Merge and Sort Streams of Nested Objects**:
+    - Given two streams of `Company` objects, each containing a list of `Employee` objects, merge the companies and sort employees within each company by salary.
+	
+	
+### Additional Topics for Java 8 Streams
+
+#### Basic Operations
+381. **Filter Even Numbers from a Stream**:
+    - Given a stream of integers, filter out the even numbers.
+
+382. **Find Maximum Value in a Stream**:
+    - Given a stream of integers, find the maximum value.
+
+383. **Find First Element Matching a Condition**:
+    - Given a stream of strings, find the first element that starts with a specific prefix.
+
+384. **Count Elements Matching a Condition**:
+    - Given a stream of integers, count how many are greater than a specific value.
+
+385. **Sum of Elements in a Stream**:
+    - Given a stream of integers, compute the sum of all elements.
+
+#### Advanced Operations
+386. **Concatenate Streams**:
+    - Given two streams of strings, concatenate them into a single stream.
+
+387. **Parallel Stream Processing**:
+    - Given a list of integers, process it in parallel to compute the sum of squares.
+
+388. **Map to Another Type**:
+    - Given a stream of integers, map them to their string representations.
+
+389. **FlatMap Example**:
+    - Given a stream of lists of integers, flatten them into a single stream of integers.
+
+390. **Stream Zipping**:
+    - Given two streams of integers, zip them into a single stream of pairs.
+
+#### Collectors
+391. **Group by Property**:
+    - Given a stream of `Employee` objects, group them by their department.
+
+392. **Partition by Condition**:
+    - Given a stream of integers, partition them into even and odd numbers.
+
+393. **Collect to Set**:
+    - Given a stream of strings, collect them into a set.
+
+394. **Collect to Map**:
+    - Given a stream of `Employee` objects, collect them into a map where the key is the employee ID and the value is the employee name.
+
+395. **Joining Strings**:
+    - Given a stream of strings, join them into a single string separated by commas.
+
+#### Custom Collectors
+396. **Custom Collector to Calculate Average**:
+    - Given a stream of integers, create a custom collector to calculate the average value.
+
+397. **Custom Collector to Find Mode**:
+    - Given a stream of integers, create a custom collector to find the mode (most frequent value).
+
+398. **Custom Collector for Statistics**:
+    - Given a stream of integers, create a custom collector to compute summary statistics (min, max, average).
+
+399. **Custom Collector to Create Immutable Collection**:
+    - Given a stream of `Employee` objects, create a custom collector to collect them into an immutable list.
+
+#### Stream Creation
+400. **Create Stream from Array**:
+    - Given an array of integers, create a stream from it.
+
+401. **Create Stream from File**:
+    - Given a file, create a stream of its lines.
+
+402. **Create Stream from Collection**:
+    - Given a list of strings, create a stream from it.
+
+403. **Generate Infinite Stream**:
+    - Create an infinite stream of random integers.
+
+404. **Create Stream with Iterate**:
+    - Create a stream of the first 10 powers of 2 using `Stream.iterate`.
+
+#### Stream Operations
+405. **Peek for Debugging**:
+    - Given a stream of integers, use `peek` to print each element during processing.
+
+406. **Limit and Skip**:
+    - Given a stream of integers, skip the first 5 elements and then limit to the next 10 elements.
+
+407. **Distinct Elements**:
+    - Given a stream of strings, filter out duplicate elements.
+
+408. **Match Operations**:
+    - Given a stream of integers, check if all elements are positive, if any element is negative, and if none are zero.
+
+409. **Reduce Operation**:
+    - Given a stream of integers, use `reduce` to calculate the product of all elements.
+
+#### Stream API Best Practices
+410. **Avoid Modifying State**:
+    - Demonstrate how to avoid modifying external state from within a stream operation.
+
+411. **Prefer Method References**:
+    - Given a list of strings, use method references instead of lambda expressions where applicable.
+
+412. **Use Parallel Streams Wisely**:
+    - Discuss when it is appropriate to use parallel streams and potential pitfalls.
+
+413. **Optimize Stream Pipelines**:
+    - Discuss how to optimize stream pipelines for better performance.
+
+414. **Stream Debugging Techniques**:
+    - Discuss techniques for debugging complex stream operations.
+
+#### Practical Examples
+415. **Reading and Processing CSV Files**:
+    - Given a CSV file, read it into a list of objects and process the data using streams.
+
+416. **Processing JSON Data**:
+    - Given a JSON array, convert it into a list of objects and perform stream operations.
+
+417. **Generating Reports from Data**:
+    - Given a list of transactions, generate a summary report using stream operations.
+
+418. **Data Transformation Pipelines**:
+    - Given raw data, demonstrate a transformation pipeline using streams to clean, process, and output the data.
+
+419. **Combining Data from Multiple Sources**:
+    - Given multiple lists of related data, combine and process them using streams.
+
+#### Miscellaneous
+420. **Stream Error Handling**:
+    - Demonstrate how to handle exceptions within a stream pipeline.
+
+421. **Stream API for Reactive Programming**:
+    - Discuss how the Stream API can be used in reactive programming scenarios.
+
+422. **Streams with JPA/Hibernate**:
+    - Demonstrate how to use streams with JPA/Hibernate to process database query results.
+
+423. **Stream Performance Benchmarking**:
+    - Discuss how to benchmark the performance of stream operations.
+
+424. **Comparing Streams with Other Libraries**:
+    - Compare the Stream API with other functional programming libraries like Guava and Apache Commons.
+
+These additional topics cover a wide range of use cases and demonstrate the versatility and power of the Java 8 Stream API in various scenarios.
 
