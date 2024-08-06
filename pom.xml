@@ -14,6 +14,7 @@
         <module>multithreading</module>
         <module>design_patterns</module>
         <module>database_learning</module>
+        <module>SpringEmail</module>
     </modules>
 
     <properties>

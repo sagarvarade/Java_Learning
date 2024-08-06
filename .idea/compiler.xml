@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="Hibernate" />
         <module name="kafka_learning" />
+        <module name="SpringEmail" />
         <module name="core_java" />
         <module name="JavaTechieSpring" />
         <module name="multithreading" />
@@ -23,6 +24,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Hibernate" options="-parameters" />
       <module name="JavaTechieSpring" options="-parameters" />
+      <module name="SpringEmail" options="-parameters" />
       <module name="kafka_learning" options="-parameters" />
     </option>
   </component>
