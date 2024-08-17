@@ -17,7 +17,7 @@ import java.util.List;
 @RequestMapping("/course")
 public class CourseController {
 
-    Logger log= LoggerFactory.getLogger(CourseController.class);
+    final Logger log= LoggerFactory.getLogger(CourseController.class);
     @Autowired  //Setter injection
     private CourseService courseService;
 

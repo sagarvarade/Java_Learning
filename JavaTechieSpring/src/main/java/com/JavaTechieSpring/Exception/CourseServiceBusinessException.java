@@ -2,7 +2,7 @@ package com.JavaTechieSpring.Exception;
 
 public class CourseServiceBusinessException extends RuntimeException{
 
-    private  String message;
+    private final String message;
     public CourseServiceBusinessException(String message) {
         super(message);
         this.message=message;

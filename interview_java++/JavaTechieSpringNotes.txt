@@ -125,6 +125,65 @@ public void postme(){  sout("post app run"); }
 }
 }
 
+Video 3: 
+Dependency Injections , types 
+1. Can be used by using interface to create object
+2. Factory pattern can be used to create object
+
+1. Constructor DI
+2. Setter DI
+
+IOC, inversion of control
+
+Sterotype Annotations, 4 annotations to identify class as service or repository, Its good practive to seperate this annos.
+
+1. @Component  =Parent of below annotations
+2. @Service
+3. @Repository
+4. @Controller
+
+
+@Autowired : Most imp, will create object in Spring app ,setter is default injection, if other is not set to bean.
+
+If two bean found we get error , required a single bean found 2 , to resolve this we can use @Qualifier annotaion 
+
+1. Setter injection
+
+@Autowired
+@Qualifier("tikTokService") 
+private Social Service;
+=> class Name in camel case / setter injection
+
+2. Constructor injection
+
+private SocialService service;
+
+@Autowired
+public UserApp(@Qualifier("whatsAppService") SocialSerive service){
+this.service=service;
+}
+
+why we have two injection stratergies :
+1. If injection is optional then go for setter
+2. If injection is mandatory then go for construction DI, Spring will make sure bean is loaded.
+   If there is cyclic dependency then it can be solved by setter injection, constructor injection can not solve this.
+
+
+2. Command Line runners : 
+    If we want to do somethis before application start up then we should use command line runners , need to implement command line runner interface and need to override run method. this overriden method will be called before SpringApp.run();  , Instead of command line runner we can use @PostConstruct annoation to run some method before main method.
+
+@SpringBootApplication
+class App implements CommandLineRunner{
+   
+@PostConstruct
+public void postme(){  sout("post app run"); }
+  @Override
+  public void run(String... args){
+  sout("print before app statrt");
+}
+}
+
+
 Video 4 : Spring boot Rest example 
 
 We can expose our services to users
@@ -180,6 +239,62 @@ Constraints on bean
 5. @Pattern
 6. @Email
 7. @PastOrPresent
+
+
+
+Video Bean validation: 
+
+Constraints on bean 
+
+1. @NotNull
+2. @NotEmpty
+3. @NotBlank
+4. @Min / @Max
+5. @Pattern
+6. @Email
+7. @PastOrPresent
+
+Jpa
+
+JPARepository
+Pagination
+CRUDRepository
+
+spring.sql.init.mode=always   : run data.sql to insert some data on startup
+spring.jpa.defer-datasource-initialization=true  : wont execute schema.sql  , table will be created by jpa and data.sql used to push data to tables
+
+And And OR operator in JPA method
+
+Based on query we can get data 
+@Query(" from product_table where p.price=?1  ")  // Named Parameter, position based parameter
+getProductByPrice()
+
+@Query("select * from data ",nativeQuery=true)
+
+Jpa Operators :
+Like
+In
+LessThan or GreaterThan
+between
+Sorting dynamic :  Pagination 10->next -> 10-20 ->Nect -> 21-30
+
+findByPriceIn
+findByPriceBetween
+findByPriceGreaterThan
+findByPriceLessThan
+findByNameContaining ; Like clause
+findByNameIgnoreCaseContaining : Like clause ignore case
+
+find by sorting 
+repo.findAll(Sort.by(Sort.Direction.ASC,fieldName))  = Sorting
+
+Page<Product> getByPagesResponse(int offset,int int limit){
+    return repo.findAll(PageRequest.of(offset,limit));
+}
+
+Page<Product> getProductWithSortAndPagination(String fieldName,int offset,int limit){
+   return repo.findAll(PageRequest.of(offset,limit).withSort(Sort.by(fieldName)));
+}
 
 
 

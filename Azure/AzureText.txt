@@ -1,0 +1,41 @@
+Azure : Basic : AZ-900
+
+
+Cloud Models :
+1. SAAS  : Software as a service
+2. PAAS  : Platforam as a service  
+3. IAAS   : Infra as a service 
+
+Cloud Computing : 
+
+Private cloud , public cloud , Hybrid cloud
+
+Public cloud : Captila free scaling, quick app porvisioning, Pay as you go
+Private Cloud : hardware cost, sovereign control
+Hybrid cloud : Versatile scalability, strategic application placement , 
+
+Capitval Vs operational Cost 
+Opex : operational cost , cost incurred for goods and services on an ongoing basis, with expensed aligned to usage, Invoicing for these expenditure is immediate, Fast paced market
+
+CapEx : capital Expenditure , Initial investment in physical assets, The value of capital expensed diminishes over time through depriciation, Long term investment
+
+Consumption based model :
+Pay As you go billing :
+1. Flexible resource model
+2. Pay as you use
+3. no resource locking
+
+Cloud benefits :
+1. High availability  : Load balancing, Redundancy, 
+2. Scalability   :  Efficient scaling, Scale based on demand ,Resource optimization, Horizontal vs Vertical scaling ,  Cost-effective growth, Handling demand spikes
+3. Predictabilty :  Budgeting challenges, cost spikes risk, unpredictable performnace impact, resource allocation issues
+4. Governance : Governance policy consistnacy, Cloud environment compliancem, Data protection assurance , Operational integrity maintenance 
+Define -> enforce -> Monitor, Governance at scale
+5. Elasticity : Unpredictable traffic bursts, Immediate resource allocation,Automatic scaling response, Cost-efficient resource usage
+6. Relibility : Continius accesssibility, Data protection priority,fast incident recovery
+7. Security  : Security threats, Data breach risks, unauthorized access concern
+Network securiity, Data encryption, Indentity management, Thread detection
+8. Managebility : Centralized monitorin, Automated tuning , Resource optimization
+
+
+
