@@ -38,4 +38,20 @@ Network securiity, Data encryption, Indentity management, Thread detection
 8. Managebility : Centralized monitorin, Automated tuning , Resource optimization
 
 
+Cloud data  :  
+
+Azure address : 
+sagar_v
+123456789abcdE
+
+windows789
+
+13.88.5.246
+
+
+https://client.wvd.microsoft.com/arm/webclient/index.html  : To connect in web
+
+
+
+
 

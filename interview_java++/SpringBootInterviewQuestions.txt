@@ -1,0 +1,630 @@
+ Sure! Here’s a numbered list of Spring Boot interview questions, broken down by topic:
+
+1. Spring Boot Basics
+What is Spring Boot, and how does it differ from the Spring Framework?
+What are the advantages of using Spring Boot?
+How do you create a Spring Boot application?
+What is the Spring Boot initializer?
+How do Spring Boot's auto-configuration and starter dependencies work?
+2. Configuration and Properties
+What is application.properties or application.yml in Spring Boot?
+How can you configure multiple property files in Spring Boot?
+What is the difference between @Value and @ConfigurationProperties?
+How do you externalize configuration using @ConfigurationProperties?
+How would you override default properties in Spring Boot?
+3. Spring Boot Annotations
+What is @SpringBootApplication, and what does it include?
+What is the difference between @RestController and @Controller?
+What is @Autowired, and how is it used in Spring Boot?
+Explain the role of @Component and @Service in Spring Boot.
+What is @RequestMapping, and how is it used in Spring Boot?
+4. Spring Boot REST API
+How do you create a REST API in Spring Boot?
+What is @GetMapping, @PostMapping, @PutMapping, and @DeleteMapping?
+How do you handle exceptions in Spring Boot REST services?
+How do you validate request parameters in Spring Boot REST APIs?
+How would you secure a Spring Boot REST API?
+5. Spring Boot Data Access
+What is Spring Data JPA, and how does it integrate with Spring Boot?
+How do you configure a datasource in Spring Boot?
+How do you create repositories in Spring Boot using Spring Data JPA?
+What is the purpose of @Entity and @Table in Spring Boot JPA?
+How do you implement pagination and sorting in Spring Data JPA?
+6. Spring Boot Security
+How do you configure Spring Security in a Spring Boot application?
+How can you secure a REST API using Spring Security and OAuth2?
+What is CSRF protection in Spring Security, and how can you disable it?
+How do you implement user authentication in Spring Boot with JWT?
+What is the role of @PreAuthorize in securing methods?
+7. Spring Boot Testing
+How do you write unit tests for Spring Boot applications?
+What is @SpringBootTest, and how does it work?
+How do you mock dependencies in Spring Boot tests?
+How do you test Spring Boot REST controllers?
+What is TestRestTemplate, and how is it used in Spring Boot testing?
+8. Spring Boot Microservices
+What are microservices, and how does Spring Boot support them?
+How do you implement inter-service communication in Spring Boot microservices?
+What is Spring Cloud, and how does it integrate with Spring Boot?
+How do you use Eureka for service discovery in Spring Boot microservices?
+How do you implement circuit breakers using Spring Boot and Hystrix?
+9. Spring Boot Actuator
+What is Spring Boot Actuator, and how do you enable it?
+What are the most commonly used Spring Boot Actuator endpoints?
+How do you customize the Actuator endpoints in Spring Boot?
+How do you monitor metrics using Spring Boot Actuator?
+How do you secure Actuator endpoints in a Spring Boot application?
+10. Spring Boot DevOps and Deployment
+How do you package a Spring Boot application into an executable JAR or WAR?
+How do you deploy a Spring Boot application on Docker?
+How do you configure Spring Boot for different environments (dev, prod, etc.)?
+What are some best practices for deploying Spring Boot applications in production?
+How do you monitor a Spring Boot application in production?
+
+
+
+What is caching in Spring Boot, and why is it used?
+How do you enable caching in a Spring Boot application?
+What are the different cache providers supported by Spring Boot?
+How do you annotate a method for caching in Spring Boot?
+How do you configure cache expiration in Spring Boot?
+What is the difference between @Cacheable and @CacheEvict in Spring Boot?
+How do you clear a cache in Spring Boot?
+How do you implement distributed caching in Spring Boot using Redis?
+How do you enable cache statistics in Spring Boot?
+How do you handle cache synchronization in a clustered environment?
+12. Spring Boot Scheduling
+How do you enable scheduling in a Spring Boot application?
+What is the @Scheduled annotation in Spring Boot?
+How do you configure a scheduled task to run at fixed intervals in Spring Boot?
+How do you schedule tasks with cron expressions in Spring Boot?
+How do you handle exceptions in scheduled tasks in Spring Boot?
+Can you run multiple scheduled tasks in parallel in Spring Boot? How?
+How do you enable asynchronous scheduling in Spring Boot?
+What is the role of @Async in Spring Boot?
+How do you monitor scheduled tasks in Spring Boot?
+How would you gracefully shutdown scheduled tasks in a Spring Boot application?
+13. Spring Boot Profiles
+What are Spring Boot profiles, and why are they used?
+How do you define different profiles in Spring Boot?
+How do you activate a specific profile when running a Spring Boot application?
+What is the role of the @Profile annotation in Spring Boot?
+How can you specify different properties for different profiles?
+How do you switch between profiles in different environments (e.g., dev, prod)?
+How do you configure environment-specific beans using Spring Boot profiles?
+Can you use multiple profiles simultaneously in Spring Boot? How?
+How do you test Spring Boot applications with specific profiles?
+How do you manage profile-specific logging configurations in Spring Boot?
+14. Spring Boot Logging
+How is logging configured in Spring Boot by default?
+What are the different logging levels in Spring Boot?
+How do you configure a custom logging format in Spring Boot?
+How do you change the logging level for a specific package or class in Spring Boot?
+What is the purpose of logback-spring.xml in Spring Boot?
+How do you configure logging for different environments (dev, prod) in Spring Boot?
+How do you write logs to a file in Spring Boot?
+What is SLF4J, and how is it used in Spring Boot?
+How do you enable asynchronous logging in Spring Boot?
+How do you configure log rotation in Spring Boot?
+15. Spring Boot Messaging
+What is Spring Boot Messaging, and how does it work?
+How do you implement messaging in Spring Boot using RabbitMQ?
+How do you configure JMS (Java Message Service) in Spring Boot?
+How do you send and receive messages using Spring Boot with Kafka?
+What is the role of @JmsListener in Spring Boot messaging?
+How do you configure message converters in Spring Boot?
+How do you handle message persistence in Spring Boot?
+What is a message broker, and how do you integrate it with Spring Boot?
+How do you configure message retry mechanisms in Spring Boot?
+How do you secure message communication in Spring Boot?
+16. Spring Boot AOP (Aspect-Oriented Programming)
+What is AOP, and how is it implemented in Spring Boot?
+What is a pointcut in Spring Boot AOP?
+What are the different types of advice in Spring Boot AOP?
+How do you use @Aspect in Spring Boot?
+How do you create a custom aspect in Spring Boot?
+What is a join point in Spring Boot AOP?
+How do you handle cross-cutting concerns using AOP in Spring Boot?
+What is the difference between @Before, @After, and @Around advice?
+How do you control the execution order of aspects in Spring Boot?
+How do you apply AOP to specific methods or packages in Spring Boot?
+17. Spring Boot WebFlux
+What is Spring WebFlux, and how does it differ from Spring MVC?
+How do you create a reactive REST API using Spring Boot WebFlux?
+What are Mono and Flux, and how are they used in Spring Boot WebFlux?
+How do you handle backpressure in Spring Boot WebFlux?
+How do you configure a reactive database connection in Spring Boot WebFlux?
+How do you test a Spring Boot WebFlux application?
+What is the role of @Controller and @RestController in Spring Boot WebFlux?
+How do you secure a WebFlux application in Spring Boot?
+How do you configure WebSockets in Spring Boot WebFlux?
+What are some use cases where you would prefer WebFlux over Spring MVC?
+
+
+
+18. Spring Boot Validation
+How do you perform validation in Spring Boot?
+What is @Valid, and how is it used in Spring Boot?
+How do you customize validation error messages in Spring Boot?
+What is the difference between @Valid and @Validated in Spring Boot?
+How do you handle validation errors in Spring Boot REST APIs?
+How do you implement cross-field validation in Spring Boot?
+What is a custom validator in Spring Boot, and how do you create one?
+How do you validate request parameters and path variables in Spring Boot?
+How do you enable method-level validation in Spring Boot?
+How do you handle validation for nested objects in Spring Boot?
+19. Spring Boot Exception Handling
+How do you handle exceptions in a Spring Boot application?
+What is @ControllerAdvice, and how is it used for global exception handling?
+How do you create custom exceptions in Spring Boot?
+How do you return custom error responses in Spring Boot?
+How do you handle exceptions for REST APIs in Spring Boot?
+What is @ExceptionHandler, and how is it used?
+How do you log exceptions in Spring Boot?
+How do you handle validation exceptions in Spring Boot?
+How do you return meaningful HTTP status codes with exceptions in Spring Boot?
+How do you create a unified error response structure in Spring Boot?
+20. Spring Boot Internationalization (i18n)
+What is internationalization (i18n) in Spring Boot, and why is it important?
+How do you configure internationalization in a Spring Boot application?
+How do you define message bundles for different locales in Spring Boot?
+How do you switch between different languages or locales in Spring Boot?
+How do you resolve locale dynamically in Spring Boot?
+What is LocaleResolver, and how is it used in Spring Boot?
+How do you handle fallback messages in Spring Boot internationalization?
+How do you test internationalization in Spring Boot applications?
+How do you support multiple languages in Spring Boot REST APIs?
+How do you handle currency and date formats for different locales in Spring Boot?
+21. Spring Boot Database Transactions
+What is a database transaction, and how does Spring Boot manage it?
+How do you enable transaction management in Spring Boot?
+What is @Transactional, and how is it used in Spring Boot?
+How do you control transaction propagation in Spring Boot?
+What is the difference between REQUIRED and REQUIRES_NEW in transaction propagation?
+How do you handle rollback scenarios in Spring Boot transactions?
+How do you implement programmatic transaction management in Spring Boot?
+How do you configure transaction timeouts in Spring Boot?
+How do you test transactional behavior in Spring Boot?
+How do you handle distributed transactions in Spring Boot?
+22. Spring Boot Data Migration
+What are data migration tools, and why are they needed in Spring Boot applications?
+How do you integrate Liquibase with Spring Boot for database migrations?
+How do you use Flyway for managing database versions in Spring Boot?
+What is the difference between Liquibase and Flyway?
+How do you create a new database migration script in Spring Boot?
+How do you manage multiple environments (dev, test, prod) with database migrations in Spring Boot?
+How do you roll back a migration in Spring Boot?
+How do you handle schema versioning with Spring Boot and Flyway/Liquibase?
+How do you test database migrations in Spring Boot applications?
+How do you handle large-scale data migrations with Spring Boot?
+23. Spring Boot Integration Testing
+What is integration testing in Spring Boot, and how is it different from unit testing?
+How do you write integration tests in Spring Boot using @SpringBootTest?
+How do you mock external services in integration tests in Spring Boot?
+How do you perform database integration testing in Spring Boot?
+How do you configure in-memory databases (e.g., H2) for testing in Spring Boot?
+How do you test REST APIs using MockMvc in Spring Boot?
+How do you configure test profiles for integration testing in Spring Boot?
+How do you test Spring Boot security configurations in integration tests?
+How do you use Testcontainers for testing with real databases in Spring Boot?
+How do you test asynchronous processes in Spring Boot integration tests?
+24. Spring Boot WebSockets
+What is WebSocket, and how is it implemented in Spring Boot?
+How do you enable WebSocket support in Spring Boot?
+How do you create a WebSocket server endpoint in Spring Boot?
+How do you implement a WebSocket client in Spring Boot?
+How do you broadcast messages to all connected WebSocket clients in Spring Boot?
+How do you secure WebSockets in Spring Boot?
+How do you handle WebSocket message encoding and decoding in Spring Boot?
+What is STOMP, and how does it integrate with Spring Boot WebSockets?
+How do you handle WebSocket session management in Spring Boot?
+How do you test WebSocket connections in Spring Boot applications?
+25. Spring Boot and NoSQL Databases
+How do you connect a Spring Boot application to a MongoDB database?
+What is Spring Data MongoDB, and how is it integrated with Spring Boot?
+How do you perform CRUD operations using Spring Data MongoDB in Spring Boot?
+How do you configure a Cassandra database in Spring Boot?
+What is the role of @Document in Spring Data MongoDB?
+How do you handle transactions in Spring Boot with MongoDB?
+How do you query a MongoDB database using MongoTemplate in Spring Boot?
+How do you connect Spring Boot to a Redis database?
+How do you store and retrieve data in Redis using Spring Boot?
+How do you configure Elasticsearch in Spring Boot?
+
+
+
+26. Spring Boot Monitoring and Metrics
+How do you monitor a Spring Boot application using Actuator?
+What metrics can you track with Spring Boot Actuator?
+How do you expose custom metrics in Spring Boot?
+How do you enable health checks in Spring Boot with Actuator?
+How do you integrate Prometheus with Spring Boot for monitoring?
+How do you set up Grafana dashboards for monitoring Spring Boot applications?
+How do you configure Micrometer in Spring Boot for application metrics?
+How do you track HTTP request metrics in Spring Boot?
+How do you use logging as a form of monitoring in Spring Boot?
+How do you monitor JVM metrics (e.g., memory, threads) in Spring Boot?
+27. Spring Boot Event Handling
+How do you implement event-driven programming in Spring Boot?
+What is ApplicationEvent in Spring Boot, and how do you use it?
+How do you create and publish custom events in Spring Boot?
+How do you listen to events in Spring Boot using @EventListener?
+How do you handle asynchronous events in Spring Boot?
+How do you use the ApplicationEventPublisher in Spring Boot?
+How do you configure transactional event listeners in Spring Boot?
+What is the role of SmartApplicationListener in Spring Boot?
+How do you create conditional event listeners in Spring Boot?
+How do you test event handling in a Spring Boot application?
+28. Spring Boot Security with OAuth2 and JWT
+How do you implement OAuth2 authentication in Spring Boot?
+How do you configure OAuth2 resource servers in Spring Boot?
+What is JWT (JSON Web Token), and how is it used in Spring Boot security?
+How do you generate and validate JWT tokens in Spring Boot?
+How do you implement OAuth2 authorization using Spring Security?
+How do you secure Spring Boot REST APIs using OAuth2 and JWT?
+How do you refresh JWT tokens in a Spring Boot application?
+How do you handle user roles and authorities with JWT in Spring Boot?
+How do you store JWT tokens securely in Spring Boot applications?
+How do you configure token expiration and revocation in Spring Boot?
+29. Spring Boot Email Integration
+How do you send emails in a Spring Boot application?
+How do you configure Spring Boot to use SMTP for sending emails?
+What is JavaMailSender, and how is it used in Spring Boot?
+How do you send HTML emails in Spring Boot?
+How do you attach files to emails in Spring Boot?
+How do you send templated emails using Spring Boot and Thymeleaf?
+How do you handle email sending failures in Spring Boot?
+How do you schedule email notifications in Spring Boot?
+How do you test email sending functionality in Spring Boot?
+How do you send emails asynchronously in Spring Boot?
+30. Spring Boot with GraphQL
+What is GraphQL, and how does it differ from REST?
+How do you integrate GraphQL with Spring Boot?
+How do you create a GraphQL schema in Spring Boot?
+How do you define queries and mutations in Spring Boot GraphQL?
+How do you use GraphQL-Java with Spring Boot?
+How do you handle errors in a Spring Boot GraphQL application?
+How do you perform data fetching in Spring Boot with GraphQL?
+How do you secure a Spring Boot GraphQL API?
+How do you test GraphQL queries and mutations in Spring Boot?
+How do you implement subscriptions in Spring Boot GraphQL?
+31. Spring Boot with Kubernetes
+How do you deploy a Spring Boot application to Kubernetes?
+What is the purpose of a Dockerfile when deploying to Kubernetes?
+How do you create a Kubernetes Deployment for a Spring Boot app?
+How do you configure a Service in Kubernetes for a Spring Boot app?
+How do you use ConfigMaps and Secrets in Kubernetes with Spring Boot?
+How do you scale a Spring Boot application in Kubernetes?
+How do you configure Kubernetes health checks for Spring Boot apps?
+How do you implement auto-scaling for a Spring Boot app in Kubernetes?
+How do you monitor Spring Boot applications running in Kubernetes?
+How do you handle logging for Spring Boot apps in Kubernetes?
+32. Spring Boot with Reactive Databases
+What is a reactive database, and why would you use one with Spring Boot?
+How do you configure a reactive database connection in Spring Boot?
+How do you perform CRUD operations in Spring Boot using R2DBC?
+How do you manage transactions in a reactive Spring Boot application?
+How do you integrate MongoDB with Spring Boot using reactive programming?
+How do you query a reactive database using Flux and Mono?
+How do you handle backpressure in reactive database operations in Spring Boot?
+How do you optimize the performance of reactive database operations?
+How do you test reactive database interactions in Spring Boot?
+How do you configure connection pooling for reactive databases in Spring Boot?
+33. Spring Boot File Upload and Download
+How do you handle file uploads in Spring Boot?
+How do you configure multipart file upload in Spring Boot?
+How do you store uploaded files in Spring Boot?
+How do you handle large file uploads in Spring Boot?
+How do you download files from a Spring Boot REST API?
+How do you return file streams in Spring Boot?
+How do you secure file upload endpoints in Spring Boot?
+How do you handle file upload errors in Spring Boot?
+How do you integrate cloud storage (e.g., AWS S3) for file uploads in Spring Boot?
+How do you perform file upload validation (e.g., file type, size) in Spring Boot?
+34. Spring Boot Batch Processing
+What is Spring Batch, and how is it used in Spring Boot?
+How do you configure a Spring Boot batch job?
+What are the key components of a Spring Batch job (Job, Step, Tasklet, etc.)?
+How do you configure chunk processing in Spring Boot batch jobs?
+How do you handle job scheduling in Spring Boot Batch?
+How do you persist job execution metadata in Spring Batch?
+How do you handle retries and skips in Spring Boot Batch processing?
+How do you read and write data in a Spring Boot Batch job (e.g., CSV, DB)?
+How do you monitor and log Spring Batch job executions?
+How do you configure job parameters in Spring Boot Batch?
+35. Spring Boot Integration with External APIs
+How do you call external REST APIs in a Spring Boot application?
+What is RestTemplate, and how is it used in Spring Boot?
+How do you handle HTTP requests and responses using WebClient in Spring Boot?
+How do you handle timeouts when calling external APIs in Spring Boot?
+How do you handle errors and retries when calling external APIs?
+How do you secure external API calls using OAuth2 in Spring Boot?
+How do you parse and handle JSON data from external APIs in Spring Boot?
+How do you manage API rate limiting in Spring Boot?
+How do you test external API calls in Spring Boot?
+How do you integrate with SOAP services in Spring Boot?
+
+
+What are the best practices for integration testing in Spring Boot?
+How do you configure a testing profile in Spring Boot?
+How do you test a Spring Boot REST API using MockMvc?
+How do you test service layers in Spring Boot?
+How do you mock external dependencies for integration testing in Spring Boot?
+How do you test database operations using an in-memory database like H2 in Spring Boot?
+What is @SpringBootTest, and how does it work for integration testing?
+How do you use Testcontainers for integration testing in Spring Boot?
+How do you handle transactional tests in Spring Boot?
+How do you write integration tests for security-related functionality in Spring Boot?
+37. Spring Boot with Kafka
+How do you integrate Apache Kafka with Spring Boot?
+How do you configure a Kafka producer and consumer in Spring Boot?
+How do you handle message serialization and deserialization in Spring Boot with Kafka?
+How do you manage Kafka topic creation and configuration in Spring Boot?
+How do you handle message filtering in Spring Boot with Kafka?
+How do you handle consumer groups in Spring Boot Kafka integration?
+How do you configure Kafka retries and error handling in Spring Boot?
+How do you monitor Kafka consumer lags in Spring Boot?
+How do you implement transactional Kafka messaging in Spring Boot?
+How do you test Kafka integrations in a Spring Boot application?
+38. Spring Boot Security with LDAP
+How do you integrate LDAP with Spring Boot for authentication?
+What is the purpose of LdapTemplate, and how is it used in Spring Boot?
+How do you configure Spring Security to authenticate using LDAP in Spring Boot?
+How do you secure REST APIs using LDAP authentication in Spring Boot?
+How do you manage user roles and groups in an LDAP setup with Spring Boot?
+How do you configure LDAP connection settings in Spring Boot?
+How do you handle password encoding in LDAP authentication with Spring Boot?
+How do you map LDAP attributes to Spring Security authorities?
+How do you implement role-based access control using LDAP in Spring Boot?
+How do you test LDAP authentication in Spring Boot?
+39. Spring Boot Session Management
+How does session management work in a Spring Boot application?
+How do you configure HTTP sessions in Spring Boot?
+What is Spring Session, and how does it differ from traditional session management?
+How do you persist sessions in a Spring Boot application?
+How do you configure session timeouts in Spring Boot?
+How do you store sessions in Redis using Spring Boot?
+How do you implement session clustering in Spring Boot?
+How do you handle session fixation attacks in Spring Boot?
+How do you manage session cookies in Spring Boot?
+How do you test session management in Spring Boot applications?
+40. Spring Boot Performance Tuning
+What are some best practices for performance tuning in Spring Boot?
+How do you optimize the startup time of a Spring Boot application?
+How do you tune database connections in a Spring Boot application?
+How do you optimize Hibernate performance in Spring Boot?
+How do you use caching to improve performance in Spring Boot?
+How do you handle large amounts of data in Spring Boot applications efficiently?
+How do you profile a Spring Boot application to find performance bottlenecks?
+How do you optimize memory usage in a Spring Boot application?
+How do you configure thread
+
+
+
+
+
+
+
+36. Spring Boot Integration Testing
+What are the best practices for integration testing in Spring Boot?
+How do you configure a testing profile in Spring Boot?
+How do you test a Spring Boot REST API using MockMvc?
+How do you test service layers in Spring Boot?
+How do you mock external dependencies for integration testing in Spring Boot?
+How do you test database operations using an in-memory database like H2 in Spring Boot?
+What is @SpringBootTest, and how does it work for integration testing?
+How do you use Testcontainers for integration testing in Spring Boot?
+How do you handle transactional tests in Spring Boot?
+How do you write integration tests for security-related functionality in Spring Boot?
+37. Spring Boot with Kafka
+How do you integrate Apache Kafka with Spring Boot?
+How do you configure a Kafka producer and consumer in Spring Boot?
+How do you handle message serialization and deserialization in Spring Boot with Kafka?
+How do you manage Kafka topic creation and configuration in Spring Boot?
+How do you handle message filtering in Spring Boot with Kafka?
+How do you handle consumer groups in Spring Boot Kafka integration?
+How do you configure Kafka retries and error handling in Spring Boot?
+How do you monitor Kafka consumer lags in Spring Boot?
+How do you implement transactional Kafka messaging in Spring Boot?
+How do you test Kafka integrations in a Spring Boot application?
+38. Spring Boot Security with LDAP
+How do you integrate LDAP with Spring Boot for authentication?
+What is the purpose of LdapTemplate, and how is it used in Spring Boot?
+How do you configure Spring Security to authenticate using LDAP in Spring Boot?
+How do you secure REST APIs using LDAP authentication in Spring Boot?
+How do you manage user roles and groups in an LDAP setup with Spring Boot?
+How do you configure LDAP connection settings in Spring Boot?
+How do you handle password encoding in LDAP authentication with Spring Boot?
+How do you map LDAP attributes to Spring Security authorities?
+How do you implement role-based access control using LDAP in Spring Boot?
+How do you test LDAP authentication in Spring Boot?
+39. Spring Boot Session Management
+How does session management work in a Spring Boot application?
+How do you configure HTTP sessions in Spring Boot?
+What is Spring Session, and how does it differ from traditional session management?
+How do you persist sessions in a Spring Boot application?
+How do you configure session timeouts in Spring Boot?
+How do you store sessions in Redis using Spring Boot?
+How do you implement session clustering in Spring Boot?
+How do you handle session fixation attacks in Spring Boot?
+How do you manage session cookies in Spring Boot?
+How do you test session management in Spring Boot applications?
+40. Spring Boot Performance Tuning
+What are some best practices for performance tuning in Spring Boot?
+How do you optimize the startup time of a Spring Boot application?
+How do you tune database connections in a Spring Boot application?
+How do you optimize Hibernate performance in Spring Boot?
+How do you use caching to improve performance in Spring Boot?
+How do you handle large amounts of data in Spring Boot applications efficiently?
+How do you profile a Spring Boot application to find performance bottlenecks?
+How do you optimize memory usage in a Spring Boot application?
+How do you configure thread pools in Spring Boot to improve performance?
+How do you optimize REST API performance in Spring Boot?
+41. Spring Boot Integration with Messaging Systems
+How do you integrate RabbitMQ with Spring Boot?
+How do you send and receive messages using RabbitMQ in Spring Boot?
+How do you handle message acknowledgments in Spring Boot with RabbitMQ?
+How do you configure a message queue and exchange in RabbitMQ using Spring Boot?
+How do you ensure message durability in RabbitMQ with Spring Boot?
+How do you configure ActiveMQ with Spring Boot?
+How do you handle message retry and error handling in Spring Boot with RabbitMQ/ActiveMQ?
+How do you integrate JMS (Java Message Service) with Spring Boot?
+How do you test message-based systems in Spring Boot?
+How do you monitor and manage RabbitMQ/ActiveMQ queues in a Spring Boot application?
+42. Spring Boot with Cloud Providers
+How do you deploy a Spring Boot application to AWS?
+How do you integrate AWS S3 with a Spring Boot application for file storage?
+How do you use AWS RDS with a Spring Boot application?
+How do you configure AWS SNS and SQS in Spring Boot for messaging?
+How do you manage secrets with AWS Secrets Manager in a Spring Boot application?
+How do you deploy a Spring Boot application to Microsoft Azure?
+How do you use Azure Blob Storage with Spring Boot?
+How do you integrate Google Cloud Storage with Spring Boot?
+How do you use Google Cloud Pub/Sub for messaging in Spring Boot?
+How do you handle configuration management with Spring Cloud and AWS/Azure/Google Cloud?
+43. Spring Boot Reactive Programming
+What is reactive programming, and how does it differ from traditional programming?
+How do you build a reactive REST API in Spring Boot using WebFlux?
+What is Mono and Flux, and how are they used in Spring Boot?
+How do you handle backpressure in reactive programming with Spring Boot?
+How do you perform database operations reactively using Spring Data Reactive Repositories?
+How do you integrate WebSockets with reactive programming in Spring Boot?
+How do you implement reactive streams in Spring Boot?
+How do you test reactive components in Spring Boot?
+How do you handle errors in reactive programming with Spring Boot?
+How do you implement event-driven architectures using reactive programming in Spring Boot?
+44. Spring Boot with Microservices
+What is a microservice architecture, and how does Spring Boot fit into it?
+How do you develop a Spring Boot microservice?
+How do you use Spring Cloud for building microservices in Spring Boot?
+What is service discovery, and how do you implement it in Spring Boot using Eureka?
+How do you implement inter-service communication using Feign in Spring Boot?
+How do you handle configuration management in Spring Boot microservices using Spring Cloud Config?
+How do you secure microservices in Spring Boot?
+How do you monitor microservices using Spring Boot and Spring Cloud?
+How do you handle API gateways in Spring Boot microservices using Spring Cloud Gateway?
+How do you handle distributed tracing and logging in Spring Boot microservices?
+45. Spring Boot with Circuit Breakers
+What is a circuit breaker, and how does it help in a distributed system?
+How do you implement a circuit breaker in Spring Boot using Resilience4j?
+How do you configure timeouts and retry policies in a Spring Boot application?
+How do you monitor circuit breaker metrics in Spring Boot?
+How do you integrate Hystrix with Spring Boot for circuit breaking?
+How do you handle fallback methods in Spring Boot with Resilience4j?
+How do you use circuit breakers in reactive programming with Spring Boot?
+How do you test circuit breakers in Spring Boot?
+How do you handle bulkheads and rate limiting in Spring Boot?
+How do you implement resilience patterns like timeouts, retries, and rate limits in Spring Boot?
+
+
+
+36. Spring Boot Testing
+How do you perform unit testing in a Spring Boot application?
+What is @SpringBootTest, and when should you use it?
+How do you test Spring Boot services?
+How do you mock dependencies in Spring Boot tests using @MockBean?
+How do you test Spring Boot repositories?
+How do you use @DataJpaTest for testing JPA repositories in Spring Boot?
+How do you test Spring Boot controllers using MockMvc?
+How do you perform integration testing in Spring Boot?
+How do you write test cases for REST APIs in Spring Boot?
+How do you test Spring Boot security configurations?
+37. Spring Boot and Microservices
+What is a microservice architecture, and how is it implemented in Spring Boot?
+How do you create a microservice using Spring Boot?
+What is service discovery in microservices, and how is it implemented in Spring Boot?
+How do you use Spring Cloud Netflix Eureka for service discovery?
+What is the purpose of a service registry in a microservice architecture?
+How do you implement client-side load balancing with Spring Boot and Ribbon?
+How do you use Feign clients for inter-service communication in Spring Boot?
+How do you handle distributed tracing in Spring Boot microservices?
+How do you implement circuit breakers using Spring Boot and Hystrix?
+How do you implement distributed transactions in Spring Boot microservices?
+38. Spring Boot with RabbitMQ and Kafka
+What is RabbitMQ, and how is it integrated with Spring Boot?
+How do you configure a RabbitMQ connection in Spring Boot?
+How do you send and receive messages using RabbitMQ in Spring Boot?
+How do you handle message queues in Spring Boot with RabbitMQ?
+What is Kafka, and how does it integrate with Spring Boot?
+How do you configure Kafka producers and consumers in Spring Boot?
+How do you handle Kafka topics and partitions in Spring Boot?
+How do you manage message offsets in Spring Boot Kafka applications?
+How do you ensure message reliability with Kafka in Spring Boot?
+How do you monitor Kafka messages and topics in Spring Boot?
+39. Spring Boot with WebFlux
+What is Spring WebFlux, and how is it different from Spring MVC?
+When would you use WebFlux instead of Spring MVC in a Spring Boot application?
+What is Mono, and how is it used in WebFlux?
+What is Flux, and how is it used in WebFlux?
+How do you handle asynchronous programming with WebFlux in Spring Boot?
+How do you create a REST API using Spring WebFlux?
+How do you handle backpressure in WebFlux?
+How do you configure a reactive MongoDB repository in Spring Boot with WebFlux?
+How do you secure WebFlux endpoints in a Spring Boot application?
+How do you perform testing for WebFlux-based applications in Spring Boot?
+40. Spring Boot Profiles
+What are Spring Boot profiles, and why are they used?
+How do you define different profiles in a Spring Boot application?
+How do you activate a specific profile in Spring Boot?
+What is the difference between application.properties and application-{profile}.properties?
+How do you create environment-specific configurations in Spring Boot?
+How do you switch profiles programmatically in Spring Boot?
+How do you use YAML for profile configuration in Spring Boot?
+How do you test profile-specific beans in Spring Boot?
+How do you use Spring Boot profiles for managing different database environments (e.g., dev, test, prod)?
+How do you handle sensitive configurations (like credentials) in profile-specific properties files?
+41. Spring Boot Caching
+What is caching in Spring Boot, and why is it important?
+How do you enable caching in a Spring Boot application?
+What is @Cacheable, and how does it work in Spring Boot?
+How do you use @CachePut in Spring Boot?
+How do you evict cache entries using @CacheEvict in Spring Boot?
+How do you configure a cache manager in Spring Boot?
+How do you use Redis for caching in Spring Boot?
+How do you handle cache expiration in Spring Boot?
+How do you test caching behavior in Spring Boot?
+How do you monitor cache performance in Spring Boot?
+42. Spring Boot and Docker
+What is Docker, and how is it used with Spring Boot?
+How do you create a Docker image for a Spring Boot application?
+What is a Dockerfile, and how do you create one for a Spring Boot app?
+How do you build and run a Spring Boot application using Docker?
+How do you use Docker Compose with Spring Boot for multi-container applications?
+How do you configure environment variables in a Docker container for Spring Boot?
+How do you optimize a Spring Boot Docker image for faster builds?
+How do you configure logging in a Dockerized Spring Boot application?
+How do you test a Spring Boot application running in a Docker container?
+How do you monitor a Spring Boot application running in Docker?
+43. Spring Boot Web Security
+What is the default security configuration in Spring Boot?
+How do you disable the default Spring Boot security configuration?
+How do you implement basic authentication in a Spring Boot application?
+How do you secure Spring Boot REST APIs with OAuth2?
+How do you configure role-based access control (RBAC) in Spring Boot?
+How do you secure Spring Boot endpoints with JWT tokens?
+How do you customize security error responses in Spring Boot?
+How do you implement CSRF protection in Spring Boot?
+How do you configure HTTPS in a Spring Boot application?
+How do you handle user authentication and authorization in a Spring Boot application?
+44. Spring Boot and Graph Databases
+How do you integrate a Spring Boot application with Neo4j?
+How do you configure a Neo4j connection in Spring Boot?
+What is @NodeEntity, and how is it used with Neo4j in Spring Boot?
+How do you perform CRUD operations in Spring Boot using Neo4j?
+How do you write custom queries for Neo4j in Spring Boot?
+How do you model relationships in Neo4j using Spring Boot?
+How do you configure transactions for Neo4j in Spring Boot?
+How do you test a Spring Boot application with Neo4j integration?
+How do you handle graph traversal in Spring Boot with Neo4j?
+How do you monitor and optimize Neo4j performance in Spring Boot?
+45. Spring Boot and Reactive Programming
+What is reactive programming, and how does it differ from traditional programming in Spring Boot?
+What are Mono and Flux, and how are they used in reactive programming?
+How do you create a reactive REST API using Spring Boot?
+How do you handle errors in reactive programming with Spring Boot?
+How do you implement backpressure in a Spring Boot reactive application?
+How do you integrate WebFlux with a database in a Spring Boot application?
+How do you handle asynchronous data streams in Spring Boot?
+How do you test reactive programming code in Spring Boot?
+How do you configure reactive database connections in Spring Boot?
+How do you handle large data streams in reactive Spring Boot applications?

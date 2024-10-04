@@ -299,3 +299,59 @@ Page<Product> getProductWithSortAndPagination(String fieldName,int offset,int li
 
 
  
+1. Azure virtual machine
+2. Azure virtual desktops
+3. 
+
+Spring Boot Testing Annotations 
+To access any enpoints from controller
+1. URL
+2. HTTP Method types
+3. Request/Input
+4. Response/Output
+
+Integration Test : 
+1. RestTemplate
+2. TestRestTemplate
+3. MockMVC
+
+
+
+@Test
+@Test(expected=FileNotFoundException.class)
+
+@SpringBootTest
+@AutoConfigureMockMvc
+
+@Autowired
+private MockMvc mockmvc;
+
+@Before
+public void setup(){
+ this.mockmvc=MockMvcBuilders.standAloneSetup(ProductController.class).build();
+}
+
+@Test
+test(){
+   Product prc=new Product("demo",12,22);
+   mockmvc.perform(MockMvcRequestBuilders.post("/products").content());
+}
+
+@EnableCaching
+
+@Cacheble(cacheName="products")
+public List<Products> getProducts(){
+repo.findAll();
+}
+
+@CachePut(cacheNames="products",key="#product.id")
+public Product(Product prc){
+ repo.save(prc);
+}
+
+@CacheEvict(key="#id")
+public void deleteProduct(int id){
+repo.delete(id);
+}
+
+Mostly use cache for get API

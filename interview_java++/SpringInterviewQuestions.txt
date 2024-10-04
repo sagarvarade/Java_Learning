@@ -1,0 +1,420 @@
+General Spring Core Concepts
+What is Spring Framework?
+Explain the key features of the Spring Framework.
+What are the advantages of using Spring?
+What is dependency injection in Spring?
+Describe the different types of dependency injection in Spring.
+What is Inversion of Control (IoC)?
+Explain the Spring IoC container.
+What are the differences between BeanFactory and ApplicationContext?
+What are Spring beans?
+What is the life cycle of a Spring bean?
+How do you define a Spring bean?
+How do you configure Spring beans using XML?
+How do you configure Spring beans using Java-based configuration?
+How do you configure Spring beans using annotations?
+What is a singleton scope in Spring?
+What is the prototype scope in Spring?
+What are other bean scopes available in Spring?
+How does Spring manage bean dependencies?
+What is the purpose of the @Autowired annotation?
+What are @Qualifier and @Primary annotations used for?
+Explain the @Component annotation.
+What is the role of the @Repository annotation?
+What is the @Service annotation?
+What is the difference between @Component, @Service, and @Repository?
+Explain the @Controller annotation.
+What is the use of @RestController in Spring?
+How is Spring MVC different from Spring Core?
+What is the purpose of the @Configuration annotation?
+What is a Spring configuration class?
+What are Spring profiles, and how do they work?
+How do you enable profiles in Spring?
+What is Spring Expression Language (SpEL)?
+How does Spring handle internationalization (i18n)?
+How do you externalize configuration in Spring?
+Spring AOP (Aspect-Oriented Programming)
+What is Aspect-Oriented Programming (AOP)?
+What are cross-cutting concerns?
+What is an aspect in Spring AOP?
+What is a pointcut in Spring AOP?
+What is advice in Spring AOP?
+What is a join point in Spring AOP?
+What is a target object in Spring AOP?
+What are the different types of advice in Spring AOP?
+What is the difference between before and after advice?
+What is around advice in Spring AOP?
+How is Spring AOP implemented internally?
+What is the difference between Spring AOP and AspectJ AOP?
+How do you define aspects using annotations in Spring?
+What is the role of the @Aspect annotation in Spring AOP?
+How does Spring handle transaction management using AOP?
+Spring Annotations
+What is the purpose of the @Bean annotation?
+Explain the difference between @Component and @Bean.
+How does @Value annotation work in Spring?
+What is the purpose of @Scope annotation?
+What does the @Lazy annotation do in Spring?
+What is the @PostConstruct annotation?
+What is the @PreDestroy annotation?
+How does the @RequestMapping annotation work in Spring MVC?
+What is the difference between @GetMapping and @PostMapping?
+What is the use of the @RequestBody annotation?
+How do you handle exceptions using @ExceptionHandler?
+How does @ResponseBody work in Spring MVC?
+What is the role of @PathVariable?
+What is the difference between @RequestParam and @PathVariable?
+How does @ModelAttribute work in Spring MVC?
+What is the role of @RequestScope in Spring?
+What is the @SessionScope annotation?
+Spring Transactions
+What is transaction management in Spring?
+What are the two types of transaction management in Spring?
+How do you define a transaction in Spring using annotations?
+What is the role of the @Transactional annotation?
+How does Spring handle declarative transaction management?
+What are isolation levels in Spring transactions?
+What is propagation in Spring transactions?
+What are the default values for transaction attributes in Spring?
+Can you explain rollback rules in Spring?
+How does Spring handle nested transactions?
+How can you manage programmatic transactions in Spring?
+Spring Security
+What is Spring Security?
+How do you implement authentication and authorization in Spring Security?
+What is the role of UserDetailsService in Spring Security?
+What is the AuthenticationManager in Spring Security?
+How does Spring Security handle password encoding?
+What is the purpose of @EnableWebSecurity?
+How do you configure security using annotations?
+How do you configure security in XML?
+What are filters in Spring Security?
+Spring Data and Persistence
+What is Spring Data?
+How does Spring integrate with ORM frameworks like Hibernate?
+What is Spring Data JPA?
+How do you define repositories in Spring Data JPA?
+What is the role of the @Repository annotation in data access?
+How does Spring manage data transactions?
+How do you handle pagination and sorting in Spring Data?
+What is the difference between CrudRepository and JpaRepository?
+How do you write custom queries in Spring Data JPA?
+What is Spring Data REST?
+How does Spring handle NoSQL databases?
+What is Spring Boot, and how does it relate to Spring Core?
+How does Spring Boot simplify the configuration of a Spring application?
+What is the purpose of spring-boot-starter dependencies in Spring Boot?
+
+
+
+
+
+How does Spring handle circular dependencies?
+What is bean wiring in Spring?
+What are bean post-processors in Spring?
+What is the role of BeanFactoryPostProcessor?
+What is the difference between BeanPostProcessor and BeanFactoryPostProcessor?
+How do you create a custom BeanPostProcessor?
+What are Spring events?
+How do you publish and listen to events in Spring?
+How does Spring handle resource loading?
+What is Spring's PropertyPlaceholderConfigurer?
+How do you inject a collection (List, Set, Map) in Spring?
+What is the FactoryBean interface?
+How do you use @Import to import configuration from another class?
+How do you use property files in Spring configuration?
+What is the difference between @Bean and @Component?
+How does Spring handle @Primary bean definitions?
+What is the role of the Environment object in Spring?
+How does Spring handle lazy initialization of beans?
+How do you create a Spring bean dynamically at runtime?
+How does Spring handle property overriding?
+How do you use @Conditional to define beans conditionally?
+What is the role of the ApplicationEventPublisher?
+How do you create custom events in Spring?
+What is the role of the ApplicationListener interface?
+How does Spring handle autowiring by name and type?
+What is a circular dependency in Spring, and how do you solve it?
+What is the difference between constructor injection and setter injection?
+How do you inject a value from an external property file in Spring?
+How does Spring handle method injection?
+What is the difference between bean definition inheritance and bean overriding?
+How do you use Spring’s @ImportResource annotation?
+How does Spring's event propagation mechanism work?
+Spring Boot (Advanced)
+What is Spring Boot autoconfiguration?
+How does Spring Boot choose which beans to autoconfigure?
+How do you exclude a specific autoconfiguration class in Spring Boot?
+What is Spring Boot's @SpringBootApplication annotation?
+What is the purpose of spring-boot-devtools?
+How does Spring Boot handle externalized configuration?
+How do you define custom properties in Spring Boot?
+What are Spring Boot starters?
+What is the Spring Boot Actuator?
+How do you customize Spring Boot Actuator endpoints?
+What is Spring Boot CLI?
+How do you handle profiles in Spring Boot?
+What is the purpose of the @EnableAutoConfiguration annotation?
+How does Spring Boot manage logging configuration?
+What are some common Spring Boot annotations?
+How do you create custom Spring Boot starter projects?
+How does Spring Boot handle data source configuration?
+What is Spring Boot’s embedded server, and how does it work?
+What is the default server in Spring Boot, and how do you change it?
+How do you configure multiple data sources in Spring Boot?
+How does Spring Boot integrate with Spring Data JPA?
+How do you enable and manage caching in Spring Boot?
+What are Spring Boot health checks, and how do you configure them?
+How does Spring Boot manage RESTful services?
+How do you use Spring Boot to consume and produce JSON data?
+How does Spring Boot handle error responses in REST APIs?
+How do you handle versioning in Spring Boot REST services?
+How do you create a custom exception handler in Spring Boot?
+How do you enable HTTPS in a Spring Boot application?
+How does Spring Boot handle security?
+What is a CommandLineRunner in Spring Boot?
+What is a SpringApplication class in Spring Boot?
+What is @SpringBootTest used for?
+How do you create integration tests in Spring Boot?
+How do you configure a Spring Boot application for production?
+How do you manage Spring Boot application properties based on environments?
+How do you deploy a Spring Boot application on a cloud platform?
+Spring Data (Advanced)
+How do you configure Spring Data repositories?
+What is the purpose of @Query annotation in Spring Data JPA?
+How do you write native queries using Spring Data JPA?
+How do you handle custom repository methods in Spring Data JPA?
+What is EntityManager in Spring Data JPA?
+What is the difference between JpaRepository and CrudRepository?
+What is Spring Data Projection?
+How do you perform bulk updates in Spring Data JPA?
+How do you paginate data in Spring Data JPA?
+What is optimistic locking in Spring Data JPA?
+How does Spring Data JPA handle lazy loading and eager loading?
+How do you configure a secondary database with Spring Data JPA?
+What is the role of @EntityGraph in Spring Data JPA?
+How does caching work in Spring Data JPA?
+How does Spring Data JPA handle composite keys?
+What is derived query method in Spring Data JPA?
+How do you configure auditing in Spring Data JPA?
+How does Spring Data integrate with NoSQL databases like MongoDB?
+How do you write repository queries for NoSQL databases in Spring Data?
+What is Spring Data REST, and how does it expose repositories as REST APIs?
+Spring AOP (Advanced)
+What are the limitations of Spring AOP compared to AspectJ?
+How do you configure aspects using XML in Spring AOP?
+How does Spring handle method interception using AOP?
+What is a weaving process in Spring AOP?
+How do you handle pointcuts that span across multiple classes?
+What is a proxy in Spring AOP?
+What is a CGLIB proxy, and how does it work?
+How does Spring handle self-invocation in AOP proxies?
+How does Spring AOP work with transactional methods?
+What are JoinPoint and ProceedingJoinPoint in Spring AOP?
+What are the advantages of using AspectJ over Spring AOP?
+Spring Security (Advanced)
+How does Spring Security manage user roles and authorities?
+What is CSRF protection in Spring Security?
+How does Spring Security handle form-based authentication?
+How do you integrate OAuth2 with Spring Security?
+How do you configure JWT-based authentication in Spring Security?
+How do you create custom authentication providers in Spring Security?
+What is method-level security in Spring, and how do you enable it?
+How do you handle stateless authentication in Spring Security?
+What is the role of SecurityContextHolder in Spring Security?
+How does Spring Security handle session management?
+How do you configure multiple authentication providers in Spring Security?
+How does Spring Security handle password storage and encryption?
+How do you enable HTTPS in Spring Security?
+How does Spring Security handle custom login pages?
+How do you use Spring Security for securing REST APIs?
+How do you disable security for certain URLs in Spring Security?
+What is the difference between role-based and attribute-based access control in Spring Security?
+How do you handle security in a microservices architecture using Spring Security?
+Spring Testing
+What is Spring TestContext Framework?
+How do you write unit tests in Spring?
+How do you test Spring controllers using MockMvc?
+How do you write integration tests in Spring?
+How do you use @WebMvcTest for testing Spring controllers?
+How do you test services and repositories in Spring?
+How does Spring Boot simplify testing compared to Spring Core?
+How do you use @DataJpaTest for repository testing in Spring Boot?
+How does Spring handle transactional tests?
+What is the role of @MockBean in Spring testing?
+How do you use @SpyBean in Spring tests?
+How do you mock external services in Spring tests?
+How do you test Spring security configurations?
+How do you use @TestPropertySource in Spring tests?
+How do you test event listeners in Spring?
+Spring Microservices
+How do you implement a microservices architecture using Spring Boot?
+How does Spring Cloud integrate with Spring Boot for microservices?
+What is Spring Cloud Config, and how do you use it?
+How do you use Eureka for service discovery in Spring Cloud?
+How do you implement a gateway service using Spring Cloud Gateway?
+How do you handle circuit breakers using Spring Cloud Circuit Breaker?
+What is Spring Cloud Sleuth, and how does it help with distributed tracing?
+How do you implement load balancing using Spring Cloud LoadBalancer?
+How do you secure microservices using Spring Security and OAuth2?
+How does Spring Boot integrate with Docker for containerization?
+What is Hystrix, and how does it work with Spring Cloud?
+How do you use Spring Cloud Stream for messaging in microservices?
+
+
+
+What is Spring Cloud Netflix, and how does it integrate with Spring Cloud?
+How does Ribbon provide client-side load balancing in Spring Cloud?
+What is Feign in Spring Cloud, and how is it used?
+How does Spring Cloud Config handle externalized configuration in microservices?
+What are microservices patterns implemented using Spring Cloud?
+How do you implement service registration and discovery in Spring Cloud using Eureka?
+What is the difference between Spring Cloud Gateway and Zuul?
+How do you implement API Gateway in Spring Cloud?
+How does Spring Cloud handle service resiliency using Resilience4J?
+What are fallback methods in Spring Cloud, and how are they implemented?
+How does Spring Cloud handle service-to-service communication?
+What is service registry, and how does Spring Cloud integrate with it?
+How do you handle versioning in microservices using Spring Cloud?
+How does Spring Cloud provide centralized configuration for microservices?
+What is Spring Cloud Bus, and how is it used?
+How does Spring Cloud handle distributed tracing?
+How do you implement monitoring in Spring Cloud microservices?
+How does Spring Cloud handle circuit breakers and retries in microservices?
+What is Consul, and how does it integrate with Spring Cloud?
+What is the role of Zookeeper in Spring Cloud microservices?
+How does Spring Cloud integrate with Kubernetes?
+How do you deploy Spring microservices in Kubernetes?
+What is Kubernetes ConfigMap, and how do you use it with Spring Boot?
+How do you secure communication between microservices in Spring Cloud?
+How do you handle distributed sessions in Spring Cloud microservices?
+How does Spring Cloud integrate with Kafka for messaging?
+What is Spring Cloud Task, and how is it used?
+How do you handle rate limiting in Spring Cloud?
+How does Spring Cloud integrate with Elasticsearch?
+How do you handle request tracing using Spring Cloud Sleuth?
+What is the difference between synchronous and asynchronous communication in Spring microservices?
+How does Spring Cloud integrate with AWS services like S3, SNS, and SQS?
+How does Spring Cloud integrate with GCP (Google Cloud Platform)?
+How do you integrate Spring microservices with API management tools like Kong or Apigee?
+Spring Boot (Continued)
+What is a SpringBootApplication class, and what does it do?
+How do you create a Spring Boot fat jar?
+How do you create a Spring Boot thin jar?
+How does Spring Boot handle database migrations using Flyway?
+How does Spring Boot handle database migrations using Liquibase?
+How do you externalize properties in a Spring Boot application?
+How do you enable actuator endpoints in Spring Boot?
+How does Spring Boot auto-configure a data source?
+How do you configure custom data sources in Spring Boot?
+How does Spring Boot manage exceptions in REST APIs?
+How do you customize the default error page in Spring Boot?
+How does Spring Boot integrate with Maven or Gradle for build automation?
+How do you configure logging levels in a Spring Boot application?
+How does Spring Boot support different logging frameworks (Logback, Log4j2)?
+How does Spring Boot manage CORS (Cross-Origin Resource Sharing)?
+How do you customize the Spring Boot banner?
+How do you create custom health checks in Spring Boot Actuator?
+How does Spring Boot manage hot reloading using DevTools?
+How do you implement OpenAPI documentation using Spring Boot?
+How do you configure Spring Boot for different environments (dev, test, prod)?
+How do you secure Spring Boot applications with HTTPS?
+How do you monitor Spring Boot applications in production?
+How do you integrate Spring Boot with Prometheus and Grafana for monitoring?
+How do you build a RESTful API with Spring Boot?
+How does Spring Boot integrate with Postman for API testing?
+How do you handle validation in Spring Boot REST APIs?
+How do you handle exception handling globally in Spring Boot?
+How do you implement Swagger documentation in Spring Boot?
+What is the role of the SpringApplication class in Spring Boot?
+How do you create a batch job in Spring Boot?
+How do you schedule tasks in Spring Boot?
+How does Spring Boot integrate with Redis for caching?
+How do you set up basic authentication in Spring Boot?
+How do you configure Spring Boot with OAuth2?
+How do you build reactive applications using Spring Boot?
+Spring Security (Continued)
+What is OAuth2, and how do you implement it using Spring Security?
+How do you configure LDAP authentication in Spring Security?
+How does Spring Security handle CSRF attacks?
+How do you secure Spring Boot REST APIs with JWT (JSON Web Token)?
+How does Spring Security handle OAuth2 token generation and validation?
+How do you implement remember-me functionality in Spring Security?
+How does Spring Security handle HTTP Basic Authentication?
+How do you secure a Spring Boot application using Spring Security and OAuth2?
+How do you customize Spring Security authentication entry points?
+What are security filters in Spring Security, and how do you customize them?
+How does Spring Security handle concurrent sessions?
+What are access decision voters in Spring Security?
+How do you integrate SAML (Security Assertion Markup Language) with Spring Security?
+How does Spring Security integrate with JWT for stateless authentication?
+How do you set up role-based access control in Spring Security?
+How do you customize the login form in Spring Security?
+How do you log security events in Spring Security?
+How does Spring Security handle role hierarchies?
+How do you secure a Spring Boot microservice with OAuth2 and JWT?
+How do you configure Spring Security for multi-tenancy?
+Spring Batch
+What is Spring Batch?
+What is the role of Job, Step, and Tasklet in Spring Batch?
+How does Spring Batch handle chunk-based processing?
+What is an ItemReader in Spring Batch?
+What is an ItemProcessor in Spring Batch?
+What is an ItemWriter in Spring Batch?
+How does Spring Batch handle retry logic?
+How does Spring Batch handle parallel processing?
+How do you configure jobs in Spring Batch?
+What is the difference between a Tasklet and Chunk in Spring Batch?
+How do you manage job execution states in Spring Batch?
+How does Spring Batch handle job scheduling?
+How do you persist job execution details in Spring Batch?
+What is the role of the JobLauncher in Spring Batch?
+How do you restart a failed job in Spring Batch?
+How does Spring Batch integrate with external systems like Kafka?
+How do you implement a listener in Spring Batch?
+How does Spring Batch handle validation during job execution?
+What is a job repository in Spring Batch?
+Spring Data (Continued)
+How does Spring Data handle caching with Redis?
+What is Spring Data Neo4j, and how is it used?
+How does Spring Data integrate with MongoDB?
+How do you handle reactive programming in Spring Data with MongoDB?
+How does Spring Data JPA handle native SQL queries?
+How do you handle optimistic locking in Spring Data JPA?
+What is pessimistic locking in Spring Data JPA?
+How do you configure Spring Data JPA for PostgreSQL?
+What is the role of EntityManagerFactory in Spring Data JPA?
+How do you implement auditing in Spring Data JPA?
+How do you perform batch operations in Spring Data JPA?
+What is Spring Data JDBC, and how is it different from JPA?
+How do you handle mapping between entities and DTOs in Spring Data JPA?
+How do you create dynamic queries in Spring Data JPA?
+What are the key annotations used in Spring Data MongoDB?
+How do you handle MongoDB transactions with Spring Data?
+How does Spring Data Elasticsearch work?
+How do you configure Spring Data Cassandra?
+Reactive Programming in Spring
+What is reactive programming, and how is it different from imperative programming?
+How does Spring handle reactive programming?
+What is Spring WebFlux?
+How do you create a reactive REST API using Spring WebFlux?
+What is Mono in Spring WebFlux?
+What is Flux in Spring WebFlux?
+How does backpressure work in Spring WebFlux?
+How do you handle reactive database access in Spring?
+How does Spring integrate with R2DBC for reactive database access?
+How do you configure a reactive data source in Spring?
+What are the advantages of using reactive programming in Spring?
+Spring Cloud (Continued)
+How do you implement centralized logging in Spring Cloud microservices?
+How do you implement fault tolerance in Spring Cloud using Resilience4J?
+How do you handle data consistency in Spring Cloud microservices?
+How does Spring Cloud handle service orchestration?
+How do you implement distributed transactions in Spring Cloud?
+How does Spring Cloud support reactive microservices?
+What is the role of Spring Cloud Config in a microservice architecture?
+How do you implement request tracing in Spring Cloud using Zipkin?
+
+
+
+
