@@ -1,0 +1,330 @@
+1. General Kubernetes Basics:
+What is Kubernetes?
+What problem does Kubernetes solve?
+Explain the architecture of Kubernetes.
+What are the main components of a Kubernetes cluster?
+What is a Kubernetes node?
+What is a pod in Kubernetes?
+What is a cluster in Kubernetes?
+How do Kubernetes nodes communicate with each other?
+What are labels and selectors in Kubernetes?
+How does Kubernetes perform service discovery?
+What is kubectl?
+What is a Kubernetes namespace?
+How do you create a namespace in Kubernetes?
+What is the role of etcd in Kubernetes?
+Explain the role of the API server in Kubernetes.
+What is the purpose of the controller manager?
+What is the scheduler in Kubernetes?
+What is a kubelet?
+What is kube-proxy?
+What is the Kubernetes control plane?
+2. Pods:
+What is a Kubernetes pod?
+Can a pod contain multiple containers?
+How do pods communicate with each other?
+How do you deploy a pod in Kubernetes?
+How do you expose a pod in Kubernetes?
+Can a pod be restarted? If yes, how?
+What happens when a pod fails?
+How can you view pod logs in Kubernetes?
+What are the types of pods in Kubernetes?
+How do you scale a pod in Kubernetes?
+Can a pod survive a node failure?
+What are ephemeral containers in Kubernetes?
+What is the difference between a pod and a container?
+What is a pod lifecycle in Kubernetes?
+How can you delete a pod in Kubernetes?
+What are the common pod statuses?
+Can you share storage between containers in a pod?
+How do you pass environment variables to a pod?
+What is an init container?
+How do you update an existing pod configuration?
+3. Controllers:
+What is a ReplicaSet?
+How is a ReplicaSet different from a replication controller?
+How do you define a ReplicaSet?
+What is a Deployment in Kubernetes?
+How do you create a Deployment in Kubernetes?
+What is a StatefulSet?
+What is the difference between StatefulSet and Deployment?
+How does a DaemonSet work?
+What is a Job in Kubernetes?
+What is a CronJob in Kubernetes?
+What is the purpose of horizontal pod autoscaling (HPA)?
+How does a rolling update work in Kubernetes?
+What is the difference between a rolling update and a blue-green deployment?
+How do you scale a Deployment in Kubernetes?
+What is a canary deployment in Kubernetes?
+How can you rollback a Kubernetes deployment?
+What is the purpose of a helm chart?
+What is a Helm release?
+How do you version deployments in Kubernetes?
+How do Deployments handle changes to pods?
+4. Services and Networking:
+What is a Kubernetes service?
+What are the types of services in Kubernetes?
+What is a ClusterIP service?
+How does a NodePort service work?
+What is a LoadBalancer service?
+How do you expose services to the internet?
+What is DNS in Kubernetes?
+What is kube-dns or CoreDNS?
+How do you set up a service to load-balance across pods?
+What is an ingress controller in Kubernetes?
+What is the difference between services and ingress?
+How do you define an ingress resource in Kubernetes?
+What is Network Policy in Kubernetes?
+How do you define network policies in Kubernetes?
+What is the purpose of a service mesh?
+What are service endpoints in Kubernetes?
+What is a headless service?
+How do services perform service discovery?
+How do you route external traffic to services?
+How do you handle multiple environments in Kubernetes (e.g., dev, prod)?
+5. Storage:
+What is persistent storage in Kubernetes?
+What is a PersistentVolume (PV)?
+What is a PersistentVolumeClaim (PVC)?
+How does dynamic provisioning work in Kubernetes?
+What is a StorageClass?
+How do you mount a volume to a pod?
+What is the difference between a hostPath and a PersistentVolume?
+How do you share volumes between containers in a pod?
+How does Kubernetes handle data storage for stateless applications?
+What are the types of volumes available in Kubernetes?
+What is a ConfigMap?
+What is a Secret in Kubernetes?
+How do you secure secrets in Kubernetes?
+What are emptyDir volumes?
+Can you back up PersistentVolumes?
+What happens if a PVC request exceeds the available storage?
+How do you resize a PVC in Kubernetes?
+What are ephemeral volumes in Kubernetes?
+How do you connect cloud-based storage to a Kubernetes cluster?
+How does Kubernetes handle data persistence during pod termination?
+6. Security:
+What is RBAC in Kubernetes?
+How does Kubernetes handle authentication?
+What is a ServiceAccount?
+How do you define roles and role bindings in Kubernetes?
+What is the difference between a role and a cluster role?
+How do you create a ServiceAccount?
+How do you enable HTTPS communication in Kubernetes?
+What are Kubernetes secrets?
+How do you encrypt secrets in Kubernetes?
+How can you enforce network isolation in Kubernetes?
+What are PodSecurityPolicies?
+How do you implement pod security policies?
+How can you secure communication between pods?
+What are Kubernetes admission controllers?
+How do you audit logs in Kubernetes?
+How do you handle TLS certificates in Kubernetes?
+How do you prevent containers from running as root in Kubernetes?
+What is seccomp and how is it used in Kubernetes?
+What is a Pod Security Standard?
+How do you use OPA (Open Policy Agent) for policy enforcement in Kubernetes?
+7. Monitoring and Logging:
+How do you monitor a Kubernetes cluster?
+What is Prometheus, and how does it integrate with Kubernetes?
+What is Grafana and how do you use it with Kubernetes?
+How do you configure logging for pods in Kubernetes?
+What is Fluentd in Kubernetes?
+How do you centralize logs in Kubernetes?
+How do you monitor pod performance?
+How do you collect metrics in Kubernetes?
+What is the purpose of kube-state-metrics?
+How do you set up alerts for pod failures?
+What is a liveness probe?
+What is a readiness probe?
+How does horizontal pod autoscaling work in Kubernetes?
+What is vertical pod autoscaling?
+How do you check cluster health in Kubernetes?
+How do you manage application logs in Kubernetes?
+How do you perform container-level monitoring in Kubernetes?
+How can you troubleshoot a failed pod?
+How do you get logs from a specific container within a pod?
+How do you use OpenTelemetry with Kubernetes?
+8. Advanced Kubernetes Concepts:
+What is a multi-cluster setup in Kubernetes?
+How do you implement CI/CD with Kubernetes?
+What is a custom resource definition (CRD)?
+How do you create a custom resource in Kubernetes?
+What are operators in Kubernetes?
+What is the difference between operators and CRDs?
+How does Kubernetes handle high availability?
+What is a sidecar container?
+What is a node affinity and anti-affinity?
+How do you use taints and tolerations in Kubernetes?
+What is the difference between kubectl exec and kubectl run?
+How does Kubernetes handle self-healing?
+How do you implement blue-green deployment in Kubernetes?
+How do you implement canary releases in Kubernetes?
+What is helm, and how does it help in deploying applications?
+What is kubeadm and how is it used?
+How do you scale a Kubernetes cluster?
+What is kube-scheduler?
+How do you troubleshoot kubelet issues?
+What is the role of API aggregation in Kubernetes?
+
+
+
+
+
+
+9. Autoscaling and Performance Optimization:
+What is Kubernetes autoscaling?
+How does Horizontal Pod Autoscaler (HPA) work in Kubernetes?
+What is Vertical Pod Autoscaler (VPA)?
+How do you set up Horizontal Pod Autoscaler?
+What are the metrics used by HPA for autoscaling?
+How do you configure Custom Metrics for autoscaling?
+What is Cluster Autoscaler in Kubernetes?
+What is node-level autoscaling?
+How do you monitor resource usage for scaling decisions?
+What is the difference between Vertical and Horizontal Pod Autoscaling?
+How do you tune Kubernetes cluster performance?
+How do you configure resource requests and limits in Kubernetes?
+What is resource overcommitment in Kubernetes?
+How does Kubernetes schedule pods based on resource requests?
+How do you monitor pod resource utilization?
+How do you prevent resource starvation in Kubernetes?
+How do you handle memory leaks in a pod?
+What is a ResourceQuota in Kubernetes?
+How do you restrict resources across namespaces?
+What is the impact of resource limits on pod performance?
+10. High Availability and Failover:
+How do you achieve high availability (HA) in Kubernetes?
+How does Kubernetes handle node failures?
+What is a self-healing mechanism in Kubernetes?
+How does Kubernetes handle pod failures?
+How do you configure a multi-master setup in Kubernetes?
+What is a distributed etcd cluster in Kubernetes?
+How does Kubernetes perform leader election in HA environments?
+How do you handle control plane failure in Kubernetes?
+What is a load balancer’s role in an HA Kubernetes cluster?
+How do you ensure HA for Kubernetes API Server?
+How do you handle disaster recovery in Kubernetes?
+What is Kubernetes federation?
+How does Kubernetes manage cluster upgrades in HA setups?
+What is the significance of persistent storage in HA environments?
+How do you perform backups for an etcd cluster?
+How does Kubernetes ensure data consistency across nodes?
+What is a rolling update and how does it ensure HA?
+How do you handle database HA in a Kubernetes environment?
+What is the benefit of a canary deployment for HA?
+How do you ensure HA across multiple Kubernetes clusters?
+11. Networking and Load Balancing:
+How does Kubernetes networking work?
+What is a CNI (Container Network Interface) in Kubernetes?
+What are popular CNI plugins used in Kubernetes?
+What is the purpose of kube-proxy in Kubernetes networking?
+How do you configure a Kubernetes network policy?
+How do you manage ingress traffic in Kubernetes?
+What is an ingress controller in Kubernetes?
+How do you set up a load balancer in Kubernetes?
+What is a service mesh in Kubernetes networking?
+How do you configure an internal load balancer in Kubernetes?
+What is MetalLB and how does it enable bare metal load balancing?
+How do you handle external traffic routing in Kubernetes?
+What is kube-router and how is it different from kube-proxy?
+What is the difference between ClusterIP and NodePort services?
+How do you configure DNS for Kubernetes services?
+How do you expose multiple services via a single IP in Kubernetes?
+What is the difference between ingress and service in Kubernetes?
+How does network segmentation work in Kubernetes?
+How do you debug network issues in a Kubernetes cluster?
+How do you configure IP whitelisting for a Kubernetes service?
+12. Security:
+What are Kubernetes security best practices?
+What is Role-Based Access Control (RBAC) in Kubernetes?
+How do you configure roles and permissions in Kubernetes?
+What are Kubernetes service accounts?
+How do you ensure secure communication between pods?
+How do you secure API access in Kubernetes?
+How do you implement pod security policies (PSP)?
+How do you manage secrets in Kubernetes?
+How do you encrypt data in transit in Kubernetes?
+How does Kubernetes handle TLS certificates for pods?
+How do you limit resource access using network policies?
+What are Kubernetes admission controllers and how do they enhance security?
+What is Pod Security Admission and how does it replace PSPs?
+How do you configure security contexts for pods?
+What is a Seccomp profile in Kubernetes?
+How do you prevent privilege escalation in containers?
+What is the importance of namespaces in Kubernetes security?
+How do you handle image scanning for vulnerabilities?
+How do you isolate workloads across tenants in a Kubernetes cluster?
+How do you audit a Kubernetes cluster for security compliance?
+13. Persistent Storage and Stateful Applications:
+How does Kubernetes manage persistent storage?
+What is the difference between PersistentVolume (PV) and PersistentVolumeClaim (PVC)?
+How do you manage dynamic storage provisioning in Kubernetes?
+What is the role of a StorageClass in Kubernetes?
+How do you attach a persistent volume to a pod?
+How do you share persistent storage between multiple pods?
+How do you scale stateful applications in Kubernetes?
+What is a StatefulSet in Kubernetes?
+How does StatefulSet differ from a Deployment?
+How do you manage database state in a Kubernetes cluster?
+How does Kubernetes handle data recovery for stateful applications?
+What are the best practices for running databases in Kubernetes?
+How do you back up persistent volumes in Kubernetes?
+How do you handle storage resizing in Kubernetes?
+How do you handle data replication across nodes in Kubernetes?
+What is the importance of ReadWriteMany (RWX) volumes in Kubernetes?
+How do you implement storage encryption in Kubernetes?
+What is volume affinity in Kubernetes?
+How do you handle storage failover in a multi-availability zone setup?
+How do you manage cloud-native storage solutions in Kubernetes?
+14. Kubernetes in Cloud Environments:
+What is GKE (Google Kubernetes Engine)?
+How does AKS (Azure Kubernetes Service) differ from GKE?
+What is EKS (Amazon Elastic Kubernetes Service)?
+How do you manage multi-cloud Kubernetes deployments?
+What is the role of a cloud controller manager in Kubernetes?
+How do you provision cloud resources using Kubernetes?
+How do you set up Kubernetes on AWS using EKS?
+What is the difference between managed Kubernetes services and self-managed clusters?
+How do you integrate cloud-based storage solutions in Kubernetes?
+How do you ensure high availability in cloud-based Kubernetes environments?
+What is the benefit of cloud-native Kubernetes for CI/CD pipelines?
+How do you configure auto-scaling in cloud-based Kubernetes environments?
+How do you manage IAM roles in cloud-based Kubernetes environments?
+How do you configure load balancers for cloud-native Kubernetes services?
+How do you implement cloud-based monitoring for Kubernetes?
+What is a cloud-native ingress controller in Kubernetes?
+How do you handle multi-region Kubernetes clusters in the cloud?
+How do you integrate Kubernetes with cloud-based logging solutions?
+How do you implement cloud-native security solutions in Kubernetes?
+How do you set up Kubernetes in hybrid cloud environments?
+15. Troubleshooting and Debugging:
+How do you troubleshoot a failing pod in Kubernetes?
+How do you debug failed deployments in Kubernetes?
+How do you resolve scheduling issues in Kubernetes?
+How do you analyze pod logs for debugging purposes?
+What is a CrashLoopBackOff error and how do you resolve it?
+How do you troubleshoot networking issues in Kubernetes?
+How do you check the health of a Kubernetes node?
+How do you handle OutOfMemory (OOM) errors in Kubernetes?
+How do you resolve image pull failures in Kubernetes?
+How do you troubleshoot persistent volume mount issues?
+What tools can be used for Kubernetes troubleshooting?
+How do you debug a Kubernetes cluster using kubectl commands?
+How do you diagnose high resource consumption in Kubernetes?
+How do you resolve resource quota issues in Kubernetes?
+How do you handle certificate expiration in Kubernetes?
+How do you analyze etcd performance and health issues?
+How do you resolve DNS resolution issues in Kubernetes?
+How do you identify and kill a problematic pod?
+What is the role of the Kubernetes event log in debugging?
+How do you troubleshoot ingress or load balancer issues in Kubernetes?
+
+
+
+
+
+
+
+
+

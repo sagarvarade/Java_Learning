@@ -1,0 +1,473 @@
+ 1. Docker Basics (50 questions)
+What is Docker?
+What is containerization?
+How does Docker differ from a virtual machine?
+What are the key components of Docker?
+How do you install Docker on Linux/Windows?
+What is a Docker image?
+How is a Docker container different from an image?
+What is Docker Hub?
+How do you pull a Docker image from Docker Hub?
+What is docker pull?
+How do you create a Docker container from an image?
+What is the difference between docker run and docker start?
+How do you stop a running Docker container?
+How do you restart a stopped container in Docker?
+What is the docker exec command used for?
+How do you remove a Docker container?
+What is the difference between removing a container and stopping it?
+What is a Dockerfile?
+How do you build a Docker image using a Dockerfile?
+What is docker build and how does it work?
+How do you list all running containers in Docker?
+What is docker ps and what information does it show?
+How do you list all containers, including stopped ones?
+What are layers in Docker images?
+What is a Docker tag, and how is it used?
+How do you tag a Docker image?
+How do you push a Docker image to a registry?
+How do you remove an image from the local Docker registry?
+How does Docker handle file system isolation?
+What is docker inspect used for?
+How do you rename a Docker container?
+What is the default storage driver in Docker?
+What are Docker volumes?
+How do you create a Docker volume?
+How do you mount a volume in a Docker container?
+How do you share data between Docker containers?
+What is the purpose of the docker-compose tool?
+How does docker-compose.yml file work?
+What are the basic commands of Docker Compose?
+How do you scale services in Docker Compose?
+What is a Docker network?
+How do you connect a container to a network in Docker?
+What is the difference between bridge, host, and overlay networks in Docker?
+How do you inspect the logs of a Docker container?
+What is docker logs?
+How do you check resource usage in a Docker container?
+What is the difference between docker stats and docker top?
+What is Docker's role in DevOps?
+How do you optimize Docker images for faster builds?
+What are some common Docker use cases?
+2. Docker Architecture (50 questions)
+What is Docker Engine?
+What are the main components of Docker architecture?
+How does Docker Engine work?
+What is the difference between Docker Engine and Docker Daemon?
+What is the Docker client?
+How does Docker CLI interact with the Docker daemon?
+What are container runtimes in Docker?
+What is the role of the container runtime (like runc) in Docker?
+What is the docker-containerd?
+How does Docker handle resource isolation?
+What are namespaces in Docker?
+What is the role of cgroups in Docker?
+How does Docker use union file systems?
+What is Docker's layered architecture?
+How do storage drivers work in Docker?
+What is the role of libcontainer in Docker?
+What are Docker plug-ins, and how are they used?
+How does Docker manage state between containers?
+What is Docker's image caching mechanism?
+How does Docker layer its images and containers?
+How are processes isolated within a Docker container?
+How do PID, network, and mount namespaces work in Docker?
+How does Docker create isolated environments for containers?
+What is the role of Docker registry in Docker architecture?
+How does Docker Engine interact with the host OS?
+What is the Docker REST API?
+What are the advantages of Docker's architecture compared to traditional VMs?
+How does Docker support multi-host container orchestration?
+What is Docker's Swarm mode, and how does it work?
+What is Docker CE vs. Docker EE?
+How does Docker EE differ in terms of architecture and features?
+How are Docker container logs handled at the architecture level?
+What is the role of Docker's bridge network?
+How does Docker manage its internal DNS?
+What is the role of /var/lib/docker/ in Docker?
+How do you persist container state across restarts in Docker?
+What is the importance of the /etc/docker/daemon.json file?
+How does Docker support multi-architecture builds?
+How are custom Docker runtime classes handled?
+How does Docker handle container lifecycle events (start, stop, etc.)?
+How does Docker support GPU-accelerated workloads?
+How does Docker handle application scaling?
+What are Docker BuildKit and its features?
+How do you integrate Docker with continuous integration (CI) pipelines?
+What is Docker's role in a microservices architecture?
+How does Docker Swarm handle high availability?
+What are the limitations of Docker's architecture?
+How does Docker interact with systemd on Linux?
+What is the future direction of Docker architecture?
+How does Docker interact with cloud-native environments?
+3. Docker Networking (50 questions)
+What are Docker networks?
+What are the types of Docker networks?
+What is a bridge network in Docker?
+What is a host network in Docker?
+What is an overlay network in Docker?
+How do you create a custom network in Docker?
+How do you connect a container to a specific network?
+How do you inspect Docker network configurations?
+What is Docker's default bridge network?
+How does container-to-container communication work in Docker?
+What is the role of Docker's internal DNS server?
+How do you assign a static IP to a container?
+What is the purpose of docker network ls?
+How do you remove a Docker network?
+What are Docker network drivers?
+How does the bridge driver work in Docker?
+How does the host driver differ from the bridge driver?
+How does Docker handle IP addressing for containers?
+How do you create a multi-host overlay network in Docker?
+How does Docker network overlay mode work?
+What is the purpose of Docker's network namespaces?
+What is Docker's macvlan network driver?
+How do you configure port mapping in Docker?
+What is docker run -p used for?
+How do you bind a container port to a host port?
+What is the difference between -p and -P in Docker networking?
+How do you restrict container network access?
+How do you run a Docker container in a specific network namespace?
+What is Docker Compose's role in setting up networks?
+How do you troubleshoot network issues in Docker containers?
+How do you connect a Docker container to multiple networks?
+What are Docker's published ports?
+How do you route traffic between containers in different networks?
+What are ingress networks in Docker Swarm?
+How do you configure a private network in Docker?
+What are the security implications of exposing Docker container ports?
+How does Docker handle container DNS resolution?
+How do you implement network policies for Docker containers?
+How do you use Docker's swarm-mode ingress load balancing?
+What is docker network inspect used for?
+How does Docker's IPv6 support work?
+What is the role of VXLAN in Docker overlay networks?
+How do you configure inter-container communication in Docker Swarm?
+What is docker-compose up --scale for networking?
+How do you enable external network access for a Docker container?
+How do you configure a Docker network for a database container?
+How do you simulate network outages for Docker containers?
+What is the role of the net-alias in Docker?
+How do you debug Docker networking issues using tcpdump?
+How does Docker handle multi-host networking?
+4. Docker Volumes & Storage (50 questions)
+What are Docker volumes?
+How does Docker use volumes for persistent storage?
+What is the difference between volumes and bind mounts in Docker?
+How do you create a volume in Docker?
+How do you mount a volume to a container in Docker?
+How do you inspect Docker volumes?
+What are the advantages of using volumes over bind mounts?
+How do you share volumes between Docker containers?
+How do you backup and restore a Docker volume?
+How do you remove unused volumes in Docker?
+What is the purpose of docker volume prune?
+How do you use named volumes in Docker Compose?
+How does Docker handle data consistency in volumes?
+How do you migrate data between Docker volumes?
+How do you configure Docker containers to use cloud storage?
+What are volume drivers in Docker?
+How do you use a remote volume driver in Docker?
+How does Docker handle encrypted volumes?
+How do you create a read-only volume in Docker?
+How does Docker handle volume lifecycle management?
+How do you move volumes between hosts?
+How does Docker manage NFS mounts?
+What are the best practices for using volumes in production?
+How do you avoid data loss during container removal in Docker?
+How do you configure Docker for database persistence?
+What is the purpose of the :z and :Z flags in volume mounts?
+How do you use Docker with distributed storage systems like GlusterFS?
+How do you manage large volumes in Docker?
+How do you handle volume snapshots in Docker?
+What are driver options for Docker volumes?
+How do you mount a volume with SELinux support in Docker?
+How do you attach a volume to an existing container?
+How do you share volumes across multiple Docker services in Compose?
+What is the docker volume ls command for?
+How do you inspect the size of a Docker volume?
+How do you handle volume locks in Docker?
+How do you copy data from a Docker volume?
+How do you clean up orphaned Docker volumes?
+How do you use a volume to persist MySQL data in Docker?
+What is the difference between a tmpfs mount and a volume in Docker?
+How do you mount a host directory as a volume in Docker?
+What is a volume plugin in Docker, and how do you use one?
+How do you manage volumes in Kubernetes with Docker containers?
+How does Docker Compose handle volume mounting?
+What are the security considerations for using volumes in Docker?
+How do you access a Docker volume's contents outside of a container?
+How do you use volumes for shared storage in a Docker Swarm?
+What are the risks of mounting the host filesystem as a volume?
+How does Docker handle read/write conflicts in shared volumes?
+What is the Docker volume garbage collection mechanism?
+5. Docker Security (50 questions)
+How does Docker isolate containers from each other?
+How does Docker isolate containers from the host system?
+What are the security risks associated with Docker containers?
+How does Docker mitigate privilege escalation attacks?
+What is the role of the user namespace in Docker security?
+How do you configure Docker to run containers as a non-root user?
+What is the purpose of Docker’s AppArmor and SELinux profiles?
+How do you use seccomp to limit system calls in Docker containers?
+How does Docker ensure container image security?
+What are the best practices for securing Docker images?
+How do you scan Docker images for vulnerabilities?
+What is Docker Content Trust (DCT)?
+How does Docker handle signed images?
+How do you use Docker secrets in a secure manner?
+What is the purpose of Docker secrets and how are they stored?
+How does Docker Swarm handle encrypted communication?
+How do you configure encrypted networks in Docker?
+How do you manage and rotate Docker secrets?
+How does Docker implement rootless containers?
+What is the purpose of --cap-drop and --cap-add in Docker security?
+How do you restrict the capabilities of a Docker container?
+How do you run a container in read-only mode for added security?
+What are the security implications of using docker exec?
+How do you prevent privilege escalation in Docker containers?
+How do you apply custom security profiles to Docker containers?
+How do you securely use Docker with privileged mode (--privileged)?
+How does Docker Swarm handle encrypted storage?
+How do you configure Docker container resource limits to improve security?
+What are Docker's built-in security features?
+How do you harden the Docker daemon?
+How do you securely configure Docker for production environments?
+How do you manage TLS certificates for Docker daemon communication?
+How do you secure the Docker API?
+What are some common Docker security vulnerabilities?
+How do you mitigate container breakout attacks in Docker?
+How does Docker handle multi-tenant security in cloud environments?
+How do you configure Docker containers for compliance requirements?
+How do you restrict Docker container access to the host network?
+How do you configure network policies to secure Docker containers?
+How does Docker use cgroups for security?
+How do you isolate Docker containers in a multi-user environment?
+How do you audit Docker container activity for security purposes?
+What are Docker security advisories?
+How do you secure Docker container logs?
+How do you detect suspicious activity within Docker containers?
+How do you configure firewall rules for Docker container security?
+What is the impact of running a container with the --net=host option on security?
+How do you use a security scanner like Clair or Trivy with Docker?
+How does Docker handle secret injection in production environments?
+What are the guidelines for securely building and deploying Docker images?
+6. Docker Orchestration & Swarm (50 questions)
+What is Docker Swarm?
+What is the difference between Docker Swarm and Kubernetes?
+How do you initialize a Docker Swarm?
+How do you add nodes to a Docker Swarm cluster?
+How does Docker Swarm handle service discovery?
+What is a Swarm manager node?
+How do you promote and demote manager nodes in Docker Swarm?
+How does Docker Swarm handle load balancing?
+How does Docker Swarm ensure high availability?
+What is a Docker Swarm service?
+How do you deploy a service in Docker Swarm?
+How do you scale services in Docker Swarm?
+How does Docker Swarm handle service replicas?
+What is the difference between global and replicated services in Docker Swarm?
+How do you roll back a service update in Docker Swarm?
+How does Docker Swarm handle rolling updates?
+What is a Docker stack?
+How do you deploy a stack in Docker Swarm?
+How do you manage Docker Swarm secrets?
+How does Docker Swarm handle node failures?
+How do you check the status of a Swarm service?
+How do you configure resource constraints for Docker Swarm services?
+How do you use Docker Compose with Docker Swarm?
+How do you monitor Docker Swarm services?
+What is the purpose of docker service ls?
+How do you configure service discovery in Docker Swarm?
+How does Docker Swarm handle multi-host networking?
+How do you update a service in Docker Swarm?
+How does Docker Swarm handle container restarts?
+What is the role of an ingress network in Docker Swarm?
+How do you configure a Docker Swarm overlay network?
+How does Docker Swarm ensure network security?
+How do you troubleshoot network issues in Docker Swarm?
+How do you integrate Docker Swarm with load balancers?
+What is Docker Swarm's approach to service health checks?
+How does Docker Swarm manage state?
+How does Docker Swarm handle persistent storage?
+What are Docker Swarm constraints and affinities?
+How does Docker Swarm handle service placement?
+How do you back up and restore a Docker Swarm cluster?
+How do you configure fault tolerance in Docker Swarm?
+How does Docker Swarm handle leader election?
+What is the difference between a Swarm worker and manager node?
+How do you enable Docker Swarm auto-scaling?
+How does Docker Swarm handle application deployment across multiple datacenters?
+How do you configure alerting for Docker Swarm services?
+How does Docker Swarm handle node draining?
+How do you manage resource limits for Docker Swarm containers?
+How do you deploy a multi-tier application in Docker Swarm?
+How do you secure a Docker Swarm cluster?
+7. Kubernetes with Docker (50 questions)
+What is Kubernetes, and how does it relate to Docker?
+How does Docker work with Kubernetes?
+What is the difference between Docker Swarm and Kubernetes?
+What is a Kubernetes pod, and how does it differ from a Docker container?
+How do you deploy a Docker container in Kubernetes?
+What is the role of a Kubernetes node in running Docker containers?
+How does Kubernetes manage container networking with Docker?
+What is a Kubernetes service, and how does it relate to Docker networking?
+How does Kubernetes handle container orchestration compared to Docker Swarm?
+How do you create a Kubernetes deployment using Docker images?
+How does Kubernetes manage scaling for Docker containers?
+What is the role of Kubernetes ConfigMaps and Secrets with Docker containers?
+How does Kubernetes handle persistent storage for Docker containers?
+How do you update Docker containers in a Kubernetes cluster?
+What is the Kubernetes kubelet, and how does it interact with Docker?
+How do you manage Docker container logs in Kubernetes?
+How does Kubernetes handle container resource limits?
+How do you use Docker images with Kubernetes Helm charts?
+How does Kubernetes handle container security compared to Docker Swarm?
+What are the benefits of using Docker with Kubernetes over standalone Docker?
+How do you deploy Docker containers with Kubernetes YAML files?
+What are Kubernetes namespaces, and how do they work with Docker containers?
+How does Kubernetes handle container DNS?
+How do you monitor Docker containers in Kubernetes?
+How does Kubernetes manage rolling updates for Docker containers?
+How do you troubleshoot Docker container issues in Kubernetes?
+How does Kubernetes manage container affinity and anti-affinity rules?
+What are Kubernetes StatefulSets, and how do they work with Docker?
+How does Kubernetes ingress work with Docker containers?
+How do you configure health checks for Docker containers in Kubernetes?
+How does Kubernetes handle container termination and restarts?
+What is the role of Kubernetes DaemonSets with Docker containers?
+How does Kubernetes handle load balancing for Docker containers?
+How do you integrate Docker container registries with Kubernetes?
+How does Kubernetes handle multi-cloud deployments with Docker containers?
+What are Kubernetes Persistent Volumes, and how do they relate to Docker volumes?
+How do you implement auto-scaling for Docker containers in Kubernetes?
+How do you configure resource quotas for Docker containers in Kubernetes?
+How does Kubernetes manage container lifecycles?
+What are Kubernetes Operators, and how do they relate to Docker container management?
+How does Kubernetes handle container image caching with Docker?
+What are Kubernetes taints and tolerations, and how do they work with Docker containers?
+How does Kubernetes manage container networking policies?
+What is the difference between Kubernetes Jobs and CronJobs with Docker containers?
+How do you manage Docker container security policies in Kubernetes?
+How does Kubernetes handle sidecar containers with Docker?
+What are Kubernetes Horizontal Pod Autoscalers, and how do they work with Docker containers?
+How do you use Kubernetes Service Accounts with Docker containers?
+What are the security best practices for running Docker containers in Kubernetes?
+How does Kubernetes manage multi-tenancy for Docker containers?
+8. Advanced Docker Topics (50 questions)
+How do you optimize Docker image builds for performance?
+What is multi-stage building in Docker?
+How do you handle Docker container logs in a production environment?
+How do you configure resource limits for Docker containers?
+How do you monitor Docker containers in a production environment?
+How do you configure Docker containers to auto-restart after a crash?
+What is the role of HEALTHCHECK in Dockerfile?
+How do you handle environment variables in Docker containers?
+What is the purpose of ARG and ENV in Dockerfile?
+How do you use Docker with continuous integration pipelines (Jenkins, GitLab, etc.)?
+How do you run a Docker container in detached mode?
+How do you clean up unused Docker images and containers?
+What is Docker BuildKit, and how does it improve Docker builds?
+How do you run GPU workloads in Docker containers?
+How do you manage Docker containers in a serverless architecture?
+What is the difference between Docker Compose and Docker Stack?
+How do you troubleshoot slow Docker builds?
+How do you manage Docker container logs using centralized logging solutions like ELK or Fluentd?
+How do you handle cross-platform Docker builds?
+How do you manage Docker container secrets in production environments?
+How do you configure Docker containers for time synchronization?
+How do you configure Docker containers to use a proxy?
+How do you manage Docker container health in a production environment?
+What are the security risks of running Docker containers with --privileged?
+How do you minimize the size of Docker images?
+What are some advanced Docker networking configurations (macvlan, ipvlan)?
+How do you secure Docker containers running in a public cloud?
+How do you configure Docker for high-availability setups?
+How do you use Docker with dynamic programming languages like Python or Node.js?
+How do you configure Docker containers for performance monitoring with Prometheus?
+How do you manage Docker container lifecycle events using hooks?
+What is the purpose of Docker registry mirrors?
+How do you configure Docker containers to use shared memory efficiently?
+How do you troubleshoot performance issues in Docker containers?
+What are the best practices for managing Docker containers in a microservices architecture?
+How do you configure Docker containers to auto-scale in the cloud?
+How do you handle multi-cloud Docker deployments?
+How do you manage Docker containers across multiple data centers?
+How do you use Docker containers for data processing workloads (e.g., Apache Spark)?
+What are the best practices for Docker container security in a production environment?
+How do you use Docker containers for testing and development pipelines?
+How do you run distributed applications in Docker containers?
+How do you configure Docker containers for high-performance networking?
+How do you handle stateful applications in Docker containers?
+How do you configure Docker containers to use cloud-native logging solutions?
+How do you manage Docker containers in a disaster recovery plan?
+What are the best practices for Docker container resource optimization?
+How do you configure Docker containers to work with legacy applications?
+How do you manage Docker container deployments with infrastructure-as-code tools (e.g., Terraform)?
+What is Docker's impact on serverless architectures?
+9. Miscellaneous Docker Questions (100 questions)
+What is the Docker ecosystem, and how does it evolve?
+How does Docker integrate with cloud service providers (AWS, Azure, GCP)?
+What is Docker Cloud, and how does it work?
+How does Docker Hub manage private repositories?
+What are Docker official images, and how are they maintained?
+How do you set up a private Docker registry?
+How does Docker handle multi-tenant environments?
+How do you manage Docker images for a large organization?
+How do you configure Docker containers for hybrid cloud environments?
+What is Docker Desktop, and how does it differ from Docker Engine?
+How do you set up Docker on macOS and Windows?
+How does Docker integrate with systemd on Linux systems?
+How do you configure Docker containers for real-time applications?
+What is the role of Docker in edge computing?
+How do you integrate Docker with message queues (Kafka, RabbitMQ)?
+How do you use Docker with database systems like MySQL or PostgreSQL?
+How do you configure Docker for blockchain-based applications?
+How do you integrate Docker with big data frameworks (Hadoop, Spark)?
+How does Docker handle cross-platform compatibility?
+How do you handle legacy application modernization with Docker?
+What are Docker Multi-Arch images, and how are they used?
+How do you handle secret management for Docker containers in cloud environments?
+How do you deploy Docker containers in a serverless environment (e.g., AWS Lambda)?
+How do you use Docker containers for artificial intelligence (AI) workloads?
+How do you manage Docker containers for machine learning workflows?
+How do you configure Docker containers for low-latency applications?
+What is the role of Docker in continuous testing?
+How does Docker integrate with security tools (e.g., OpenSCAP, Aqua Security)?
+How do you configure Docker containers for 5G workloads?
+What are Docker rootless containers, and how are they used?
+How does Docker handle compliance and regulatory requirements?
+How do you use Docker with content management systems (WordPress, Drupal)?
+What are Docker’s multi-platform image capabilities?
+How do you configure Docker for API gateways (Kong, NGINX)?
+What are the limitations of Docker in production environments?
+How do you use Docker for IoT applications?
+How does Docker handle system resource contention?
+How do you configure Docker containers for AI/ML model training?
+How do you deploy Docker containers for API development and testing?
+What is Docker’s role in full-stack development?
+How do you handle Docker container resource scheduling in Kubernetes?
+How do you configure Docker containers for media processing workloads?
+What are Docker container checkpoints, and how are they used?
+How do you manage Docker container state persistence?
+How does Docker integrate with virtualization technologies (e.g., KVM, Hyper-V)?
+How do you configure Docker containers for real-time video streaming applications?
+What is Docker Compose V2, and how does it improve on Docker Compose V1?
+How does Docker handle GPU workloads for deep learning frameworks (TensorFlow, PyTorch)?
+How do you configure Docker containers for event-driven architectures?
+What is Docker's impact on platform-as-a-service (PaaS) solutions?
+How do you use Docker with AWS Fargate or Azure Container Instances (ACI)?
+How do you configure Docker containers for secure application deployment?
+What is Docker’s role in multi-cloud environments?
+How do you manage Docker containers with service meshes (Istio, Linkerd)?
+How does Docker handle microVMs with Firecracker or Kata Containers?
+How do you configure Docker containers for robotics applications?
+What is Docker’s role in next-generation 5G network infrastructure?
+How do you handle Docker container orchestration in heterogeneous environments?
+How do you optimize Docker for high-throughput, low-latency workloads?
+How do you integrate Docker with observability platforms (e.g., OpenTelemetry)?
+How does Docker interact with service-oriented architectures (SOA)?
+What are Docker-based SaaS solutions, and how do they work?
+How do you configure Docker containers for large-scale batch processing?
+How do you use Docker for infrastructure automation?
