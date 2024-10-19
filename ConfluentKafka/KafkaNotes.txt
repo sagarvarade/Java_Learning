@@ -1,0 +1,12 @@
+Kafka Learn 100 days notes
+
+https://docs.confluent.io/platform/current/get-started/platform-quickstart.html
+
+dir docker-compose.yml
+> docker compose up -d  
+
+To run kafka on docker 
+
+
+> 
+docker-compose restart control-center
