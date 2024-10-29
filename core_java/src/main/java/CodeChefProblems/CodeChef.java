@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
-
+@SuppressWarnings("unused")
 public class CodeChef {
 	public static void main(String[] args) {
 		// https://www.codechef.com/problems/R5S
@@ -88,44 +88,105 @@ public class CodeChef {
 		// https://www.codechef.com/problems/CHEFTRANS
 		// CHEFTRANS();
 		// https://www.codechef.com/problems/VISA
-		//VISA();
-		//https://www.codechef.com/problems/DRUNKALK
-		//DRUNKALK();
-		//https://www.codechef.com/problems/CARRYGOLD
-		//CARRYGOLD();
-		//https://www.codechef.com/problems/EXISTENCE
-		//EXISTENCE();
-		//Test();
-		//https://www.codechef.com/problems/DEVSPORTS
-		//DEVSPORTS();
-		//https://www.codechef.com/problems/CARCHOICE
-		//CARCHOICE();
-		//https://www.codechef.com/problems/UTKPLC
-		//UTKPLC();
-		//https://www.codechef.com/problems/OLYRANK
-		//OLYRANK();
-		//https://www.codechef.com/problems/HOWMANY
-		HOWMANY();
+		// VISA();
+		// https://www.codechef.com/problems/DRUNKALK
+		// DRUNKALK();
+		// https://www.codechef.com/problems/CARRYGOLD
+		// CARRYGOLD();
+		// https://www.codechef.com/problems/EXISTENCE
+		// EXISTENCE();
+		// Test();
+		// https://www.codechef.com/problems/DEVSPORTS
+		// DEVSPORTS();
+		// https://www.codechef.com/problems/CARCHOICE
+		// CARCHOICE();
+		// https://www.codechef.com/problems/UTKPLC
+		// UTKPLC();
+		// https://www.codechef.com/problems/OLYRANK
+		// OLYRANK();
+		// https://www.codechef.com/problems/HOWMANY
+		// HOWMANY();
+		// https://www.codechef.com/problems/GOLDCOINS
+		// GOLDCOINS();
+		//https://www.codechef.com/problems/JUSTICE
+		//JUSTICE();
+		// findTwMaxInteger();
+		//https://www.codechef.com/problems/STOCKMARKET
+		//STOCKMARKET();
+		// https://www.codechef.com/problems/THREEQ
+		THREEQ();
+	}
+
+	private static void THREEQ() {
 		
 	}
 
+	private static void STOCKMARKET() {
+		try (Scanner scanner = new Scanner(System.in)) {
+			int t = scanner.nextInt();
+			while (t-- > 0) {
+				int days = scanner.nextInt();
+				int[] trade = new int[days];
+				for (int i = 0; i < days; i++) {
+					trade[i] = scanner.nextInt();
+				}
+				Arrays.sort(trade);
+				trade[0] = 0;
+				int sum = 0;
+				for (int i : trade) {
+					sum = sum + i;
+				}
+				System.out.println(sum);
+			}
+		}
+	}
+
+	private static void findTwMaxInteger() {
+		int [] a=new int[]{0,0};
+		Arrays.sort(a);
+		System.out.println(a[a.length-1]+a[a.length-2]);
+	}
+
+	private static void JUSTICE() {
+		try (Scanner scanner = new Scanner(System.in)) {
+		    int x = scanner.nextInt();
+		    int y = scanner.nextInt();
+		    if(x>y) {
+		    	System.out.println("YES");
+		    }else {
+		    	System.out.println("NO");
+		    }
+		}
+	}
+
+	private static void GOLDCOINS() {
+		try (Scanner scanner = new Scanner(System.in)) {
+			int A = scanner.nextInt();
+			int B = scanner.nextInt();
+			int X = scanner.nextInt();
+			int Y = scanner.nextInt();
+			if (X > Y)
+				System.out.println(A);
+			else
+				System.out.println(B);
+		}
+	}
 
 	private static void HOWMANY() {
 		try (Scanner scanner = new Scanner(System.in)) {
 			int t = scanner.nextInt();
-			String x="";
-			if(t>0 && t<10)
-				x="1";
-			else if(t>=10 && t<100)
-				x="2";
-			else if (t>=100 && t<1000)
-				x="3";
-			else 
-				x="More than 3 digits";
+			String x = "";
+			if (t > 0 && t < 10)
+				x = "1";
+			else if (t >= 10 && t < 100)
+				x = "2";
+			else if (t >= 100 && t < 1000)
+				x = "3";
+			else
+				x = "More than 3 digits";
 			System.out.println(x);
 		}
 	}
-
 
 	private static void OLYRANK() {
 		try (Scanner scanner = new Scanner(System.in)) {
@@ -148,26 +209,23 @@ public class CodeChef {
 		}
 	}
 
-
 	private static void UTKPLC() {
 		try (Scanner sc = new Scanner(System.in)) {
 			int t = sc.nextInt();
 			while (t-- > 0) {
-				char A=sc.next().charAt(0);
-			    char B=sc.next().charAt(0);
-			    char C=sc.next().charAt(0);
-			    char a=sc.next().charAt(0);
-			    char b=sc.next().charAt(0);
-			    if(a==A ||b==A ){
-			        System.out.println(A);
-			    }
-			    else{
-			        System.out.println(B);
-			    }
+				char A = sc.next().charAt(0);
+				char B = sc.next().charAt(0);
+				char C = sc.next().charAt(0);
+				char a = sc.next().charAt(0);
+				char b = sc.next().charAt(0);
+				if (a == A || b == A) {
+					System.out.println(A);
+				} else {
+					System.out.println(B);
+				}
 			}
 		}
 	}
-
 
 	private static void CARCHOICE() {
 		try (Scanner sc = new Scanner(System.in)) {
@@ -195,48 +253,47 @@ public class CodeChef {
 			int t = scanner.nextInt();
 			while (t-- > 0) {
 				int z = scanner.nextInt();
-			    int y = scanner.nextInt();
-			    int a = scanner.nextInt();
-			    int b = scanner.nextInt();
-			    int c = scanner.nextInt();
-			    
-			    if((a+b+c)<=(z-y)) {
-			    	System.out.println("YES");
-			    }else
-			    	System.out.println("NO");
+				int y = scanner.nextInt();
+				int a = scanner.nextInt();
+				int b = scanner.nextInt();
+				int c = scanner.nextInt();
+
+				if ((a + b + c) <= (z - y)) {
+					System.out.println("YES");
+				} else
+					System.out.println("NO");
 			}
 		}
 	}
 
 	private static void Test() {
 		Map<String, String> bankMap = new HashMap<>();
-        bankMap.put("BRI", "Bank Rakyat Indonesia");
-        bankMap.put("MDR", "Bank Mandiri");
-        bankMap.put("BNI", "Bank Negara Indonesia");
-        bankMap.put("BTN", "Bank Tabungan Negara");
-        bankMap.put("JPN", "PT. Jalin Pembayaran Nusantara");
-        bankMap.put("SAT", "Artajasa");
-        bankMap.put("RTS", "Prima");
-        bankMap.put("ALT", "Alto");
-        bankMap.put("BIS", "Bank BNI Syariah");
-        bankMap.put("BSR", "Bank BRI Syariah");
-        bankMap.put("KAS", "BPD Kalsel");
-        bankMap.put("NTB", "BANK NTB");
-        bankMap.put("GNS", "Bank Ganesha");
-        bankMap.put("BSM", "Bank Syariah Mandiri");
-        bankMap.put("BMI", "Bank Maspion");
-        bankMap.put("MTP", "BANK MANTAP");
-        bankMap.put("BAL", "BANK ALADIN");
-        bankMap.put("BKL", "Bank Bengkulu");
-        bankMap.put("NUT", "BANK NTT");
-        bankMap.put("RYA", "Bank Raya");
-        bankMap.put("LMP", "Bank Lampung");
-        bankMap.put("CBC", "Bank ICBC");
-        bankMap.put("DSP", "Digital Solusi Pratama");
-        bankMap.put("SUL", "Bank Sulteng");
-		
-        
-        String data="""
+		bankMap.put("BRI", "Bank Rakyat Indonesia");
+		bankMap.put("MDR", "Bank Mandiri");
+		bankMap.put("BNI", "Bank Negara Indonesia");
+		bankMap.put("BTN", "Bank Tabungan Negara");
+		bankMap.put("JPN", "PT. Jalin Pembayaran Nusantara");
+		bankMap.put("SAT", "Artajasa");
+		bankMap.put("RTS", "Prima");
+		bankMap.put("ALT", "Alto");
+		bankMap.put("BIS", "Bank BNI Syariah");
+		bankMap.put("BSR", "Bank BRI Syariah");
+		bankMap.put("KAS", "BPD Kalsel");
+		bankMap.put("NTB", "BANK NTB");
+		bankMap.put("GNS", "Bank Ganesha");
+		bankMap.put("BSM", "Bank Syariah Mandiri");
+		bankMap.put("BMI", "Bank Maspion");
+		bankMap.put("MTP", "BANK MANTAP");
+		bankMap.put("BAL", "BANK ALADIN");
+		bankMap.put("BKL", "Bank Bengkulu");
+		bankMap.put("NUT", "BANK NTT");
+		bankMap.put("RYA", "Bank Raya");
+		bankMap.put("LMP", "Bank Lampung");
+		bankMap.put("CBC", "Bank ICBC");
+		bankMap.put("DSP", "Digital Solusi Pratama");
+		bankMap.put("SUL", "Bank Sulteng");
+
+		String data = """
 				BANKCODE=002|BANKNAME=Bank Rakyat Indonesia|batchKey=002|01_ACQ_SUCCESS|header1=LAPORAN AKTIVITAS ACQUIRER|header2=TRANSAKSI POINT OF SALE BERHASIL|reportCode=54|FILE=Acquirer|reportDate={nextDate}{dateFormat=dd/MM/yyyy}|BANKCODE_FOR_FILE_NAME=BRI |
 				BANKCODE=007|BANKNAME=ARTAJASA|batchKey=360001|01_ACQ_SUCCESS|header1=LAPORAN AKTIVITAS ACQUIRER|header2=TRANSAKSI POINT OF SALE BERHASIL|reportCode=54|FILE=Acquirer|reportDate={nextDate}{dateFormat=dd/MM/yyyy}|BANKCODE_FOR_FILE_NAME=SAT |
 				BANKCODE=008|BANKNAME=BANK MANDIRI|batchKey=008|01_ACQ_SUCCESS|header1=LAPORAN AKTIVITAS ACQUIRER|header2=TRANSAKSI POINT OF SALE BERHASIL|reportCode=54|FILE=Acquirer|reportDate={nextDate}{dateFormat=dd/MM/yyyy}|BANKCODE_FOR_FILE_NAME=MDR |
@@ -264,43 +321,50 @@ public class CodeChef {
 				BANKCODE=564|BANKNAME=BANK MANTAP|batchKey=564|01_ACQ_SUCCESS|header1=LAPORAN AKTIVITAS ACQUIRER|header2=TRANSAKSI POINT OF SALE BERHASIL|reportCode=54|FILE=Acquirer|reportDate={nextDate}{dateFormat=dd/MM/yyyy}|BANKCODE_FOR_FILE_NAME=MTP |
 				BANKCODE=947|BANKNAME=BANK ALADIN|batchKey=947|01_ACQ_SUCCESS|header1=LAPORAN AKTIVITAS ACQUIRER|header2=TRANSAKSI POINT OF SALE BERHASIL|reportCode=54|FILE=Acquirer|reportDate={nextDate}{dateFormat=dd/MM/yyyy}|BANKCODE_FOR_FILE_NAME=BAL |
 				BANKCODE=998|BANKNAME=Digital Solusi Pratama|batchKey=998|01_ACQ_SUCCESS|header1=LAPORAN AKTIVITAS ACQUIRER|header2=TRANSAKSI POINT OF SALE BERHASIL|reportCode=54|FILE=Acquirer|reportDate={nextDate}{dateFormat=dd/MM/yyyy}|BANKCODE_FOR_FILE_NAME=DSP |
-        		""";
-        
-        String[] lines = data.split("\n");
-        for (String line : lines) {
-        	String BANKCODE=extractValue(line,"BANKCODE").replace("=", "").trim();
-        	String BANKCODE_FOR_FILE_NAME=extractValue(line,"BANKCODE_FOR_FILE_NAME").replace("=", "").trim();
-        	String fullBankName = bankMap.get(BANKCODE_FOR_FILE_NAME);
-            if(fullBankName!=null) {
-            	System.out.println("INSERT INTO renaissance_property (category, property_name, property_value) VALUES (\'3325_static_batch\',\'"+BANKCODE+"|1_DEBIT_SWITCH_REVENUE_"+BANKCODE+"\',\'1;TRANS;BANK_NAME_INITIALS="+BANKCODE_FOR_FILE_NAME+"|BANK_NAME="+fullBankName+"\');");
-            	System.out.println("INSERT INTO renaissance_property (category, property_name, property_value) VALUES (\'3325_static_batch\',\'"+BANKCODE+"|2_DEBIT_SWITCH_REVENUE_"+BANKCODE+"\',\'2;DISPUTE;BANK_NAME_INITIALS="+BANKCODE_FOR_FILE_NAME+"|BANK_NAME="+fullBankName+"\');");
-            }
-        }
+				    		""";
+
+		String[] lines = data.split("\n");
+		for (String line : lines) {
+			String BANKCODE = extractValue(line, "BANKCODE").replace("=", "").trim();
+			String BANKCODE_FOR_FILE_NAME = extractValue(line, "BANKCODE_FOR_FILE_NAME").replace("=", "").trim();
+			String fullBankName = bankMap.get(BANKCODE_FOR_FILE_NAME);
+			if (fullBankName != null) {
+				System.out.println(
+						"INSERT INTO renaissance_property (category, property_name, property_value) VALUES (\'3325_static_batch\',\'"
+								+ BANKCODE + "|1_DEBIT_SWITCH_REVENUE_" + BANKCODE + "\',\'1;TRANS;BANK_NAME_INITIALS="
+								+ BANKCODE_FOR_FILE_NAME + "|BANK_NAME=" + fullBankName + "\');");
+				System.out.println(
+						"INSERT INTO renaissance_property (category, property_name, property_value) VALUES (\'3325_static_batch\',\'"
+								+ BANKCODE + "|2_DEBIT_SWITCH_REVENUE_" + BANKCODE
+								+ "\',\'2;DISPUTE;BANK_NAME_INITIALS=" + BANKCODE_FOR_FILE_NAME + "|BANK_NAME="
+								+ fullBankName + "\');");
+			}
+		}
 	}
-	
-	
+
 	private static String extractValue(String input, String key) {
-        int startIndex = input.indexOf(key);
-        if (startIndex != -1) {
-            startIndex += key.length();
-            int endIndex = input.indexOf('|', startIndex);
-            if (endIndex != -1) {
-                return input.substring(startIndex, endIndex);
-            } else {
-                return input.substring(startIndex);
-            }
-        }
-        return null;
-    }
+		int startIndex = input.indexOf(key);
+		if (startIndex != -1) {
+			startIndex += key.length();
+			int endIndex = input.indexOf('|', startIndex);
+			if (endIndex != -1) {
+				return input.substring(startIndex, endIndex);
+			} else {
+				return input.substring(startIndex);
+			}
+		}
+		return null;
+	}
+
 	private static void EXISTENCE() {
 		try (Scanner sc = new Scanner(System.in)) {
 			int t = sc.nextInt();
 			while (t-- > 0) {
-				int x=sc.nextInt();
-				int y=sc.nextInt();
-				double X1=Math.pow(x, 4)+4*Math.pow(y, 2);
-				double Y1=4*Math.pow(x, 2)*y;
-				if(X1==Y1)
+				int x = sc.nextInt();
+				int y = sc.nextInt();
+				double X1 = Math.pow(x, 4) + 4 * Math.pow(y, 2);
+				double Y1 = 4 * Math.pow(x, 2) * y;
+				if (X1 == Y1)
 					System.out.println("YES");
 				else
 					System.out.println("NO");
@@ -312,14 +376,13 @@ public class CodeChef {
 		try (Scanner sc = new Scanner(System.in)) {
 			int t = sc.nextInt();
 			while (t-- > 0) {
-				int x=sc.nextInt()+1;
-			    int y=sc.nextInt();
-			    int z=sc.nextInt();
-			    if(x*z>=y)
-			    {
-			    	System.out.println("YES");
-			    }else
-			    	System.out.println("NO");
+				int x = sc.nextInt() + 1;
+				int y = sc.nextInt();
+				int z = sc.nextInt();
+				if (x * z >= y) {
+					System.out.println("YES");
+				} else
+					System.out.println("NO");
 			}
 		}
 	}
@@ -328,14 +391,13 @@ public class CodeChef {
 		try (Scanner sc = new Scanner(System.in)) {
 			int t = sc.nextInt();
 			while (t-- > 0) {
-				int x1=sc.nextInt();
-				int step=0;
-				for(int i=1;i<=x1;i++) {
-					if(step%2!=0) {
-						step=step-1;
-					}
-					else
-						step=step+3;
+				int x1 = sc.nextInt();
+				int step = 0;
+				for (int i = 1; i <= x1; i++) {
+					if (step % 2 != 0) {
+						step = step - 1;
+					} else
+						step = step + 3;
 				}
 				System.out.println(step);
 			}
@@ -346,19 +408,17 @@ public class CodeChef {
 		try (Scanner sc = new Scanner(System.in)) {
 			int t = sc.nextInt();
 			while (t-- > 0) {
-				int x1=sc.nextInt();
-			    int x2=sc.nextInt();
-			    int y1=sc.nextInt();
-			    int y2=sc.nextInt();
-			    int z1=sc.nextInt();
-			    int z2=sc.nextInt();
-			    if(x2>=x1 && y2>=y1 && z2<=z1)
-			    {
-			        System.out.println("YES");
-			    }
-			    else{
-			        System.out.println("NO");
-			    }
+				int x1 = sc.nextInt();
+				int x2 = sc.nextInt();
+				int y1 = sc.nextInt();
+				int y2 = sc.nextInt();
+				int z1 = sc.nextInt();
+				int z2 = sc.nextInt();
+				if (x2 >= x1 && y2 >= y1 && z2 <= z1) {
+					System.out.println("YES");
+				} else {
+					System.out.println("NO");
+				}
 			}
 		}
 	}
@@ -946,12 +1006,13 @@ public class CodeChef {
 	}
 
 	private static void R5s() {
-		Scanner sc = new Scanner(System.in);
-		int a = sc.nextInt();
-		int b = sc.nextInt();
-		if (a + b >= 200)
-			System.out.println("YES");
-		else
-			System.out.println("NO");
+		try (Scanner sc = new Scanner(System.in)) {
+			int a = sc.nextInt();
+			int b = sc.nextInt();
+			if (a + b >= 200)
+				System.out.println("YES");
+			else
+				System.out.println("NO");
+		}
 	}
 }
